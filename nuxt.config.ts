@@ -3,6 +3,9 @@ export default defineNuxtConfig({
   build: {
     transpile: ['gsap'],
   },
+  app: {
+    baseURL: '/animation/'
+  },
   components: [
     {
       path: "~/components",
