@@ -5,8 +5,11 @@ body {
 main {
   display: flex;
   width: 700vw;
+  height: 100vh;
+  overflow-x: hidden;
 }
 section {
+  min-height: 100vh;
   // height: 100vh;
   position: relative;
   overflow: hidden;

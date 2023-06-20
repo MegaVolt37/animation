@@ -1,151 +1,147 @@
 <template>
   <div>
     <div class="wrapper">
-      <div class="content">
-        <main>
-          <section class="section__header bg__white" data-speed=".6">
-            <img
-              class="section__header-img"
-              src="@/assets/images/bottle.svg"
-              alt="bottle"
-            />
-            <h1 class="section__title section__header-title text__white">
-              3d визуализация бутылки
+      <div class="content" ref="main">
+        <section class="section__header bg__white" data-speed="0.6">
+          <img
+            class="section__header-img"
+            src="@/assets/images/bottle.svg"
+            alt="bottle"
+          />
+          <h1 class="section__title section__header-title text__white">
+            3d визуализация бутылки
+          </h1>
+          <p class="section__subtitle section__header-subtitle text__black">
+            с помощью 3D визуализации создали реалистичную модель упаковки
+            подсолнечного масла
+          </p>
+        </section>
+        <section class="section__drawing bg__black">
+          <!-- <drawingBottleIcon /> -->
+          <img
+            class="section__drawing-img"
+            src="@/assets/images/bottle__drawing.svg"
+            alt="bottle"
+          />
+
+          <div class="section__drawing-text">
+            <h1 class="section__title section__drawing-title text__white">
+              Чертёж
             </h1>
-            <p class="section__subtitle section__header-subtitle text__black">
-              с помощью 3D визуализации создали реалистичную модель упаковки
-              подсолнечного масла
+            <p class="section__subtitle section__drawing-subtitle text__gray">
+              был предоставлен клиентом, он позволил спроектировать
+              и смоделировать объект с учётом всех размеров, форм и других
+              характеристик.
             </p>
-          </section>
-          <section class="section__drawing bg__black">
-            <!-- <drawingBottleIcon /> -->
-            <img
-              class="section__drawing-img"
-              src="@/assets/images/bottle__drawing.svg"
-              alt="bottle"
-            />
+          </div>
+        </section>
+        <section class="section__modeling bg__black">
+          <img
+            class="section__modeling-img"
+            src="@/assets/images/bottle__modeling.png"
+            alt="bottle"
+          />
 
-            <div class="section__drawing-text">
-              <h1 class="section__title section__drawing-title text__white">
-                Чертёж
-              </h1>
-              <p class="section__subtitle section__drawing-subtitle text__gray">
-                был предоставлен клиентом, он позволил спроектировать
-                и смоделировать объект с учётом всех размеров, форм и других
-                характеристик.
-              </p>
-            </div>
-          </section>
-          <section class="section__modeling bg__black">
-            <img
-              class="section__modeling-img"
-              src="@/assets/images/bottle__modeling.png"
-              alt="bottle"
-            />
+          <div class="section__modeling-text">
+            <h1 class="section__title section__modeling-title text__white">
+              Моделинг
+            </h1>
+            <p class="section__subtitle section__modeling-subtitle text__gray">
+              следующий этап, который позволяет создать трёхмерный объект,
+              приближенный к финальному результату
+            </p>
+          </div>
+        </section>
+        <section class="section__render bg__white">
+          <img
+            class="section__render-img"
+            src="@/assets/images/bottle__render.png"
+            alt="bottle"
+          />
 
-            <div class="section__modeling-text">
-              <h1 class="section__title section__modeling-title text__white">
-                Моделинг
-              </h1>
-              <p
-                class="section__subtitle section__modeling-subtitle text__gray"
+          <div class="section__render-text">
+            <h1 class="section__title section__render-title text__black">
+              Рендер
+            </h1>
+            <p
+              class="section__subtitle section__render-subtitle text__light-gray"
+            >
+              <span class="text__black">конечный процесс создания</span>
+              реального объекта из подготовленной сцены.
+            </p>
+          </div>
+        </section>
+        <section class="section__finally bg__white">
+          <img
+            class="section__finally-img"
+            src="@/assets/images/bottle__finally.png"
+            alt="bottle"
+          />
+
+          <div class="section__finally-text">
+            <h1 class="section__title section__finally-title text__black">
+              Финал
+            </h1>
+            <p
+              class="section__subtitle section__finally-subtitle text__light-gray"
+            >
+              <span class="text__black"
+                >добавить еще тройку строк текста про визуализацию</span
               >
-                следующий этап, который позволяет создать трёхмерный объект,
-                приближенный к финальному результату
-              </p>
-            </div>
-          </section>
-          <section class="section__render bg__white">
+              для чего и каких целей она реализована, возможно рассказать про
+              этикетку.
+            </p>
+          </div>
+        </section>
+        <section class="section__finally-end bg__white">
+          <div class="section__finally-end__block-img">
             <img
-              class="section__render-img"
-              src="@/assets/images/bottle__render.png"
-              alt="bottle"
-            />
-
-            <div class="section__render-text">
-              <h1 class="section__title section__render-title text__black">
-                Рендер
-              </h1>
-              <p
-                class="section__subtitle section__render-subtitle text__light-gray"
-              >
-                <span class="text__black">конечный процесс создания</span>
-                реального объекта из подготовленной сцены.
-              </p>
-            </div>
-          </section>
-          <section class="section__finally bg__white">
-            <img
-              class="section__finally-img"
+              class="section__finally-end-img"
               src="@/assets/images/bottle__finally.png"
               alt="bottle"
             />
+          </div>
 
-            <div class="section__finally-text">
-              <h1 class="section__title section__finally-title text__black">
-                Финал
+          <div class="section__finally-end-text">
+            <p
+              class="section__subtitle section__finally-end-subtitle text__light-gray"
+            >
+              <span class="text__black">высокая детализация</span> 10K —
+              обозначение разрешающей способности в цифровом кинематографе и
+              компьютерной графике, приблизительно соответствующее 10000
+              пикселей по горизонтали.
+            </p>
+            <span class="text__gradient section__finally-end-text__gradient"
+              >44 236 800 пикселей</span
+            >
+            <p
+              class="section__subtitle section__finally-end-subtitle text__light-gray"
+            >
+              10K UHD (10240 × 4320)
+            </p>
+          </div>
+        </section>
+        <section class="section__angle bg__white">
+          <div class="section__angle-content">
+            <img
+              class="section__angle-img"
+              src="@/assets/images/Etiketka.png"
+              alt="bottle"
+            />
+
+            <div class="section__angle-text">
+              <h1 class="section__title section__angle-title text__black">
+                7 разных ракурсов
               </h1>
               <p
-                class="section__subtitle section__finally-subtitle text__light-gray"
+                class="section__subtitle section__angle-subtitle text__light-gray"
               >
-                <span class="text__black"
-                  >добавить еще тройку строк текста про визуализацию</span
-                >
-                для чего и каких целей она реализована, возможно рассказать про
-                этикетку.
+                добавить еще тройку строк текста про визуализацию для чего и
+                каких целей она реализована, возможно рассказать про этикетку.
               </p>
             </div>
-          </section>
-          <section class="section__finally-end bg__white">
-            <div class="section__finally-end__block-img">
-              <img
-                class="section__finally-end-img"
-                src="@/assets/images/bottle__finally.png"
-                alt="bottle"
-              />
-            </div>
-
-            <div class="section__finally-end-text">
-              <p
-                class="section__subtitle section__finally-end-subtitle text__light-gray"
-              >
-                <span class="text__black">высокая детализация</span> 10K —
-                обозначение разрешающей способности в цифровом кинематографе и
-                компьютерной графике, приблизительно соответствующее 10000
-                пикселей по горизонтали.
-              </p>
-              <span class="text__gradient section__finally-end-text__gradient"
-                >44 236 800 пикселей</span
-              >
-              <p
-                class="section__subtitle section__finally-end-subtitle text__light-gray"
-              >
-                10K UHD (10240 × 4320)
-              </p>
-            </div>
-          </section>
-          <section class="section__angle bg__white">
-            <div class="section__angle-content">
-              <img
-                class="section__angle-img"
-                src="@/assets/images/Etiketka.png"
-                alt="bottle"
-              />
-
-              <div class="section__angle-text">
-                <h1 class="section__title section__angle-title text__black">
-                  7 разных ракурсов
-                </h1>
-                <p
-                  class="section__subtitle section__angle-subtitle text__light-gray"
-                >
-                  добавить еще тройку строк текста про визуализацию для чего и
-                  каких целей она реализована, возможно рассказать про этикетку.
-                </p>
-              </div>
-            </div>
-          </section>
-        </main>
+          </div>
+        </section>
       </div>
     </div>
   </div>
@@ -154,118 +150,59 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap-trial/ScrollSmoother";
+import "@/assets/styles/main.scss";
 const nuxtApp = useNuxtApp();
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-// import "@/assets/style.css";
-import "@/assets/styles/main.scss";
-// import "@/assets/animation.scss";
+
 if (process.client) {
   await nextTick();
-  const tlLoader = gsap.timeline();
   gsap.config({
     trialWarn: false,
   });
-  // ScrollSmoother.create({
-  //   wrapper: ".wrapper",
-  //   content: ".content",
-  //   smooth: 1,
-  //   effects: true,
-  // });
-  tlLoader
-    .set(".section__header-img", {
-      xPercent: -100,
-    })
-    .set(".section__header-subtitle", {
-      yPercent: 100,
-      opacity: 0,
-    });
-  // .to(".section__header-img", {
-  //   xPercent: -18,
-  //   duration: 3,
-  // })
-  // .fromTo(
-  //   ".section__header-title",
-  //   {
-  //     color: "#000000",
-  //   },
-  //   {
-  //     color: "#fff",
-  //     duration: 3,
-  //   },
-  //   "-=2.8"
-  // )
-  // .to(".section__header-img", {
-  //   xPercent: 0,
-  //   // yPercent: -10,
-  //   y: "-10%",
-  //   duration: 2,
-  // })
-  // .to(
-  //   ".section__header-title",
-  //   {
-  //     y: "-30%",
-  //     duration: 2,
-  //   },
-  //   "-=2"
-  // )
-  // .to(
-  //   ".section__header-subtitle",
-  //   {
-  //     yPercent: 0,
-  //     opacity: 1,
-  //     duration: 1,
-  //   },
-  //   "-=1"
-  // )
-  // .to(".section__header-title", {
-  //   color: "#000000",
-  //   duration: 2,
-  // })
-  // .to(
-  //   ".section__header-img",
-  //   {
-  //     xPercent: 0,
-  //     yPercent: 60,
-  //     duration: 2,
-  //   },
-  //   "-=2"
-  // );
-  // .to(".section__header-img", {
-  //   yPercent: -100,
-  //   duration: 2,
-  // })
-  gsap.fromTo(
-    ".section__header-img",
-    {
-      xPercent: -100,
+  const tlHeader = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".section__header",
+      start: "top top",
+      end: "+=7000",
+      scrub: 1,
+      pin: true,
+      markers: true,
     },
-    {
-      scrollTrigger: {
-        trigger: ".section__header", // относительно чего
-        markers: true, // включает индикаторы маркеров
-        start: "top top", // откуда начинать анимацию относительно trigger
-        scrub: true, // на протяжении всего скролла
-      },
-      xPercent: -18,
-      duration: 3,
-      // duration: 3,
-      // opacity: 0,
-    },
-    {}
+  });
+  tlHeader.set(".section__header-subtitle", { opacity: 0, yPercent: 100 });
+  tlHeader.set(".section__header-title", { color: "#000000" });
+  tlHeader.set(".section__header-img", { xPercent: -400 });
+  tlHeader.to(".section__header-img", {
+    duration: 1,
+    xPercent: -18,
+    duration: 1,
+  });
+  tlHeader.to(
+    ".section__header-title",
+    { color: "#fff", duration: 1 },
+    "-=0.5"
   );
-  // tlLoader
-  //   .set(".loader__item", { yPercent: -100 })
-  //   .set(".loader__title", { opacity: 0 })
-  //   .to(".loader__item", {
-  //     yPercent: 0,
-  //     duration: 0.5,
-  //     stagger: 0.25
-  //   })
-  //   .to(".loader__item", {
-  //     yPercent: 100,
-  //     duration: 0.5,
-  //     stagger: 0.25
-  //   })
+  tlHeader.to(
+    ".section__header-img",
+    { xPercent: 0, y: -100, duration: 1 },
+    "+=0.5"
+  );
+  tlHeader.to(
+    ".section__header-title",
+    { top: "42%", y: -42, duration: 1 },
+    "-=1"
+  );
+  tlHeader.to(
+    ".section__header-subtitle",
+    { opacity: 1, yPercent: 0 },
+    "+=0.5"
+  );
+  tlHeader.to(
+    ".section__header-img",
+    { y: -120, top: "120%", duration: 1 },
+    "+=0.5"
+  );
+  tlHeader.to(".section__header-title", { color: "#000" }, "-=0.7");
 }
 </script>
 <style lang="scss">
