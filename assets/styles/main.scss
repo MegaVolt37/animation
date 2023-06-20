@@ -1,0 +1,59 @@
+body {
+  font-family: 'SFPRO500';
+  overflow-x: hidden;
+}
+main {
+  display: flex;
+  width: 700vw;
+}
+section {
+  // height: 100vh;
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+
+}
+
+.bg__white {
+  background-color: #fff;
+}
+
+.bg__black {
+  background-color: #000;
+}
+
+.text__white {
+  color: #fff;
+}
+
+.text__black {
+  color: #000;
+}
+
+.text__gray {
+  color: #757575;
+}
+.text__light-gray {
+  color: #AFAFAF;
+}
+.text__gradient {
+  font-family: 'SFPRO600';
+  font-size: vw(38);
+  line-height: 100%;
+  letter-spacing: vw(-1);
+  background: linear-gradient(90deg, #FF0000 0%, #FFE604 104.12%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section__title {
+  font-family: 'SFPRO600';
+  font-size: vw(76);
+  line-height: 100%;
+  letter-spacing: vw(-2);
+}
+
+.section__subtitle {
+  font-size: vw(18);
+  line-height: 115%;
+}
