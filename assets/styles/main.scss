@@ -2,6 +2,9 @@ body {
   font-family: 'SFPRO500';
   overflow-x: hidden;
 }
+.wrapper {
+  overflow-x: hidden;
+}
 main {
   display: flex;
   width: 700vw;
