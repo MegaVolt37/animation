@@ -14,7 +14,7 @@ export function animateHeader(gsap) {
   tlHeader.set(".section__header-img", { xPercent: -400 });
   tlHeader.to(".section__header-img", {
     duration: 1,
-    xPercent: -18,
+    xPercent: -10,
     duration: 1,
   });
   tlHeader.to(
@@ -24,7 +24,7 @@ export function animateHeader(gsap) {
   );
   tlHeader.to(
     ".section__header-img",
-    { xPercent: 0, yPercent: -64, duration: 1 },
+    { xPercent: 6, yPercent: -13, duration: 1 },
     "+=0.5"
   );
   tlHeader.to(
@@ -39,7 +39,7 @@ export function animateHeader(gsap) {
   );
   tlHeader.to(
     ".section__header-img",
-    { y: -120, top: "120%", duration: 1 },
+    { yPercent: 60, duration: 1 },
     "+=0.5"
   );
   tlHeader.to(".section__header-title", { color: "#000" }, "-=0.7");

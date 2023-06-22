@@ -3,11 +3,13 @@
     <div class="wrapper">
       <div class="content">
         <section class="section__header bg__white" data-speed="0.6">
-          <img
-            class="section__header-img"
-            src="@/assets/images/bottle.svg"
-            alt="bottle"
-          />
+          <div class="section__header-image">
+            <img
+              class="section__header-img"
+              src="@/assets/images/bottle.svg"
+              alt="bottle"
+            />
+          </div>
 
           <h1 class="section__title section__header-title text__white">
             3d визуализация бутылки
@@ -203,11 +205,21 @@ if (process.client) {
   display: grid;
   position: relative;
   padding-top: 78vh;
-  &-img {
+  &-image {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: -10%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &-img {
+    // position: absolute;
+    // top: 50%;
+    // transform: translateY(-50%);
+    // left: -10%;
     width: 140%;
     width: vw(1530);
     height: vw(387);
