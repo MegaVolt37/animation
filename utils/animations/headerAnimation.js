@@ -24,12 +24,12 @@ export function animateHeader(gsap) {
   );
   tlHeader.to(
     ".section__header-img",
-    { xPercent: 0, yPercent: -70, duration: 1 },
+    { xPercent: 0, yPercent: -64, duration: 1 },
     "+=0.5"
   );
   tlHeader.to(
     ".section__header-title",
-    { top: "42%", y: -42, duration: 1 },
+    { top: "55%", y: "-55%", duration: 1 },
     "-=1"
   );
   tlHeader.to(

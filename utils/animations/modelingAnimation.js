@@ -6,7 +6,6 @@ export function animateModeling(gsap) {
       end: "+=1000",
       scrub: 1,
       pin: true,
-      markers: true,
     },
   });
 }

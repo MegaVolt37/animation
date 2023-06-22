@@ -6,7 +6,6 @@ export function animateFinally(gsap) {
       end: "+=1000",
       scrub: 1,
       pin: true,
-      markers: true,
     },
   },"-=2");
   tlRender.set(".section__finally-img", {

@@ -6,7 +6,6 @@ export function animateRender(gsap) {
       end: "bottom",
       scrub: 1,
       pin: true,
-      markers: true,
     },
   });
   tlRender.to(".section__render-img", {

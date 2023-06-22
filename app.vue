@@ -8,6 +8,7 @@
             src="@/assets/images/bottle.svg"
             alt="bottle"
           />
+
           <h1 class="section__title section__header-title text__white">
             3d визуализация бутылки
           </h1>
@@ -201,13 +202,15 @@ if (process.client) {
 .section__header {
   display: grid;
   position: relative;
-  padding-top: 82vh;
+  padding-top: 78vh;
   &-img {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: -12%;
+    left: -10%;
     width: 140%;
+    width: vw(1530);
+    height: vw(387);
   }
   &-title {
     max-width: vw(575);
@@ -220,7 +223,7 @@ if (process.client) {
   &-subtitle {
     max-width: vw(295);
     width: 100%;
-    margin-right: 7%;
+    margin-right: 13%;
     margin-left: auto;
     margin-top: 0;
     margin-bottom: auto;
@@ -413,7 +416,9 @@ if (process.client) {
   &-img {
     margin: auto;
   }
-  .angle__image-first,.angle__image-second,.angle__image-third {
+  .angle__image-first,
+  .angle__image-second,
+  .angle__image-third {
     position: absolute;
     top: 250%;
     bottom: 0;
