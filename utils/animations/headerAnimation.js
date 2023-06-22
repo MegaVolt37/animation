@@ -29,7 +29,7 @@ export function animateHeader(gsap) {
   );
   tlHeader.to(
     ".section__header-title",
-    { top: "55%", y: "-55%", duration: 1 },
+    { top: "37%", yPercent: -37, duration: 1 },
     "-=1"
   );
   tlHeader.to(

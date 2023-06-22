@@ -216,10 +216,6 @@ if (process.client) {
     justify-content: center;
   }
   &-img {
-    // position: absolute;
-    // top: 50%;
-    // transform: translateY(-50%);
-    // left: -10%;
     width: 140%;
     width: vw(1530);
     height: vw(387);
@@ -247,20 +243,34 @@ if (process.client) {
   align-items: center; // удалить и попробовать еще раз
   gap: vw(70);
   &-images {
-    width: vw(1675);
-    height: vw(731);
-    margin-left: vw(-1056);
+    // width: vw(1675);
+    // height: vw(731);
+    // margin-left: vw(-1056);
     position: relative;
+    height: 100%;
+    width: 50%;
+    // padding-bottom: 95%;
   }
   &-img {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    right: 0;
+    // width: 100%;
+    // height: 100%;
+    width: vw(1675);
+    margin-top: -19%;
+    height: vw(731);
+    // max-height: 731px;
+    object-fit: cover;
+    object-position: center;
   }
   &-img__color {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    right: 0;
+    margin-top: -19%;
+    width: vw(1675);
+    height: vw(731);
+    object-fit: cover;
+    object-position: center;
   }
   &-title {
     margin-bottom: vw(60);
