@@ -111,9 +111,17 @@
                   компьютерной графике, приблизительно соответствующее 10000
                   пикселей по горизонтали.
                 </p>
-                <span class="text__gradient section__finally-end-text__gradient"
-                  >44 236 800 пикселей</span
-                >
+                <div class="text__gradient-block">
+                  <span
+                    class="text__gradient text__black text__gradient-first section__finally-end-text__gradient"
+                    >44 236 800 пикселей</span
+                  >
+                  <span
+                    class="text__gradient text__gradient-second section__finally-end-text__gradient"
+                    >44 236 800 пикселей</span
+                  >
+                </div>
+
                 <p
                   class="section__subtitle section__finally-end-subtitle text__light-gray"
                 >
@@ -122,41 +130,25 @@
               </div>
             </div>
           </section>
-          <section class="section__finally-end bg__white">
-            <div class="section__finally-end__block-img">
-              <img
-                class="section__finally-end-img"
-                src="@/assets/images/bottle__finally.png"
-                alt="bottle"
-              />
-            </div>
-
-            <div class="section__finally-end-text">
-              <p
-                class="section__subtitle section__finally-end-subtitle text__light-gray"
-              >
-                <span class="text__black">высокая детализация</span> 10K —
-                обозначение разрешающей способности в цифровом кинематографе и
-                компьютерной графике, приблизительно соответствующее 10000
-                пикселей по горизонтали.
-              </p>
-              <span class="text__gradient section__finally-end-text__gradient"
-                >44 236 800 пикселей</span
-              >
-              <p
-                class="section__subtitle section__finally-end-subtitle text__light-gray"
-              >
-                10K UHD (10240 × 4320)
-              </p>
-            </div>
-          </section>
           <section class="section__angle bg__white">
             <div class="section__angle-content">
-              <img
-                class="section__angle-img"
-                src="@/assets/images/Etiketka.png"
-                alt="bottle"
-              />
+              <div class="section__angle-block__images">
+                <img
+                  class="angle__image-first section__angle-img"
+                  src="@/assets/images/Etiketka.png"
+                  alt="bottle"
+                />
+                <img
+                  class="angle__image-second section__angle-img"
+                  src="@/assets/images/Etiketka22.png"
+                  alt="bottle"
+                />
+                <img
+                  class="angle__image-third section__angle-img"
+                  src="@/assets/images/Etiketka24.png"
+                  alt="bottle"
+                />
+              </div>
 
               <div class="section__angle-text">
                 <h1 class="section__title section__angle-title text__black">
@@ -198,13 +190,13 @@ if (process.client) {
   animateModeling(gsap);
   animateRender(gsap);
   animateContainer(gsap);
-  // animateFinally(gsap);
 }
 </script>
 <style lang="scss">
 .section__wrapper {
-  width: 400vw;
+  width: 300vw;
   display: flex;
+  height: 100vh;
 }
 .section__header {
   display: grid;
@@ -309,12 +301,27 @@ if (process.client) {
     margin: auto;
     margin-left: 0;
   }
-  &-text__second {
+  .text__first {
+    -webkit-text-fill-color: initial;
+  }
+  .text__second {
     height: fit-content;
     margin: auto;
     margin-left: 0;
     position: absolute;
     transform: translateY(200%);
+  }
+  .text__gradient-block {
+    position: relative;
+  }
+  .text__gradient-first {
+    background: none;
+    -webkit-text-fill-color: initial;
+  }
+  .text__gradient-second {
+    position: absolute;
+    top: 0;
+    opacity: 0;
   }
   &-text__gradient {
     display: block;
@@ -382,18 +389,37 @@ if (process.client) {
 .section__angle {
   padding: vw(78) 0;
   margin-bottom: vw(78);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   &-content {
     max-width: vw(835);
+    width: 100%;
     margin: auto;
     display: flex;
     flex-direction: row-reverse;
     background-color: #f3f3f4;
     padding: vw(36) 0;
+    overflow: hidden;
+    padding-right: vw(40);
+  }
+  &-block__images {
+    width: vw(318);
+    height: vw(400);
+    display: flex;
+    justify-content: center;
+    position: relative;
   }
   &-img {
-    width: vw(107);
-    height: vw(400);
     margin: auto;
+  }
+  .angle__image-first,.angle__image-second,.angle__image-third {
+    position: absolute;
+    top: 250%;
+    bottom: 0;
+  }
+  .angle__image-first {
+    top: 0;
   }
   &-text {
     margin: auto;

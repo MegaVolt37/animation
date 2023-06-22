@@ -8,8 +8,7 @@ export function animateContainer(gsap) {
 
   tl.fromTo(".section__finally", {
     x: '100%',
-
-  }, { x: "-100%" }, "-=0.4")
+  }, { x: "-100%" },"-=0.3")
 
   tl.fromTo(".section__finally-img", {
     css: { 'margin-left': 0 }
@@ -24,34 +23,45 @@ export function animateContainer(gsap) {
     xPercent: -31,
     yPercent: 13
   })
-  tl.to(".section__finally-text", {
-    yPercent: -100,
+  tl.to(".text__first", {
+    yPercent: -200,
     opacity: 0,
     duration: 0.3
-  },"-=0.5")
-  tl.to(".section__finally-text", {
-    css: { display: "none" }
-  },"-=0.5")
-  tl.to(".section__finally-text__second", {
-    css: { display: "block" },
-    yPercent: 0
-  },"-=0.5")
-  // tl.to(".section__finally-img", {
-  //   css: {
-  //     width: '1740px',
-  //     'margin-left': "-1042px",
-  //     height: '664px',
-  //     height: '810px',
-  //     overflow: 'hidden',
-  //     'margin-top': '-30%',
-  //   }
-  // })
-  // tl.set(".section__finally-img", { css: { 'margin-left': '-95%' } })
-  // tl.fromTo(".section__finally-img", {
-  //   opacity: 0,
-  //   x: '100%',
-  // }, { opacity: 1, x: 0, duration: 3 }, "+=0.5")
+  }, "-=0.5")
+  tl.to(".text__second", {
+    y: 0,
+    top: 0,
+    opacity: 1,
+    duration: 0.3,
+  }, "-=0.3")
+  tl.to(".text__gradient-second", {
+    duration: 1,
+    opacity: 1,
+  })
+  tl.to(".text__gradient-first", {
+    duration: 1,
+    opacity: 0,
+  }, "-=0.5")
+  tl.fromTo(".section__angle", {
+    x: "100%"
+  }, { x: "-200%" })
+  tl.to(".section__finally", {
+    x: "-200%"
+  }, "-=0.5")
+  tl.to(".angle__image-first", {
+    top: "-250%"
+  }, "+=0.5")
+  tl.to(".angle__image-second", {
+    top: "0"
+  },"-=0.4")
+  tl.to(".angle__image-second", {
+    top: "-250%"
+  }, "+=0.5")
+  tl.to(".angle__image-third", {
+    top: "0"
+  },"-=0.4")
 
+  
   ScrollTrigger.create({
     animation: tl,
     trigger: ".section__wrapper",
