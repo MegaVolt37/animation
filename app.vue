@@ -179,7 +179,6 @@
 <script setup>
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollSmoother } from "gsap-trial/ScrollSmoother";
 import {
   animateHeader,
   animateDrawing,
@@ -190,13 +189,10 @@ import {
 } from "@/utils/animations/index";
 import "@/assets/styles/main.scss";
 const nuxtApp = useNuxtApp();
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+gsap.registerPlugin(ScrollTrigger);
 
 if (process.client) {
   await nextTick();
-  gsap.config({
-    trialWarn: false,
-  });
   animateHeader(gsap);
   animateDrawing(gsap);
   animateModeling(gsap);
