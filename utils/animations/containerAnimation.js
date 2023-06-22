@@ -19,9 +19,23 @@ export function animateContainer(gsap) {
     opacity: 0,
     x: '100%',
   }, { opacity: 1, x: 0 })
-  // tl.to(".section__finally__block-img", {
-  //   css: { display: "block" }
-  // })
+  tl.to(".section__finally-img", {
+    scale: 1.8,
+    xPercent: -31,
+    yPercent: 13
+  })
+  tl.to(".section__finally-text", {
+    yPercent: -100,
+    opacity: 0,
+    duration: 0.3
+  },"-=0.5")
+  tl.to(".section__finally-text", {
+    css: { display: "none" }
+  },"-=0.5")
+  tl.to(".section__finally-text__second", {
+    css: { display: "block" },
+    yPercent: 0
+  },"-=0.5")
   // tl.to(".section__finally-img", {
   //   css: {
   //     width: '1740px',

@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "animation",
   "private": true,
   "scripts": {
     "build": "nuxt build",
@@ -7,7 +7,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "deploy": "gh-pages --dotfiles -d .output/public",
+    "deploy": "nuxt generate && touch .output/public/.nojekyll && gh-pages --dotfiles -d .output/public",
     "predeploy": "npm run generate"
   },
   "devDependencies": {

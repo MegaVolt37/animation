@@ -88,18 +88,38 @@
             </div>
 
             <div class="section__finally-text">
-              <h1 class="section__title section__finally-title text__black">
-                Финал
-              </h1>
-              <p
-                class="section__subtitle section__finally-subtitle text__light-gray"
-              >
-                <span class="text__black"
-                  >добавить еще тройку строк текста про визуализацию</span
+              <div class="text__first">
+                <h1 class="section__title section__finally-title text__black">
+                  Финал
+                </h1>
+                <p
+                  class="section__subtitle section__finally-subtitle text__light-gray"
                 >
-                для чего и каких целей она реализована, возможно рассказать про
-                этикетку.
-              </p>
+                  <span class="text__black"
+                    >добавить еще тройку строк текста про визуализацию</span
+                  >
+                  для чего и каких целей она реализована, возможно рассказать
+                  про этикетку.
+                </p>
+              </div>
+              <div class="text__second">
+                <p
+                  class="section__subtitle section__finally-end-subtitle text__light-gray"
+                >
+                  <span class="text__black">высокая детализация</span> 10K —
+                  обозначение разрешающей способности в цифровом кинематографе и
+                  компьютерной графике, приблизительно соответствующее 10000
+                  пикселей по горизонтали.
+                </p>
+                <span class="text__gradient section__finally-end-text__gradient"
+                  >44 236 800 пикселей</span
+                >
+                <p
+                  class="section__subtitle section__finally-end-subtitle text__light-gray"
+                >
+                  10K UHD (10240 × 4320)
+                </p>
+              </div>
             </div>
           </section>
           <section class="section__finally-end bg__white">
@@ -292,6 +312,18 @@ if (process.client) {
     height: fit-content;
     margin: auto;
     margin-left: 0;
+  }
+  &-text__second {
+    height: fit-content;
+    margin: auto;
+    margin-left: 0;
+    position: absolute;
+    transform: translateY(200%);
+  }
+  &-text__gradient {
+    display: block;
+    max-width: vw(200);
+    margin-bottom: vw(25);
   }
   &__block-img {
     display: contents;
