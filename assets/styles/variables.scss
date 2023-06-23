@@ -1,3 +1,4 @@
-@function vw($value, $size: 1120) {
-  @return calc($value / $size) * 100vw;
-}
+$black: #000;
+$white: #fff;
+$light-gray: #f7f7f9;
+$light-light-gray: #f3f3f4;

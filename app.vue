@@ -62,12 +62,14 @@
           </div>
         </section>
         <div class="section__wrapper">
-          <section class="section__render bg__white">
-            <img
-              class="section__render-img"
-              src="@/assets/images/bottle__render.png"
-              alt="bottle"
-            />
+          <section class="section__render bg__gray">
+            <div class="section__render-image">
+              <img
+                class="section__render-img"
+                src="@/assets/images/bottle__render.png"
+                alt="bottle"
+              />
+            </div>
 
             <div class="section__render-text">
               <h1 class="section__title section__render-title text__black">
@@ -81,7 +83,7 @@
               </p>
             </div>
           </section>
-          <section class="section__finally bg__white">
+          <section class="section__finally bg__gray">
             <div class="section__finally__block-img">
               <img
                 class="section__finally-img"
@@ -240,28 +242,21 @@ if (process.client) {
 .section__drawing {
   height: auto;
   display: flex;
-  align-items: center; // удалить и попробовать еще раз
+  align-items: center;
   gap: vw(70);
   height: 100vh;
   &-images {
-    // width: vw(1675);
-    // height: vw(731);
-    // margin-left: vw(-1056);
     position: relative;
     height: 100%;
     max-height: 100vh;
     width: 50%;
-    // padding-bottom: 75%;
   }
   &-img {
     position: absolute;
     right: 0;
     top: 0;
     bottom: 0;
-    // width: 100%;
-    // height: 100%;
     width: vw(1675);
-    // margin-top: -19%;
     height: 100%;
     max-height: 100vh;
     object-fit: contain;
@@ -272,7 +267,6 @@ if (process.client) {
     right: 0;
     top: 0;
     bottom: 0;
-    // margin-top: -19%;
     width: vw(1675);
     height: 100%;
     max-height: 100vh;
@@ -297,6 +291,8 @@ if (process.client) {
   &-img {
     margin-right: vw(136);
     width: vw(331);
+    height: vw(571);
+    margin-top: auto;
   }
   &-title {
     margin-bottom: vw(60);
@@ -306,7 +302,6 @@ if (process.client) {
   }
 }
 .section__render {
-  background-color: #f7f7f9;
   display: flex;
   flex-direction: row-reverse;
   &-text {
@@ -317,6 +312,8 @@ if (process.client) {
   &-img {
     margin-right: vw(136);
     width: vw(331);
+    height: vw(571);
+    margin-bottom: auto;
   }
   &-title {
     margin-bottom: vw(60);
@@ -326,7 +323,7 @@ if (process.client) {
   }
 }
 .section__finally {
-  background-color: #f7f7f9;
+  background-color: $light-gray;
   display: flex;
   &-text {
     height: fit-content;
@@ -361,18 +358,26 @@ if (process.client) {
     margin-bottom: vw(25);
   }
   &__block-img {
-    display: contents;
-    width: vw(1740);
-    margin-left: vw(-1042);
-    height: vw(664);
-    height: vw(810);
-    overflow: hidden;
-    margin-top: -30%;
+    display: flex;
+    align-items: center;
+    max-height: 100vh;
+    height: 100vh;
+    width: 59%;
   }
   &-img {
     width: vw(1740);
-    margin-left: vw(-1042);
+    height: 100%;
+    object-fit: cover;
     mix-blend-mode: darken;
+
+
+    height: 116%;
+    -o-object-fit: cover;
+    object-fit: contain;
+    object-position: center;
+    mix-blend-mode: darken;
+    margin-top: -9%;
+    transform: translateX(-6%);
   }
   &-title {
     margin-bottom: vw(60);
@@ -382,7 +387,7 @@ if (process.client) {
   }
 }
 .section__finally-end {
-  background-color: #f7f7f9;
+  background-color: $light-gray;
   height: auto;
   display: flex;
   &-text {
@@ -419,7 +424,6 @@ if (process.client) {
   }
 }
 .section__angle {
-  padding: vw(78) 0;
   margin-bottom: vw(78);
   display: flex;
   align-items: center;
@@ -430,7 +434,7 @@ if (process.client) {
     margin: auto;
     display: flex;
     flex-direction: row-reverse;
-    background-color: #f3f3f4;
+    background-color: $light-light-gray;
     padding: vw(36) 0;
     overflow: hidden;
     padding-right: vw(40);
@@ -444,12 +448,15 @@ if (process.client) {
   }
   &-img {
     margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
   .angle__image-first,
   .angle__image-second,
   .angle__image-third {
     position: absolute;
-    top: 250%;
+    top: 300%;
     bottom: 0;
   }
   .angle__image-first {

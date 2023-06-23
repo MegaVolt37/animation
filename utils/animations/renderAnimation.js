@@ -3,7 +3,7 @@ export function animateRender(gsap) {
     scrollTrigger: {
       trigger: ".section__render",
       start: "top top",
-      end: "bottom",
+      end: "+=3000",
       scrub: 1,
       pin: true,
     },
@@ -11,7 +11,7 @@ export function animateRender(gsap) {
   tlRender.to(".section__render-img", {
     yPercent: -200,
     duration: 1
-  })
+  },"+=0.5")
   tlRender.to(".section__render-text", {
     xPercent: -200,
     duration: 1

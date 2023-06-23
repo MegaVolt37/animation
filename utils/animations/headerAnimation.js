@@ -10,7 +10,7 @@ export function animateHeader(gsap) {
   });
 
   tlHeader.set(".section__header-subtitle", { opacity: 0, yPercent: 100 });
-  tlHeader.set(".section__header-title", { color: "#000000" });
+  tlHeader.set(".section__header-title", { color: "#000" });
   tlHeader.set(".section__header-img", { xPercent: -400 });
   tlHeader.to(".section__header-img", {
     duration: 1,

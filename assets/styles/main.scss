@@ -21,19 +21,22 @@ section {
 }
 
 .bg__white {
-  background-color: #fff;
+  background-color: $white;
 }
 
 .bg__black {
-  background-color: #000;
+  background-color: $black;
+}
+.bg__gray {
+  background-color: $light-gray;
 }
 
 .text__white {
-  color: #fff;
+  color: $white;
 }
 
 .text__black {
-  color: #000;
+  color: $black;
 }
 
 .text__gray {
