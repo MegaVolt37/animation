@@ -242,34 +242,41 @@ if (process.client) {
   display: flex;
   align-items: center; // удалить и попробовать еще раз
   gap: vw(70);
+  height: 100vh;
   &-images {
     // width: vw(1675);
     // height: vw(731);
     // margin-left: vw(-1056);
     position: relative;
     height: 100%;
+    max-height: 100vh;
     width: 50%;
-    // padding-bottom: 95%;
+    // padding-bottom: 75%;
   }
   &-img {
     position: absolute;
     right: 0;
+    top: 0;
+    bottom: 0;
     // width: 100%;
     // height: 100%;
     width: vw(1675);
-    margin-top: -19%;
-    height: vw(731);
-    // max-height: 731px;
-    object-fit: cover;
+    // margin-top: -19%;
+    height: 100%;
+    max-height: 100vh;
+    object-fit: contain;
     object-position: center;
   }
   &-img__color {
     position: absolute;
     right: 0;
-    margin-top: -19%;
+    top: 0;
+    bottom: 0;
+    // margin-top: -19%;
     width: vw(1675);
-    height: vw(731);
-    object-fit: cover;
+    height: 100%;
+    max-height: 100vh;
+    object-fit: contain;
     object-position: center;
   }
   &-title {

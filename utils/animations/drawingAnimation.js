@@ -50,9 +50,9 @@ export function animateDrawing(gsap) {
   tlDrawing.to(
     ".section__drawing-text",
     {
-      yPercent: -300,
+      yPercent: -200,
       duration: 1
     },
-    "-=0.8"
+    "-=1"
   );
 }

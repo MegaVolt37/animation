@@ -29,7 +29,7 @@ export function animateHeader(gsap) {
   );
   tlHeader.to(
     ".section__header-title",
-    { top: "37%", yPercent: -37, duration: 1 },
+    { top: "41%",yPercent: -41,  duration: 1 },
     "-=1"
   );
   tlHeader.to(
@@ -39,7 +39,7 @@ export function animateHeader(gsap) {
   );
   tlHeader.to(
     ".section__header-img",
-    { yPercent: 60, duration: 1 },
+    { yPercent: 80, duration: 1,scaleY: "1.3" },
     "+=0.5"
   );
   tlHeader.to(".section__header-title", { color: "#000" }, "-=0.7");

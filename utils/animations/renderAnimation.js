@@ -9,7 +9,7 @@ export function animateRender(gsap) {
     },
   });
   tlRender.to(".section__render-img", {
-    yPercent: -100,
+    yPercent: -200,
     duration: 1
   })
   tlRender.to(".section__render-text", {
