@@ -3,9 +3,10 @@ export function animateHeader(gsap) {
     scrollTrigger: {
       trigger: ".section__header",
       start: "top top",
-      end: "+=7000",
+      end: "+=5000",
       scrub: 1,
       pin: true,
+      markers: true,
     },
   });
 
@@ -13,14 +14,13 @@ export function animateHeader(gsap) {
   tlHeader.set(".section__header-title", { color: "#000" });
   tlHeader.set(".section__header-img", { xPercent: -400 });
   tlHeader.to(".section__header-img", {
-    duration: 1,
     xPercent: -10,
-    duration: 1,
+    duration: 0.5,
   });
   tlHeader.to(
     ".section__header-title",
-    { color: "#fff", duration: 1 },
-    "-=0.5"
+    { color: "#fff", duration: 0.5, },
+    "-=0.2"
   );
   tlHeader.to(
     ".section__header-img",
@@ -29,7 +29,7 @@ export function animateHeader(gsap) {
   );
   tlHeader.to(
     ".section__header-title",
-    { top: "41%",yPercent: -41,  duration: 1 },
+    { top: "41%", yPercent: -41, duration: 1 },
     "-=1"
   );
   tlHeader.to(
@@ -38,9 +38,9 @@ export function animateHeader(gsap) {
     "-=0.5"
   );
   tlHeader.to(
-    ".section__header-img",
-    { yPercent: 80, duration: 1,scaleY: "1.3" },
+    ".section__header",
+    { scale: "10", duration: 1 },
     "+=0.5"
   );
-  tlHeader.to(".section__header-title", { color: "#000" }, "-=0.7");
+  tlHeader.to(".section__header-title", { opacity: 0, duration: 0.1 }, "-=0.7");
 }

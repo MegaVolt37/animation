@@ -8,7 +8,7 @@ export function animateContainer(gsap) {
 
   tl.fromTo(".section__finally", {
     x: '100%',
-  }, { x: "-100%", duration: 1 }, "+=0.5")
+  }, { x: "-100%", duration: 1 }, "+=0.1")
   tl.to(".section__finally-img", {
     x: "-60%",
     duration: 1,
@@ -34,19 +34,12 @@ export function animateContainer(gsap) {
     opacity: 1,
     duration: 0.5,
   }, "-=0.5")
-  tl.to(".text__gradient-second", {
-    duration: 1,
-    opacity: 1,
-  })
-  tl.to(".text__gradient-first", {
-    duration: 1,
-    opacity: 0,
-  }, "-=0.5")
   tl.fromTo(".section__angle", {
-    x: "100%"
-  }, { x: "-200%" })
+    x: "-200%",
+    y: "100%"
+  }, { x: "-200%",y: "0" },"+=0.5")
   tl.to(".section__finally", {
-    x: "-200%"
+    y: "-100%"
   }, "-=0.5")
   tl.to(".angle__image-first", {
     top: "-250%"

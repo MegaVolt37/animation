@@ -261,8 +261,11 @@ if (process.client) {
     max-height: 100vh;
     object-fit: contain;
     object-position: center;
+    transition: all 0.2s ease-in-out;
   }
   &-img__color {
+    opacity: 0;
+    z-index: -1;
     position: absolute;
     right: 0;
     top: 0;
@@ -272,6 +275,15 @@ if (process.client) {
     max-height: 100vh;
     object-fit: contain;
     object-position: center;
+    transition: all 0.2s ease-in-out;
+  }
+  &-images:hover .section__drawing-img__color {
+    opacity: 1;
+    z-index: 1;
+  }
+  &-images:hover:hover .section__drawing-img {
+    opacity: 0;
+    z-index: -1;
   }
   &-title {
     margin-bottom: vw(60);
@@ -346,11 +358,19 @@ if (process.client) {
   .text__gradient-first {
     background: none;
     -webkit-text-fill-color: initial;
+    transition: all 0.3s ease-in-out;
   }
   .text__gradient-second {
     position: absolute;
     top: 0;
     opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  .text__gradient-block:hover .text__gradient-first {
+    opacity: 0;
+  }
+  .text__gradient-block:hover .text__gradient-second {
+    opacity: 1;
   }
   &-text__gradient {
     display: block;
@@ -369,7 +389,6 @@ if (process.client) {
     height: 100%;
     object-fit: cover;
     mix-blend-mode: darken;
-
 
     height: 116%;
     -o-object-fit: cover;

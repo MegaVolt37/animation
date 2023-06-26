@@ -15,5 +15,5 @@ export function animateRender(gsap) {
   tlRender.to(".section__render-text", {
     xPercent: -200,
     duration: 1
-  })
+  },"-=0.8")
 }
