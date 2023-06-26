@@ -6,7 +6,6 @@ export function animateHeader(gsap) {
       end: "+=5000",
       scrub: 1,
       pin: true,
-      markers: true,
     },
   });
 
