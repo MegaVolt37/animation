@@ -4,11 +4,15 @@ export function animateDrawing(gsap) {
       trigger: ".section__drawing",
       start: "top top",
       end: "+=5000",
-      scrub: 1,
+      scrub: 1.5,
       pin: true,
     },
   });
   tlDrawing.set(".section__drawing-text", { opacity: 0, xPercent: 100 });
+  tlDrawing.fromTo(".section__drawing-images", { opacity: 0, scale: 0 }, {
+    scale: 1,
+    opacity: 1,
+  });
   tlDrawing.to(
     ".section__drawing-text",
     {
@@ -16,19 +20,11 @@ export function animateDrawing(gsap) {
       opacity: 1,
     });
   tlDrawing.to(
-    ".section__drawing-images",
-    {
-      yPercent: -100,
-      duration: 1
-    },
-    "+=0.5"
-  );
-  tlDrawing.to(
     ".section__drawing-text",
     {
       yPercent: -200,
       duration: 1
     },
-    "-=1"
+    "+=0.5"
   );
 }

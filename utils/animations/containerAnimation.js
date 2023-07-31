@@ -8,7 +8,7 @@ export function animateContainer(gsap) {
 
   tl.fromTo(".section__finally", {
     x: '100%',
-  }, { x: "-100%", duration: 1 }, "+=0.1")
+  }, { x: "-100%", duration: 2 }, "+=1.5")
   tl.to(".section__finally-img", {
     x: "-60%",
     duration: 1,
@@ -37,7 +37,7 @@ export function animateContainer(gsap) {
   tl.fromTo(".section__angle", {
     x: "-200%",
     y: "100%"
-  }, { x: "-200%",y: "0" },"+=0.5")
+  }, { x: "-200%", y: "0" }, "+=0.5")
   tl.to(".section__finally", {
     y: "-100%"
   }, "-=0.5")
@@ -53,7 +53,6 @@ export function animateContainer(gsap) {
   tl.to(".angle__image-third", {
     top: "0"
   }, "-=0.4")
-
 
   ScrollTrigger.create({
     animation: tl,

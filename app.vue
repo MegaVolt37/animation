@@ -2,7 +2,7 @@
   <div>
     <div class="wrapper">
       <div class="content">
-        <section class="section__header bg__white" data-speed="0.6">
+        <section class="section__header bg__white">
           <div class="section__header-image">
             <img
               class="section__header-img"

@@ -4,7 +4,7 @@ export function animateHeader(gsap) {
       trigger: ".section__header",
       start: "top top",
       end: "+=5000",
-      scrub: 1,
+      scrub: 1.5,
       pin: true,
     },
   });
@@ -14,12 +14,12 @@ export function animateHeader(gsap) {
   tlHeader.set(".section__header-img", { xPercent: -400 });
   tlHeader.to(".section__header-img", {
     xPercent: -10,
-    duration: 0.5,
+    duration: 3,
   });
   tlHeader.to(
     ".section__header-title",
-    { color: "#fff", duration: 0.5, },
-    "-=0.2"
+    { color: "#fff", duration: 1.5, },
+    "-=1.3"
   );
   tlHeader.to(
     ".section__header-img",
