@@ -2,23 +2,25 @@
   <div>
     <div class="wrapper">
       <div class="content">
-        <section class="section__header bg__white">
-          <div class="section__header-image">
-            <img
-              class="section__header-img"
-              src="@/assets/images/bottle.svg"
-              alt="bottle"
-            />
-          </div>
+        <div class="section__header-wrapper">
+          <section class="section__header bg__white">
+            <div class="section__header-image">
+              <img
+                class="section__header-img"
+                src="@/assets/images/bottle.svg"
+                alt="bottle"
+              />
+            </div>
 
-          <h1 class="section__title section__header-title text__white">
-            3d визуализация бутылки
-          </h1>
-          <p class="section__subtitle section__header-subtitle text__black">
-            с помощью 3D визуализации создали реалистичную модель упаковки
-            подсолнечного масла
-          </p>
-        </section>
+            <h1 class="section__title section__header-title text__white">
+              3d визуализация бутылки
+            </h1>
+            <p class="section__subtitle section__header-subtitle text__black">
+              с помощью 3D визуализации создали реалистичную модель упаковки
+              подсолнечного масла
+            </p>
+          </section>
+        </div>
         <section class="section__drawing bg__black">
           <div class="section__drawing-images">
             <img
@@ -190,11 +192,19 @@ gsap.registerPlugin(ScrollTrigger);
 
 if (process.client) {
   await nextTick();
-  animateHeader(gsap);
-  animateDrawing(gsap);
-  animateModeling(gsap);
-  animateRender(gsap);
-  animateContainer(gsap);
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".content",
+      start: "top top",
+      end: () => document.querySelector(".content").offsetHeight,
+      scrub: 1.5,
+    },
+  });
+  tl.add(animateHeader(gsap));
+  tl.add(animateDrawing(gsap));
+  tl.add(animateModeling(gsap));
+  tl.add(animateRender(gsap));
+  tl.add(animateContainer(gsap));
 }
 </script>
 <style lang="scss">
@@ -202,6 +212,10 @@ if (process.client) {
   width: 300vw;
   display: flex;
   height: 100vh;
+}
+.section__header-wrapper {
+  overflow: hidden;
+  max-height: 100vh;
 }
 .section__header {
   display: grid;

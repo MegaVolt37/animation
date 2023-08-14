@@ -5,6 +5,9 @@ body {
 .wrapper {
   overflow-x: hidden;
 }
+.content {
+  overflow: hidden;
+}
 main {
   display: flex;
   width: 700vw;

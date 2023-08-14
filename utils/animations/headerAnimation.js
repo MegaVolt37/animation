@@ -1,14 +1,13 @@
 export function animateHeader(gsap) {
   const tlHeader = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".section__header",
-      start: "top top",
-      end: "+=5000",
-      scrub: 1.5,
-      pin: true,
-    },
+    // scrollTrigger: {
+    //   trigger: ".section__header-wrapper",
+    //   start: "top top",
+    //   end: "+=5000",
+    //   scrub: 1.5,
+    //   pin: true,
+    // },
   });
-
   tlHeader.set(".section__header-subtitle", { opacity: 0, yPercent: 100 });
   tlHeader.set(".section__header-title", { color: "#000" });
   tlHeader.set(".section__header-img", { xPercent: -400 });
