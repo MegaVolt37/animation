@@ -63,7 +63,7 @@
             </p>
           </div>
         </section>
-        <div class="section__wrapper">
+        <!-- <div class="section__wrapper">
           <section class="section__render bg__gray">
             <div class="section__render-image">
               <img
@@ -93,7 +93,6 @@
                 alt="bottle"
               />
             </div>
-
             <div class="section__finally-text">
               <div class="text__first">
                 <h1 class="section__title section__finally-title text__black">
@@ -170,7 +169,7 @@
               </div>
             </div>
           </section>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -178,6 +177,7 @@
 <script setup>
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Observer } from "gsap/Observer";
 import {
   animateHeader,
   animateDrawing,
@@ -188,30 +188,45 @@ import {
 } from "@/utils/animations/index";
 import "@/assets/styles/main.scss";
 const nuxtApp = useNuxtApp();
-gsap.registerPlugin(ScrollTrigger);
-
+gsap.registerPlugin(ScrollTrigger, Observer);
 if (process.client) {
   await nextTick();
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".content",
       start: "top top",
-      end: () => document.querySelector(".content").offsetHeight,
-      scrub: 1.5,
+      scrub: true,
+      pin: true,
+      // onUpdate: (self) => {
+      //   if (posTop.value < self.scroller.pageYOffset) tlHeader.play();
+      // },
     },
   });
-  tl.add(animateHeader(gsap));
-  tl.add(animateDrawing(gsap));
-  tl.add(animateModeling(gsap));
-  tl.add(animateRender(gsap));
-  tl.add(animateContainer(gsap));
+  // const animateSectionHeader = () => {
+  //   gsap.timeline({
+  //     scrollTrigger: {
+  //       trigger: ".section__header-wrapper",
+  //       start: "top+=1px top",
+  //       scrup: true,
+  //       pin: true,
+  //     },
+  //   });
+  // };
+  // animateHeader(gsap, Observer);
+  tl.add(animateHeader(gsap, tl));
+  animateDrawing(gsap);
+  // tl.add(animateDrawing(gsap));
+  // tl.add(animateModeling(gsap));
+  // tl.add(animateRender(gsap));
+  // tl.add(animateFinally(gsap, trigger));
+  // tl.add(animateContainer(gsap));
 }
 </script>
 <style lang="scss">
 .section__wrapper {
-  width: 300vw;
-  display: flex;
-  height: 100vh;
+  // width: 300vw;
+  // display: flex;
+  // height: 100vh;
 }
 .section__header-wrapper {
   overflow: hidden;
