@@ -2,18 +2,22 @@ body {
   font-family: 'SFPRO500';
   overflow-x: hidden;
 }
+
 .wrapper {
   overflow-x: hidden;
 }
+
 .content {
-  overflow: hidden;
+  overflow-x: hidden;
 }
+
 main {
   display: flex;
   width: 700vw;
   height: 100vh;
   overflow-x: hidden;
 }
+
 section {
   min-height: 100vh;
   // height: 100vh;
@@ -30,6 +34,7 @@ section {
 .bg__black {
   background-color: $black;
 }
+
 .bg__gray {
   background-color: $light-gray;
 }
@@ -45,9 +50,11 @@ section {
 .text__gray {
   color: #757575;
 }
+
 .text__light-gray {
   color: #AFAFAF;
 }
+
 .text__gradient {
   font-family: 'SFPRO600';
   font-size: vw(38);

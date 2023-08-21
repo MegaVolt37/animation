@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="site">
     <div class="wrapper">
       <div class="content">
-        <div class="section__header-wrapper">
+        <div class="section__header-wrapper section">
           <section class="section__header bg__white">
             <div class="section__header-image">
               <img
@@ -21,7 +21,7 @@
             </p>
           </section>
         </div>
-        <section class="section__drawing bg__black">
+        <section class="section__drawing bg__black section">
           <div class="section__drawing-images">
             <img
               class="section__drawing-img"
@@ -46,7 +46,7 @@
             </p>
           </div>
         </section>
-        <section class="section__modeling bg__black">
+        <!-- <section class="section__modeling bg__black section">
           <img
             class="section__modeling-img"
             src="@/assets/images/bottle__modeling.png"
@@ -62,7 +62,7 @@
               приближенный к финальному результату
             </p>
           </div>
-        </section>
+        </section> -->
         <!-- <div class="section__wrapper">
           <section class="section__render bg__gray">
             <div class="section__render-image">
@@ -189,6 +189,10 @@ import {
 import "@/assets/styles/main.scss";
 const nuxtApp = useNuxtApp();
 gsap.registerPlugin(ScrollTrigger, Observer);
+ScrollTrigger.config({
+  invalidateOnRefresh: true,
+});
+
 if (process.client) {
   await nextTick();
   const tl = gsap.timeline({
@@ -196,33 +200,36 @@ if (process.client) {
       trigger: ".content",
       start: "top top",
       scrub: true,
-      pin: true,
-      // onUpdate: (self) => {
-      //   if (posTop.value < self.scroller.pageYOffset) tlHeader.play();
-      // },
+      // pin: true,
+      // toggleActions: "play none none reverse",
+      onUpdate: (self) => {},
     },
   });
-  // const animateSectionHeader = () => {
-  //   gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: ".section__header-wrapper",
-  //       start: "top+=1px top",
-  //       scrup: true,
-  //       pin: true,
-  //     },
-  //   });
-  // };
-  // animateHeader(gsap, Observer);
-  tl.add(animateHeader(gsap, tl));
-  animateDrawing(gsap);
-  // tl.add(animateDrawing(gsap));
+  tl.add(animateHeader(gsap, tl, scrollToSection));
+  // animateDrawing(gsap);
+  // tl.add(animateDrawing(gsap, tl, scrollToSection));
   // tl.add(animateModeling(gsap));
   // tl.add(animateRender(gsap));
   // tl.add(animateFinally(gsap, trigger));
   // tl.add(animateContainer(gsap));
+  function scrollToSection(value) {
+    const section = document.querySelector(`.${value}`);
+    section.scrollIntoView({ behavior: "smooth", block: "end" });
+  }
 }
 </script>
 <style lang="scss">
+.wrapper {
+  // height: 100vh;
+}
+.content {
+  // width: 300vw;
+  // display: flex;
+}
+.section {
+  width: 100vw;
+  // height: 100%;
+}
 .section__wrapper {
   // width: 300vw;
   // display: flex;
@@ -235,7 +242,8 @@ if (process.client) {
 .section__header {
   display: grid;
   position: relative;
-  padding-top: 78vh;
+  // padding-top: 78vh;
+  overflow: hidden;
   &-image {
     position: absolute;
     right: 0;
