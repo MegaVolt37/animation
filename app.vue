@@ -46,7 +46,7 @@
             </p>
           </div>
         </section>
-        <!-- <section class="section__modeling bg__black section">
+        <section class="section__modeling bg__black section">
           <img
             class="section__modeling-img"
             src="@/assets/images/bottle__modeling.png"
@@ -62,114 +62,113 @@
               приближенный к финальному результату
             </p>
           </div>
-        </section> -->
-        <!-- <div class="section__wrapper">
-          <section class="section__render bg__gray">
-            <div class="section__render-image">
-              <img
-                class="section__render-img"
-                src="@/assets/images/bottle__render.png"
-                alt="bottle"
-              />
-            </div>
+        </section>
 
-            <div class="section__render-text">
-              <h1 class="section__title section__render-title text__black">
-                Рендер
+        <section class="section__render section bg__gray">
+          <div class="section__render-image">
+            <img
+              class="section__render-img"
+              src="@/assets/images/bottle__render.png"
+              alt="bottle"
+            />
+          </div>
+
+          <div class="section__render-text">
+            <h1 class="section__title section__render-title text__black">
+              Рендер
+            </h1>
+            <p
+              class="section__subtitle section__render-subtitle text__light-gray"
+            >
+              <span class="text__black">конечный процесс создания</span>
+              реального объекта из подготовленной сцены.
+            </p>
+          </div>
+        </section>
+        <section class="section__finally section bg__gray">
+          <div class="section__finally__block-img">
+            <img
+              class="section__finally-img"
+              src="@/assets/images/bottle__finally.png"
+              alt="bottle"
+            />
+          </div>
+          <div class="section__finally-text">
+            <div class="text__first">
+              <h1 class="section__title section__finally-title text__black">
+                Финал
               </h1>
               <p
-                class="section__subtitle section__render-subtitle text__light-gray"
+                class="section__subtitle section__finally-subtitle text__light-gray"
               >
-                <span class="text__black">конечный процесс создания</span>
-                реального объекта из подготовленной сцены.
+                <span class="text__black"
+                  >добавить еще тройку строк текста про визуализацию</span
+                >
+                для чего и каких целей она реализована, возможно рассказать про
+                этикетку.
               </p>
             </div>
-          </section>
-          <section class="section__finally bg__gray">
-            <div class="section__finally__block-img">
+            <div class="text__second">
+              <p
+                class="section__subtitle section__finally-end-subtitle text__light-gray"
+              >
+                <span class="text__black">высокая детализация</span> 10K —
+                обозначение разрешающей способности в цифровом кинематографе и
+                компьютерной графике, приблизительно соответствующее 10000
+                пикселей по горизонтали.
+              </p>
+              <div class="text__gradient-block">
+                <span
+                  class="text__gradient text__black text__gradient-first section__finally-end-text__gradient"
+                  >44 236 800 пикселей</span
+                >
+                <span
+                  class="text__gradient text__gradient-second section__finally-end-text__gradient"
+                  >44 236 800 пикселей</span
+                >
+              </div>
+
+              <p
+                class="section__subtitle section__finally-end-subtitle text__light-gray"
+              >
+                10K UHD (10240 × 4320)
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="section__angle section bg__white">
+          <div class="section__angle-content">
+            <div class="section__angle-block__images">
               <img
-                class="section__finally-img"
-                src="@/assets/images/bottle__finally.png"
+                class="angle__image-first section__angle-img"
+                src="@/assets/images/Etiketka.png"
+                alt="bottle"
+              />
+              <img
+                class="angle__image-second section__angle-img"
+                src="@/assets/images/Etiketka22.png"
+                alt="bottle"
+              />
+              <img
+                class="angle__image-third section__angle-img"
+                src="@/assets/images/Etiketka24.png"
                 alt="bottle"
               />
             </div>
-            <div class="section__finally-text">
-              <div class="text__first">
-                <h1 class="section__title section__finally-title text__black">
-                  Финал
-                </h1>
-                <p
-                  class="section__subtitle section__finally-subtitle text__light-gray"
-                >
-                  <span class="text__black"
-                    >добавить еще тройку строк текста про визуализацию</span
-                  >
-                  для чего и каких целей она реализована, возможно рассказать
-                  про этикетку.
-                </p>
-              </div>
-              <div class="text__second">
-                <p
-                  class="section__subtitle section__finally-end-subtitle text__light-gray"
-                >
-                  <span class="text__black">высокая детализация</span> 10K —
-                  обозначение разрешающей способности в цифровом кинематографе и
-                  компьютерной графике, приблизительно соответствующее 10000
-                  пикселей по горизонтали.
-                </p>
-                <div class="text__gradient-block">
-                  <span
-                    class="text__gradient text__black text__gradient-first section__finally-end-text__gradient"
-                    >44 236 800 пикселей</span
-                  >
-                  <span
-                    class="text__gradient text__gradient-second section__finally-end-text__gradient"
-                    >44 236 800 пикселей</span
-                  >
-                </div>
 
-                <p
-                  class="section__subtitle section__finally-end-subtitle text__light-gray"
-                >
-                  10K UHD (10240 × 4320)
-                </p>
-              </div>
+            <div class="section__angle-text">
+              <h1 class="section__title section__angle-title text__black">
+                7 разных ракурсов
+              </h1>
+              <p
+                class="section__subtitle section__angle-subtitle text__light-gray"
+              >
+                добавить еще тройку строк текста про визуализацию для чего и
+                каких целей она реализована, возможно рассказать про этикетку.
+              </p>
             </div>
-          </section>
-          <section class="section__angle bg__white">
-            <div class="section__angle-content">
-              <div class="section__angle-block__images">
-                <img
-                  class="angle__image-first section__angle-img"
-                  src="@/assets/images/Etiketka.png"
-                  alt="bottle"
-                />
-                <img
-                  class="angle__image-second section__angle-img"
-                  src="@/assets/images/Etiketka22.png"
-                  alt="bottle"
-                />
-                <img
-                  class="angle__image-third section__angle-img"
-                  src="@/assets/images/Etiketka24.png"
-                  alt="bottle"
-                />
-              </div>
-
-              <div class="section__angle-text">
-                <h1 class="section__title section__angle-title text__black">
-                  7 разных ракурсов
-                </h1>
-                <p
-                  class="section__subtitle section__angle-subtitle text__light-gray"
-                >
-                  добавить еще тройку строк текста про визуализацию для чего и
-                  каких целей она реализована, возможно рассказать про этикетку.
-                </p>
-              </div>
-            </div>
-          </section>
-        </div> -->
+          </div>
+        </section>
       </div>
     </div>
   </div>
@@ -195,54 +194,57 @@ ScrollTrigger.config({
 
 if (process.client) {
   await nextTick();
+  const main = document.querySelector(".content");
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".content",
       start: "top top",
+      end: () => main.offsetWidth / 2,
       scrub: true,
-      // pin: true,
-      // toggleActions: "play none none reverse",
-      onUpdate: (self) => {},
+      pin: true,
     },
   });
-  tl.add(animateHeader(gsap, tl, scrollToSection));
-  // animateDrawing(gsap);
-  // tl.add(animateDrawing(gsap, tl, scrollToSection));
-  // tl.add(animateModeling(gsap));
-  // tl.add(animateRender(gsap));
-  // tl.add(animateFinally(gsap, trigger));
-  // tl.add(animateContainer(gsap));
-  function scrollToSection(value) {
-    const section = document.querySelector(`.${value}`);
-    section.scrollIntoView({ behavior: "smooth", block: "end" });
-  }
+  const tlS = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".content",
+      start: "top top",
+      toggleActions: "play none none reverse",
+    },
+  });
+  tl.set(".section__header-wrapper", { x: "0", y: "0" });
+  tl.set(".section__drawing", { x: "-100%", y: "+100%" });
+  tl.set(".section__modeling", { x: "-200%", y: "+100%" });
+  tl.set(".section__render", { x: "-300%", y: "+100%" });
+  tl.set(".section__finally", { x: "-400%", y: "+100%" });
+  tl.set(".section__angle", { x: "-500%", y: "+100%" });
+  tl.add(animateHeader(gsap, tl));
+  tl.add(animateDrawing(gsap, tl));
+  tl.add(animateModeling(gsap, tl));
+
+  tl.add(animateRender(gsap, tl));
+  tl.add(animateFinally(gsap, tl));
+  // tl.add(animateContainer(gsap, tl));
 }
 </script>
 <style lang="scss">
-.wrapper {
-  // height: 100vh;
-}
 .content {
-  // width: 300vw;
-  // display: flex;
+  height: 100vh;
+  display: flex;
+  width: 600vw;
 }
 .section {
   width: 100vw;
-  // height: 100%;
-}
-.section__wrapper {
-  // width: 300vw;
-  // display: flex;
-  // height: 100vh;
+  height: 100vh;
+  z-index: 1;
 }
 .section__header-wrapper {
-  overflow: hidden;
-  max-height: 100vh;
+  height: 100%;
 }
 .section__header {
+  height: 100%;
   display: grid;
   position: relative;
-  // padding-top: 78vh;
+  padding-top: 78vh;
   overflow: hidden;
   &-image {
     position: absolute;
@@ -277,11 +279,9 @@ if (process.client) {
   }
 }
 .section__drawing {
-  height: auto;
   display: flex;
   align-items: center;
   gap: vw(70);
-  height: 100vh;
   &-images {
     position: relative;
     height: 100%;

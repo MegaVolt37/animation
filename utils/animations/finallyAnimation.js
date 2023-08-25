@@ -3,12 +3,10 @@ export function animateFinally(gsap, trigger) {
   const tlRender = gsap.timeline({
     scrollTrigger: {
       trigger: ".section__finally",
-      start: "top-=1px top",
-      end: "+=1000",
+      start: "top top",
       toggleActions: "play none none reverse",
-      pin: true,
     },
-  }, "-=2");
+  });
   tlRender.set(".section__finally-img", {
     x: '150%'
   })
@@ -19,10 +17,8 @@ export function animateFinally(gsap, trigger) {
   tlRender.to(".section__finally-img", {
     x: "-60%", ease: "power1.in", scrollTrigger: {
       trigger: ".section__finally",
-      start: "top-=1px top",
-      scrub: 3,
+      start: "top top",
     }, duration: 2.2, onComplete: () => {
-      posTop = window.scrollY;
       // tlRender.pause();
       // tlRender.scrollTrigger.disable(false);
       // tlRenderTwo.scrollTrigger.enable();
@@ -43,7 +39,6 @@ export function animateFinally(gsap, trigger) {
 
   tlRender.to(".section__finally-text", {
     opacity: 1, x: 0, onComplete: () => {
-      posTop = window.scrollY;
       // tlRenderTwo.pause();
     }
   }, "+=3.5")

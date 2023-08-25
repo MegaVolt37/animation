@@ -1,14 +1,10 @@
-export function animateRender(gsap) {
+export function animateRender(gsap, tl) {
   let posTop;
   const tlRender = gsap.timeline({
     scrollTrigger: {
       trigger: ".section__render",
-      // start: "top top",
-      start: "top-=1px top",
-      end: "+=800",
-      // scrub: 1.5,
+      start: "top top",
       toggleActions: "play none none reverse",
-      // pin: true,
       onUpdate: (self) => {
         if (posTop < self.scroller.pageYOffset) tlRender.play();
       },

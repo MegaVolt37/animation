@@ -3,14 +3,6 @@ body {
   overflow-x: hidden;
 }
 
-.wrapper {
-  overflow-x: hidden;
-}
-
-.content {
-  overflow-x: hidden;
-}
-
 main {
   display: flex;
   width: 700vw;
@@ -18,14 +10,6 @@ main {
   overflow-x: hidden;
 }
 
-section {
-  min-height: 100vh;
-  // height: 100vh;
-  position: relative;
-  overflow: hidden;
-  width: 100vw;
-
-}
 
 .bg__white {
   background-color: $white;

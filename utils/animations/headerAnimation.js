@@ -1,28 +1,16 @@
 export function animateHeader(gsap, tl, scrollToSection) {
   let posTop;
+  const main = document.querySelector(".wrapper");
   const tlHeader = gsap.timeline({
     scrollTrigger: {
       trigger: ".section__header-wrapper",
       start: "top+=1px top",
       toggleActions: "play none none reverse",
-      pin: true,
       onUpdate: (self) => {
-        // if (tlHeader.paused() || tlHeader.progress() !== 1) tlHeader.resume();
-
         if (self.animation.scrollTrigger.isActive) {
-          // Разрешаем скролл после завершения анимации
           tlHeader.resume();
         }
       },
-      // onToggle: (self) => {
-      //   console.log(self.animation.scrollTrigger.isActive)
-      //   if (self.animation.scrollTrigger.isActive) {
-      //     // Разрешаем скролл после завершения анимации
-      //     tlHeader.resume();
-      //   } else {
-      //     tlHeader.pause();
-      //   }
-      // },
     },
   });
   tlHeader.fromTo(".section__header-img", {
@@ -35,6 +23,11 @@ export function animateHeader(gsap, tl, scrollToSection) {
     },
     xPercent: -10,
     duration: 1.5,
+    onStart: () => {
+      tlHeader.pause();
+    },
+    onComplete: () => {
+    }
   })
   tlHeader.fromTo(".section__header-title", {
     color: "#000"
@@ -47,12 +40,9 @@ export function animateHeader(gsap, tl, scrollToSection) {
     color: "#fff",
     duration: 1.6,
     onComplete: () => {
-      // posTop = window.scrollY;
-      // tl.scrollTrigger.disable()
+      posTop = window.scrollY;
       tlHeader.pause();
-      // const body = document.body;
-      // body.style.overflow = "hidden";
-    },
+    }
   })
   tlHeader.fromTo(
     ".section__header-img", {
@@ -85,8 +75,8 @@ export function animateHeader(gsap, tl, scrollToSection) {
     opacity: 0, yPercent: 100
   },
     {
-      opacity: 1, yPercent: 0, duration: 1, onComplete: () => {
-        posTop = window.scrollY;
+      opacity: 1, yPercent: 0, duration: 1,
+      onComplete: () => {
         tlHeader.pause();
       }
     },
@@ -97,8 +87,8 @@ export function animateHeader(gsap, tl, scrollToSection) {
     {
       scale: "2.5", duration: 3, yPercent: 0,
       onComplete: () => {
-        tl.scrollTrigger.enable()
-        scrollToSection('section__drawing')
+        tl.to(".section__header-wrapper", { y: "-100%" });
+        tl.to(".section__drawing", { y: 0 }, "<");
       }
     }
   )
