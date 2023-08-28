@@ -63,8 +63,7 @@
             </p>
           </div>
         </section>
-
-        <section class="section__render section bg__gray">
+        <section class="section__render bg__gray section">
           <div class="section__render-image">
             <img
               class="section__render-img"
@@ -136,7 +135,7 @@
             </div>
           </div>
         </section>
-        <section class="section__angle section bg__white">
+        <!-- <section class="section__angle section bg__white">
           <div class="section__angle-content">
             <div class="section__angle-block__images">
               <img
@@ -168,7 +167,7 @@
               </p>
             </div>
           </div>
-        </section>
+        </section> -->
       </div>
     </div>
   </div>
@@ -184,7 +183,7 @@ import {
   animateRender,
   animateFinally,
   animateContainer,
-} from "@/utils/animations/index";
+} from "@/utils/animations";
 import "@/assets/styles/main.scss";
 const nuxtApp = useNuxtApp();
 gsap.registerPlugin(ScrollTrigger, Observer);
@@ -200,27 +199,20 @@ if (process.client) {
       trigger: ".content",
       start: "top top",
       end: () => main.offsetWidth / 2,
+      // end: "+=10000",
       scrub: true,
       pin: true,
     },
   });
-  const tlS = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".content",
-      start: "top top",
-      toggleActions: "play none none reverse",
-    },
-  });
   tl.set(".section__header-wrapper", { x: "0", y: "0" });
   tl.set(".section__drawing", { x: "-100%", y: "+100%" });
-  tl.set(".section__modeling", { x: "-200%", y: "+100%" });
-  tl.set(".section__render", { x: "-300%", y: "+100%" });
-  tl.set(".section__finally", { x: "-400%", y: "+100%" });
-  tl.set(".section__angle", { x: "-500%", y: "+100%" });
+  tl.set(".section__modeling", { x: "-200%", y: "+200%" });
+  tl.set(".section__render", { x: "-300%", y: "+300%" });
+  tl.set(".section__finally", { x: "-400%", y: "+400%" });
+  tl.set(".section__angle", { x: "-500%", y: "+500%" });
   tl.add(animateHeader(gsap, tl));
   tl.add(animateDrawing(gsap, tl));
   tl.add(animateModeling(gsap, tl));
-
   tl.add(animateRender(gsap, tl));
   tl.add(animateFinally(gsap, tl));
   // tl.add(animateContainer(gsap, tl));
@@ -234,8 +226,7 @@ if (process.client) {
 }
 .section {
   width: 100vw;
-  height: 100vh;
-  z-index: 1;
+  height: 100%;
 }
 .section__header-wrapper {
   height: 100%;

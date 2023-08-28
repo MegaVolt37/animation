@@ -86,13 +86,11 @@ export function animateHeader(gsap, tl, scrollToSection) {
     ".section__header-img", { scale: "1" },
     {
       scale: "2.5", duration: 3, yPercent: 0,
-      onComplete: () => {
-        tl.to(".section__header-wrapper", { y: "-100%" });
-        tl.to(".section__drawing", { y: 0 }, "<");
-      }
     }
   )
   tlHeader.fromTo(".section__header-title", { opacity: 1 }, {
     opacity: 0, duration: 3, scale: "2.5",
   }, "-=3");
+  tlHeader.to(".section__header-wrapper", { y: "-100%" });
+  tlHeader.to(".section__drawing", { y: 0 }, "<");
 }

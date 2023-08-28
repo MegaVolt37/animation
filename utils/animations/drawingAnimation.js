@@ -5,7 +5,6 @@ export function animateDrawing(gsap, tl) {
       trigger: ".section__drawing",
       start: "top top",
       toggleActions: "play none none reverse",
-      markers: true,
       onUpdate: (self) => {
         if (self.animation.scrollTrigger.isActive) {
           tlDrawing.resume();
@@ -13,8 +12,6 @@ export function animateDrawing(gsap, tl) {
       },
     },
   });
-  // tlDrawing.set(".section__drawing-text", { opacity: 0, xPercent: 100 });
-  // tlDrawing.set(".section__drawing-images", { opacity: 0, scale: 0 });
   tlDrawing.fromTo(".section__drawing-images", {
     opacity: 0, scale: 0
   }, {
@@ -25,7 +22,7 @@ export function animateDrawing(gsap, tl) {
     scale: 1,
     opacity: 1, onComplete: () => {
       posTop = window.scrollY;
-      // tlDrawing.pause();
+      tlDrawing.pause();
     }
   });
   tlDrawing.fromTo(
@@ -48,6 +45,7 @@ export function animateDrawing(gsap, tl) {
     ".section__drawing-text",
     {
       yPercent: 0,
+      opacity: 1,
     },
     {
       scrollTrigger: {
@@ -55,12 +53,17 @@ export function animateDrawing(gsap, tl) {
         toggleActions: "play none none reverse",
       },
       yPercent: -200,
+      opacity: 0,
       duration: 1,
-      onComplete: () => {
-        tl.to(".section__drawing", { y: "-100%" });
-        tl.to(".section__modeling", { y: 0 }, "<");
-      }
     },
     "+=0.5"
   );
+  tlDrawing.to(".section__drawing", {
+    y: "-100%",
+    duration: 1
+  }, "+=1.5");
+  tlDrawing.to(".section__modeling", {
+    y: 0,
+    duration: 1
+  }, "-=1.3");
 }
