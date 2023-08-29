@@ -36,6 +36,7 @@ export function animateHeader(gsap, tl, scrollToSection) {
       trigger: ".section__header-wrapper",
       start: "top-=1px top",
       toggleActions: "play none none reverse",
+      markers: true,
     },
     color: "#fff",
     duration: 1.6,

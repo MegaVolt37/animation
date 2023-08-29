@@ -3,7 +3,7 @@ import { animateDrawing } from './drawingAnimation';
 import { animateModeling } from './modelingAnimation';
 import { animateRender } from './renderAnimation';
 import { animateFinally } from './finallyAnimation';
-import { animateContainer } from './containerAnimation';
+import { animateAngle } from './angleAnimation';
 
 export {
   animateHeader,
@@ -11,5 +11,5 @@ export {
   animateModeling,
   animateRender,
   animateFinally,
-  animateContainer,
+  animateAngle,
 };

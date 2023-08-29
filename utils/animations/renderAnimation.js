@@ -47,8 +47,7 @@ export function animateRender(gsap, tl) {
     duration: 1
   }, "<")
   tlRender.to(".section__render", {
-    y: "0",
-    x: "-400%",
+    y: "-100%",
     duration: 1
   }, "+=1.5")
   tlRender.to(".section__finally", {

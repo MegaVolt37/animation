@@ -5,6 +5,7 @@ export function animateFinally(gsap, trigger) {
       trigger: ".section__finally",
       start: "top top",
       toggleActions: "play none none reverse",
+      markers: true,
       onUpdate: (self) => {
         if (self.animation.scrollTrigger.isActive) {
           tlRender.resume();
@@ -42,7 +43,10 @@ export function animateFinally(gsap, trigger) {
     scale: 1.9,
     xPercent: -39,
     yPercent: 21,
-    duration: 0.5
+    duration: 0.5,
+    onComplete: () => {
+      tlRender.pause();
+    }
   }, ">")
   tlRender.to(".text__first", {
     scrollTrigger: {
@@ -66,8 +70,22 @@ export function animateFinally(gsap, trigger) {
     opacity: 1,
     duration: 0.5,
   }, "<")
-  // tlRenderTwo.fromTo(".section__angle", {
-  //   x: "-200%",
-  //   y: "100%"
-  // }, { x: "-200%", y: "0" }, "+=0.5")
+  tlRender.fromTo(".section__finally", {
+    y: 0,
+  }, {
+    scrollTrigger: {
+      trigger: ".section__finally",
+      toggleActions: "play none none reverse",
+    },
+    y: "-100%",
+    duration: 1
+  }, ">");
+  tlRender.to(".section__angle", {
+    scrollTrigger: {
+      trigger: ".section__finally",
+      toggleActions: "play none none reverse",
+    },
+    y: 0,
+    duration: 1
+  }, "<");
 }

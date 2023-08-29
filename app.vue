@@ -135,7 +135,7 @@
             </div>
           </div>
         </section>
-        <!-- <section class="section__angle section bg__white">
+        <section class="section__angle bg__white section">
           <div class="section__angle-content">
             <div class="section__angle-block__images">
               <img
@@ -167,7 +167,7 @@
               </p>
             </div>
           </div>
-        </section> -->
+        </section>
       </div>
     </div>
   </div>
@@ -182,7 +182,7 @@ import {
   animateModeling,
   animateRender,
   animateFinally,
-  animateContainer,
+  animateAngle,
 } from "@/utils/animations";
 import "@/assets/styles/main.scss";
 const nuxtApp = useNuxtApp();
@@ -198,7 +198,7 @@ if (process.client) {
     scrollTrigger: {
       trigger: ".content",
       start: "top top",
-      end: () => main.offsetWidth / 2,
+      end: () => main.offsetWidth,
       // end: "+=10000",
       scrub: true,
       pin: true,
@@ -215,7 +215,7 @@ if (process.client) {
   tl.add(animateModeling(gsap, tl));
   tl.add(animateRender(gsap, tl));
   tl.add(animateFinally(gsap, tl));
-  // tl.add(animateContainer(gsap, tl));
+  tl.add(animateAngle(gsap, tl));
 }
 </script>
 <style lang="scss">
@@ -365,6 +365,7 @@ if (process.client) {
 .section__finally {
   background-color: $light-gray;
   display: flex;
+  overflow: hidden;
   &-text {
     height: fit-content;
     margin: auto;

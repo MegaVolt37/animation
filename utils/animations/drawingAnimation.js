@@ -5,6 +5,7 @@ export function animateDrawing(gsap, tl) {
       trigger: ".section__drawing",
       start: "top top",
       toggleActions: "play none none reverse",
+      markers: true,
       onUpdate: (self) => {
         if (self.animation.scrollTrigger.isActive) {
           tlDrawing.resume();

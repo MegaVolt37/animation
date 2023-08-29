@@ -4,6 +4,7 @@ export function animateModeling(gsap, tl) {
       trigger: ".section__modeling",
       start: "top top",
       toggleActions: "play none none reverse",
+      markers: true,
     },
   });
   tlModeling.fromTo(".section__modeling-text", {
