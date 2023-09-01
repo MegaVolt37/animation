@@ -9,14 +9,14 @@ export function animateDrawing(gsap, tl) {
       markers: true
     },
   });
-  tlDrawing.fromTo(".section__drawing-images", {
+  tl.fromTo(".section__drawing-images", {
     opacity: 0, scale: 0
   }, {
     scale: 1,
     opacity: 1,
     duration: 24,
   });
-  tlDrawing.fromTo(
+  tl.fromTo(
     ".section__drawing-text",
     {
       opacity: 0, xPercent: 100
@@ -26,7 +26,7 @@ export function animateDrawing(gsap, tl) {
       opacity: 1,
       duration: 24,
     });
-  tlDrawing.to(
+  tl.to(
     ".section__drawing-text", {
     yPercent: -200,
     opacity: 0,
@@ -34,14 +34,14 @@ export function animateDrawing(gsap, tl) {
   },
     "+=15"
   );
-  tlDrawing.to(".section__drawing", {
-    y: "-100%",
+  tl.to(".section__drawing", {
+    top: "-100%",
     duration: 40,
   }, "+=1.5");
-  tlDrawing.to(".section__modeling", {
-    y: 0,
+  tl.to(".section__modeling", {
+    top: 0,
     duration: 40,
-  }, "<-=4.4");
+  }, "<");
 
   return tlDrawing
 }

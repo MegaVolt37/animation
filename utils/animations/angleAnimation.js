@@ -9,23 +9,23 @@ export function animateAngle(gsap, tl) {
       markers: true
     },
   });
-  tlAngle.fromTo(".angle__image-first", {
+  tl.fromTo(".angle__image-first", {
     top: 0
   }, {
     top: "-250%",
     duration: 24
   }, "+=10")
-  tlAngle.fromTo(".angle__image-second", {
+  tl.fromTo(".angle__image-second", {
     top: "250%",
   }, {
     top: 0,
     duration: 24,
   }, "<")
-  tlAngle.to(".angle__image-second", {
+  tl.to(".angle__image-second", {
     top: "-250%",
     duration: 24
   }, ">")
-  tlAngle.fromTo(".angle__image-third", {
+  tl.fromTo(".angle__image-third", {
     top: "250%",
   }, {
     top: 0,

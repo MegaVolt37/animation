@@ -9,7 +9,7 @@ export function animateRender(gsap, tl) {
       markers: true
     },
   });
-  tlRender.fromTo(
+  tl.fromTo(
     ".section__render-text",
     { opacity: 0, xPercent: -200 },
     {
@@ -17,24 +17,24 @@ export function animateRender(gsap, tl) {
       opacity: 1,
       duration: 24,
     });
-  tlRender.fromTo(".section__render-text", {
+  tl.fromTo(".section__render-text", {
     xPercent: 0,
   }, {
     xPercent: -200,
     duration: 24,
   }, "+=1")
-  tlRender.fromTo(".section__render-img", {
+  tl.fromTo(".section__render-img", {
     yPercent: 0,
   }, {
     yPercent: -200,
     duration: 24,
   }, "<")
-  tlRender.to(".section__render", {
-    y: "-100%",
+  tl.to(".section__render", {
+    top: "-100%",
     duration: 40
   }, ">")
-  tlRender.to(".section__finally", {
-    y: 0,
+  tl.to(".section__finally", {
+    top: 0,
     duration: 40
   }, "<")
 

@@ -3,26 +3,26 @@ export function animateModeling(gsap, tl) {
     scrollTrigger: {
       trigger: ".section__modeling",
       start: "top top",
-      scrub: 2,
+      scrub: 1,
       // pin: true
       markers: true
     },
   });
-  tlModeling.fromTo(".section__modeling-text", {
+  tl.fromTo(".section__modeling-text", {
     opacity: 0, xPercent: -150
   }, {
     xPercent: 0,
     opacity: 1,
     duration: 24
   })
-  tlModeling.to(".section__modeling", {
-    y: "-100%",
+  tl.to(".section__modeling", {
+    top: "-100%",
     duration: 40
-  }, "+=1.5");
-  tlModeling.to(".section__render", {
-    y: 0,
+  }, ">");
+  tl.to(".section__render", {
+    top: 0,
     duration: 40
-  }, "<-=4.4");
+  }, "<");
 
   return tlModeling
 }

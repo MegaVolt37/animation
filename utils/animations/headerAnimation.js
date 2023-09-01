@@ -1,4 +1,4 @@
-export function animateHeader(gsap) {
+export function animateHeader(gsap, tl) {
   const tlHeader = gsap.timeline({
     scrollTrigger: {
       trigger: ".section__header-wrapper",
@@ -9,25 +9,25 @@ export function animateHeader(gsap) {
       markers: true
     },
   });
-  tlHeader.fromTo(".section__header-img", {
+  tl.fromTo(".section__header-img", {
     xPercent: -400
   }, {
     xPercent: -10,
     duration: 40,
   })
-  tlHeader.fromTo(".section__header-title", {
+  tl.fromTo(".section__header-title", {
     color: "#000"
   }, {
     color: "#fff",
     duration: 40,
   }, "<")
-  tlHeader.to(
+  tl.to(
     ".section__header-img", {
     xPercent: 6, yPercent: -13, duration: 24,
   },
     "+=2.5"
   )
-  tlHeader.fromTo(
+  tl.fromTo(
     ".section__header-title",
     {
       top: "41%", yPercent: 0
@@ -40,7 +40,7 @@ export function animateHeader(gsap) {
     },
     "<"
   );
-  tlHeader.fromTo(
+  tl.fromTo(
     ".section__header-subtitle", {
     opacity: 0, yPercent: 100
   },
@@ -49,19 +49,19 @@ export function animateHeader(gsap) {
     },
     "<"
   )
-  tlHeader.fromTo(
+  tl.fromTo(
     ".section__header-img", { scale: "1" },
     {
       scale: "2.5", duration: 24, yPercent: 0,
     }, ">"
   )
-  tlHeader.fromTo(".section__header-title", { opacity: 1 }, {
+  tl.fromTo(".section__header-title", { opacity: 1 }, {
     opacity: 0, duration: 24, scale: "2.5",
   }, "<");
-  tlHeader.to(".section__header-wrapper", {
-    y: "-100%", duration: 40
+  tl.to(".section__header-wrapper", {
+    top: "-100%", duration: 40
   }, "+=1.5");
-  tlHeader.to(".section__drawing", { y: 0, duration: 40 }, "<");
+  tl.to(".section__drawing", { top: 0, duration: 40 }, "<");
 
   return tlHeader
 }

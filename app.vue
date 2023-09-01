@@ -198,37 +198,72 @@ if (process.client) {
     scrollTrigger: {
       trigger: ".content",
       start: "top top",
-      end: () => main.offsetWidth / 1.8,
-      scrub: 2,
+      end: "+=10000",
+      // end: () => main.offsetWidth / 1.8,
+      scrub: 1,
       pin: true,
     },
   });
-  tl.set(".section__header-wrapper", { x: "0", y: "0" });
-  tl.set(".section__drawing", { x: "-100%", y: "+100%" });
-  tl.set(".section__modeling", { x: "-200%", y: "+200%" });
-  tl.set(".section__render", { x: "-300%", y: "+300%" });
-  tl.set(".section__finally", { x: "-400%", y: "+400%" });
-  tl.set(".section__angle", { x: "-500%", y: "+500%" });
+  // tl.set(".section__header-wrapper", { x: "0", y: "0" });
+  // tl.set(".section__drawing", { x: "-100%", y: "+100%" });
+  // tl.set(".section__modeling", { x: "-200%", y: "+100%" });
+  // tl.set(".section__render", { x: "-300%", y: "+100%" });
+  // tl.set(".section__finally", { x: "-400%", y: "+100%" });
+  // tl.set(".section__angle", { x: "-500%", y: "+100%" });
   tl.add(animateHeader(gsap, tl));
   tl.add(animateDrawing(gsap, tl));
   tl.add(animateModeling(gsap, tl));
   tl.add(animateRender(gsap, tl));
   tl.add(animateFinally(gsap, tl));
   tl.add(animateAngle(gsap, tl));
+  // tl.to(
+  //   ".section__header-wrapper",
+  //   {
+  //     y: "-100%",
+  //     duration: 40,
+  //   },
+  //   "+=1.5"
+  // );
+  // tl.to(".section__drawing", { y: 0, duration: 40 }, "<");
+  // tl.to(
+  //   ".section__drawing",
+  //   {
+  //     y: "-100%",
+  //     duration: 40,
+  //   },
+  //   "+=1.5"
+  // );
+  // tl.to(
+  //   ".section__modeling",
+  //   {
+  //     y: 0,
+  //     duration: 40,
+  //   },
+  //   "<"
+  // );
 }
 </script>
 <style lang="scss">
 .content {
   height: 100vh;
-  display: flex;
-  width: 600vw;
+  // display: flex;
+  // width: 600vw;
+  position: relative;
 }
 .section {
+  position: absolute;
+  top: 100%;
+  height: 100vh;
+  z-index: 1;
   width: 100vw;
-  height: 100%;
+  // height: 100%;
   // min-height: 100vh;
 }
 .section__header-wrapper {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  z-index: 1;
   // height: 100%;
   // height: 100vh;
 }
