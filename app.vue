@@ -198,7 +198,7 @@ if (process.client) {
     scrollTrigger: {
       trigger: ".content",
       start: "top top",
-      end: "+=10000",
+      end: "+=15000",
       // end: () => main.offsetWidth / 1.8,
       scrub: 1,
       pin: true,
