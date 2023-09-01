@@ -3,52 +3,34 @@ export function animateAngle(gsap, tl) {
     scrollTrigger: {
       trigger: ".section__angle",
       start: "top top",
-      toggleActions: "play none none reverse",
-      markers: true,
-      onUpdate: (self) => {
-        if (self.animation.scrollTrigger.isActive) {
-          tlAngle.resume();
-        }
-      },
+      // end: "+=3000",
+      scrub: 2,
+      // pin: true,
+      markers: true
     },
   });
   tlAngle.fromTo(".angle__image-first", {
     top: 0
   }, {
     top: "-250%",
-    duration: 1
-  })
+    duration: 24
+  }, "+=10")
   tlAngle.fromTo(".angle__image-second", {
     top: "250%",
   }, {
-    scrollTrigger: {
-      trigger: ".section__angle",
-      toggleActions: "play none none reverse",
-    },
     top: 0,
-    duration: 1,
-    onComplete: () => {
-      tlAngle.pause();
-    }
+    duration: 24,
   }, "<")
   tlAngle.fromTo(".angle__image-second", {
     top: 0,
   }, {
-    scrollTrigger: {
-      trigger: ".section__angle",
-      toggleActions: "play none none reverse",
-    },
     top: "-250%",
-    duration: 1
+    duration: 24
   }, ">")
   tlAngle.fromTo(".angle__image-third", {
     top: "250%",
   }, {
-    scrollTrigger: {
-      trigger: ".section__angle",
-      toggleActions: "play none none reverse",
-    },
     top: 0,
-    duration: 1
+    duration: 24
   }, "<")
 }

@@ -198,9 +198,8 @@ if (process.client) {
     scrollTrigger: {
       trigger: ".content",
       start: "top top",
-      end: () => main.offsetWidth,
-      // end: "+=10000",
-      scrub: true,
+      end: () => main.offsetWidth / 1.8,
+      scrub: 2,
       pin: true,
     },
   });
@@ -227,9 +226,11 @@ if (process.client) {
 .section {
   width: 100vw;
   height: 100%;
+  // min-height: 100vh;
 }
 .section__header-wrapper {
-  height: 100%;
+  // height: 100%;
+  // height: 100vh;
 }
 .section__header {
   height: 100%;
