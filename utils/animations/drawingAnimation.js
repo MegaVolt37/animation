@@ -42,6 +42,8 @@ export function animateDrawing(gsap, tl) {
     y: 0,
     duration: 40,
   }, "<-=4.4");
+
+  return tlDrawing
 }
 
 // export function animateDrawing(gsap, tl) {

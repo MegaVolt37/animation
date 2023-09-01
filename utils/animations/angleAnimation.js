@@ -21,9 +21,7 @@ export function animateAngle(gsap, tl) {
     top: 0,
     duration: 24,
   }, "<")
-  tlAngle.fromTo(".angle__image-second", {
-    top: 0,
-  }, {
+  tlAngle.to(".angle__image-second", {
     top: "-250%",
     duration: 24
   }, ">")
@@ -33,4 +31,6 @@ export function animateAngle(gsap, tl) {
     top: 0,
     duration: 24
   }, "<")
+
+  return tlAngle
 }

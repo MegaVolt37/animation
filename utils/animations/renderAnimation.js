@@ -37,4 +37,6 @@ export function animateRender(gsap, tl) {
     y: 0,
     duration: 40
   }, "<")
+
+  return tlRender
 }

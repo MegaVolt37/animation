@@ -62,6 +62,8 @@ export function animateHeader(gsap) {
     y: "-100%", duration: 40
   }, "+=1.5");
   tlHeader.to(".section__drawing", { y: 0, duration: 40 }, "<");
+
+  return tlHeader
 }
 
 // export function animateHeader(gsap, tl, scrollToSection) {

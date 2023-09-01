@@ -47,4 +47,6 @@ export function animateFinally(gsap, trigger) {
     y: 0,
     duration: 40,
   }, "<");
+
+  return tlRender
 }

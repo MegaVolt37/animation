@@ -23,6 +23,8 @@ export function animateModeling(gsap, tl) {
     y: 0,
     duration: 40
   }, "<-=4.4");
+
+  return tlModeling
 }
 
 // export function animateModeling(gsap, tl) {
