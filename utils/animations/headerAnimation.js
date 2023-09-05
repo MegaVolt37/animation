@@ -6,7 +6,6 @@ export function animateHeader(gsap, tl) {
       // end: "+=3000",
       scrub: 2,
       // pin: true,
-      markers: true
     },
   });
   tl.fromTo(".section__header-img", {

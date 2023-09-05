@@ -6,7 +6,6 @@ export function animateAngle(gsap, tl) {
       // end: "+=3000",
       scrub: 2,
       // pin: true,
-      markers: true
     },
   });
   tl.fromTo(".angle__image-first", {
@@ -19,17 +18,17 @@ export function animateAngle(gsap, tl) {
     top: "250%",
   }, {
     top: 0,
-    duration: 24,
+    duration: 40,
   }, "<")
   tl.to(".angle__image-second", {
     top: "-250%",
-    duration: 24
+    duration: 40
   }, ">")
   tl.fromTo(".angle__image-third", {
     top: "250%",
   }, {
     top: 0,
-    duration: 24
+    duration: 40
   }, "<")
 
   return tlAngle

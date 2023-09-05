@@ -5,7 +5,6 @@ export function animateModeling(gsap, tl) {
       start: "top top",
       scrub: 1,
       // pin: true
-      markers: true
     },
   });
   tl.fromTo(".section__modeling-text", {

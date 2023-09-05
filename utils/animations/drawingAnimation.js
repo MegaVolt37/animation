@@ -6,7 +6,6 @@ export function animateDrawing(gsap, tl) {
       scrub: 2,
       // end: "+=3000",
       // pin: true,
-      markers: true
     },
   });
   tl.fromTo(".section__drawing-images", {

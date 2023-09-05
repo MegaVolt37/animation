@@ -6,7 +6,6 @@ export function animateRender(gsap, tl) {
       // end: "+=3000",
       scrub: 2,
       // pin: true
-      markers: true
     },
   });
   tl.fromTo(
@@ -22,7 +21,7 @@ export function animateRender(gsap, tl) {
   }, {
     xPercent: -200,
     duration: 24,
-  }, "+=1")
+  }, "+=3.5")
   tl.fromTo(".section__render-img", {
     yPercent: 0,
   }, {
@@ -32,7 +31,7 @@ export function animateRender(gsap, tl) {
   tl.to(".section__render", {
     top: "-100%",
     duration: 40
-  }, ">")
+  }, "+=3.5")
   tl.to(".section__finally", {
     top: 0,
     duration: 40
