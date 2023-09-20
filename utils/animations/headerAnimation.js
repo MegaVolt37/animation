@@ -18,8 +18,8 @@ export function animateHeader(gsap, tl) {
     color: "#000"
   }, {
     color: "#fff",
-    duration: 40,
-  }, "<")
+    duration: 10,
+  })
   tl.to(
     ".section__header-img", {
     xPercent: 6, yPercent: -13, duration: 24,
@@ -29,13 +29,13 @@ export function animateHeader(gsap, tl) {
   tl.fromTo(
     ".section__header-title",
     {
-      top: "41%", yPercent: 0
+      top: "50%", yPercent: -50
     },
     {
       scrollTrigger: {
         trigger: ".section__header",
         toggleActions: "play none none reverse",
-      }, top: "41%", yPercent: -41, duration: 24,
+      }, top: "38%", yPercent: -38, duration: 24,
     },
     "<"
   );
@@ -55,7 +55,10 @@ export function animateHeader(gsap, tl) {
     }, ">"
   )
   tl.fromTo(".section__header-title", { opacity: 1 }, {
-    opacity: 0, duration: 24, scale: "2.5",
+    opacity: 0, duration: 7,
+  }, "<");
+  tl.to(".section__header-title", {
+    duration: 24, scale: "2.5",
   }, "<");
   tl.to(".section__header-wrapper", {
     top: "-100%", duration: 40
