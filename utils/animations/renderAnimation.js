@@ -15,7 +15,7 @@ export function animateRender(gsap, tl) {
       xPercent: 0,
       opacity: 1,
       duration: 24,
-    });
+    },"<-=24");
   tl.fromTo(".section__render-text", {
     xPercent: 0,
   }, {
@@ -30,11 +30,11 @@ export function animateRender(gsap, tl) {
   }, "<")
   tl.to(".section__render", {
     top: "-100%",
-    duration: 40
-  }, "+=3.5")
+    duration: 0
+  }, ">")
   tl.to(".section__finally", {
     top: 0,
-    duration: 40
+    duration: 0
   }, "<")
 
   return tlRender

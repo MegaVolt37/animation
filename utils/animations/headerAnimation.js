@@ -61,9 +61,9 @@ export function animateHeader(gsap, tl) {
     duration: 24, scale: "2.5",
   }, "<");
   tl.to(".section__header-wrapper", {
-    top: "-100%", duration: 40
-  }, "+=1.5");
-  tl.to(".section__drawing", { top: 0, duration: 40 }, "<");
+    top: "-100%", duration: 1
+  });
+  tl.to(".section__drawing", { top: '0%', duration: 1 }, "<");
 
   return tlHeader
 }

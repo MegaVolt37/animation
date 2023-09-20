@@ -9,7 +9,7 @@ export function animateDrawing(gsap, tl) {
     },
   });
   tl.fromTo(".section__drawing-images", {
-    opacity: 0, scale: 0
+    opacity: 0, scale: 2
   }, {
     scale: 1,
     opacity: 1,
@@ -24,7 +24,7 @@ export function animateDrawing(gsap, tl) {
       xPercent: 0,
       opacity: 1,
       duration: 24,
-    });
+    },"<");
   tl.to(
     ".section__drawing-text", {
     yPercent: -200,
@@ -38,7 +38,7 @@ export function animateDrawing(gsap, tl) {
     duration: 40,
   }, "+=1.5");
   tl.to(".section__modeling", {
-    top: 0,
+    top: '0%',
     duration: 40,
   }, "<");
 

@@ -272,7 +272,7 @@ if (process.client) {
   display: grid;
   position: relative;
   padding-top: 78vh;
-  overflow: hidden;
+  // overflow: hidden;
   &-image {
     position: absolute;
     right: 0;
@@ -318,12 +318,12 @@ if (process.client) {
   &-img {
     position: absolute;
     right: 0;
-    top: 0;
+    top: auto;
     bottom: 0;
     width: vw(1675);
-    height: 100%;
-    max-height: 100vh;
-    object-fit: contain;
+    // height: 100%;
+    // max-height: 100vh;
+    object-fit: cover;
     object-position: center;
     transition: all 0.2s ease-in-out;
   }
@@ -332,12 +332,12 @@ if (process.client) {
     z-index: -1;
     position: absolute;
     right: 0;
-    top: 0;
+    top: auto;
     bottom: 0;
     width: vw(1675);
-    height: 100%;
-    max-height: 100vh;
-    object-fit: contain;
+    // height: 100%;
+    // max-height: 100vh;
+    object-fit: cover;
     object-position: center;
     transition: all 0.2s ease-in-out;
   }

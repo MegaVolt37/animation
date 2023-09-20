@@ -13,7 +13,7 @@ export function animateFinally(gsap, tl) {
     x: '150%'
   }, {
     x: "-60%", duration: 80,
-  })
+  },"<-=20")
   tl.fromTo(".section__finally-text", {
     opacity: 0,
     x: '100%',

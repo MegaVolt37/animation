@@ -13,7 +13,7 @@ export function animateModeling(gsap, tl) {
     xPercent: 0,
     opacity: 1,
     duration: 24
-  })
+  },"<-=24")
   tl.to(".section__modeling", {
     top: "-100%",
     duration: 40
