@@ -13,6 +13,11 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
+  modules: [
+    '@vueuse/nuxt',
+    '@vueuse/motion/nuxt',
+    '@nuxt/image'
+  ],
   vite: {
     css: {
       preprocessorOptions: {

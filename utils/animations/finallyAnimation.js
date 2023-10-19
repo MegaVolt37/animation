@@ -13,7 +13,7 @@ export function animateFinally(gsap, tl) {
     x: '150%'
   }, {
     x: "-60%", duration: 80,
-  },"<-=20")
+  },"<-=30")
   tl.fromTo(".section__finally-text", {
     opacity: 0,
     x: '100%',
@@ -36,6 +36,14 @@ export function animateFinally(gsap, tl) {
     top: 0,
     opacity: 1,
     duration: 24,
+  }, "<")
+  tl.to(".section__finally", {
+    paddingBottom: '30%',
+    duration: 12,
+  }, ">")
+  tl.to(".section__finally-img", {
+    yPercent: -15,
+    duration: 12,
   }, "<")
   tl.fromTo(".section__finally", {
     y: 0,

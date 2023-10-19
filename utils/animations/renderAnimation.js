@@ -35,7 +35,7 @@ export function animateRender(gsap, tl) {
   tl.to(".section__finally", {
     top: 0,
     duration: 0
-  }, "<")
+  }, "<-=10")
 
   return tlRender
 }

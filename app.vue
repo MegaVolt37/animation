@@ -1,5 +1,7 @@
 <template>
   <div class="site">
+  <ClientOnly>
+    <!-- <img width="30" height="30" v-for="image in arr" :key="image" :src="'images/cup/'+image" alt="Image"> -->
     <div class="wrapper">
       <div class="content">
         <div class="section__header-wrapper section">
@@ -11,7 +13,6 @@
                 alt="bottle"
               />
             </div>
-
             <h1 class="section__title section__header-title text__white">
               3d визуализация бутылки
             </h1>
@@ -22,7 +23,11 @@
           </section>
         </div>
         <section class="section__drawing bg__black section">
-          <div class="section__drawing-images">
+          <div
+            ref="drawingImages"
+            class="section__drawing-images"
+            :class="{ is_hover: readHoverDrawing }"
+          >
             <img
               class="section__drawing-img"
               src="@/assets/images/bottle__drawing.svg"
@@ -135,7 +140,7 @@
             </div>
           </div>
         </section>
-        <section class="section__angle bg__white section">
+        <section class="section__angle bg__gray section">
           <div class="section__angle-content">
             <div class="section__angle-block__images">
               <img
@@ -168,86 +173,85 @@
             </div>
           </div>
         </section>
+        <section class="section__cup bg__white section">
+          <NuxtImg class="section__cup-image" v-for="image in arr" :key="image" :src="'images/cup/'+image" alt="Image" format="webp" loading="lazy" sizes="100vw sm:50vw md:400px"/>
+        </section>
       </div>
     </div>
+  </ClientOnly>
+    
   </div>
 </template>
 <script setup>
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Observer } from "gsap/Observer";
-import {
-  animateHeader,
-  animateDrawing,
-  animateModeling,
-  animateRender,
-  animateFinally,
-  animateAngle,
-} from "@/utils/animations";
 import "@/assets/styles/main.scss";
-const nuxtApp = useNuxtApp();
+import {
+animateAngle,
+animateDrawing,
+animateFinally,
+animateHeader,
+animateModeling,
+animateRender,
+animateCup,
+} from "@/utils/animations";
+import { gsap } from "gsap";
+import { Observer } from "gsap/Observer";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+const {y} = useWindowScroll()
+const arr = ["!Render_00000.png","!Render_00001.png","!Render_00002.png","!Render_00003.png","!Render_00004.png","!Render_00005.png","!Render_00006.png","!Render_00007.png","!Render_00008.png","!Render_00009.png","!Render_00010.png","!Render_00011.png","!Render_00012.png","!Render_00013.png","!Render_00014.png","!Render_00015.png","!Render_00016.png","!Render_00017.png","!Render_00018.png","!Render_00019.png","!Render_00020.png","!Render_00021.png","!Render_00022.png","!Render_00023.png","!Render_00024.png","!Render_00025.png","!Render_00026.png","!Render_00027.png","!Rendsection__cuper_00028.png","!Render_00029.png","!Render_00030.png","!Render_00031.png","!Render_00032.png","!Render_00033.png","!Render_00034.png","!Render_00035.png","!Render_00036.png","!Render_00037.png","!Render_00038.png","!Render_00039.png","!Render_00040.png","!Render_00041.png","!Render_00042.png","!Render_00043.png","!Render_00044.png","!Render_00045.png","!Render_00046.png","!Render_00047.png","!Render_00048.png","!Render_00049.png","!Render_00050.png","!Render_00051.png","!Render_00052.png","!Render_00053.png","!Render_00054.png","!Render_00055.png","!Render_00056.png","!Render_00057.png"]
 gsap.registerPlugin(ScrollTrigger, Observer);
 ScrollTrigger.config({
   invalidateOnRefresh: true,
 });
+const drawingImages = ref(null);
 
-if (process.client) {
+// const getImageUrl = (name) => {
+//   console.log(name)
+// // return new URL(`${name}`, import.meta.url)
+// }
+// const loadImages = () => {
+//   // const modules = import.meta.glob('@*.png')
+//   console.log(modules)
+//   cupImages.value = Object.keys(modules)
+// }
+onMounted(async () => { 
+  // loadImages()
   await nextTick();
-  const main = document.querySelector(".content");
+    if (process.client) {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".content",
       start: "top top",
       end: "+=15000",
-      // end: () => main.offsetWidth / 1.8,
       scrub: 1,
       pin: true,
     },
   });
-  // tl.set(".section__header-wrapper", { x: "0", y: "0" });
-  // tl.set(".section__drawing", { x: "-100%", y: "+100%" });
-  // tl.set(".section__modeling", { x: "-200%", y: "+100%" });
-  // tl.set(".section__render", { x: "-300%", y: "+100%" });
-  // tl.set(".section__finally", { x: "-400%", y: "+100%" });
-  // tl.set(".section__angle", { x: "-500%", y: "+100%" });
   tl.add(animateHeader(gsap, tl));
   tl.add(animateDrawing(gsap, tl));
   tl.add(animateModeling(gsap, tl));
   tl.add(animateRender(gsap, tl));
   tl.add(animateFinally(gsap, tl));
   tl.add(animateAngle(gsap, tl));
-  // tl.to(
-  //   ".section__header-wrapper",
-  //   {
-  //     y: "-100%",
-  //     duration: 40,
-  //   },
-  //   "+=1.5"
-  // );
-  // tl.to(".section__drawing", { y: 0, duration: 40 }, "<");
-  // tl.to(
-  //   ".section__drawing",
-  //   {
-  //     y: "-100%",
-  //     duration: 40,
-  //   },
-  //   "+=1.5"
-  // );
-  // tl.to(
-  //   ".section__modeling",
-  //   {
-  //     y: 0,
-  //     duration: 40,
-  //   },
-  //   "<"
-  // );
+  tl.add(animateCup(gsap, tl,ScrollTrigger));
 }
+})
+// const images = import.meta.glob('@*.png')
+// const readImages = computed(() => {
+//   const res = []
+//   for (const path in images) {
+//     images[path]().then((mod) => {
+//       res.push(path)
+//     console.log(path, mod)
+//   })
+// }
+//   return res
+// })
 </script>
+
+
 <style lang="scss">
 .content {
   height: 100vh;
-  // display: flex;
-  // width: 600vw;
   position: relative;
 }
 .section {
@@ -256,23 +260,18 @@ if (process.client) {
   height: 100vh;
   z-index: 1;
   width: 100vw;
-  // height: 100%;
-  // min-height: 100vh;
 }
 .section__header-wrapper {
   position: absolute;
   top: 0;
   height: 100vh;
   z-index: 1;
-  // height: 100%;
-  // height: 100vh;
 }
 .section__header {
   height: 100%;
   display: grid;
   position: relative;
   padding-top: 78vh;
-  // overflow: hidden;
   &-image {
     position: absolute;
     right: 0;
@@ -289,12 +288,26 @@ if (process.client) {
     height: vw(387);
   }
   &-title {
+    color: orange;
     max-width: vw(575);
     width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
+
+    background: linear-gradient(
+    to right,
+    #fff,
+    #fff 50%,
+    #000 50%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+
+  background-position: 100%;
   }
   &-subtitle {
     max-width: vw(295);
@@ -321,8 +334,6 @@ if (process.client) {
     top: auto;
     bottom: 0;
     width: vw(1675);
-    // height: 100%;
-    // max-height: 100vh;
     object-fit: cover;
     object-position: center;
     transition: all 0.2s ease-in-out;
@@ -335,8 +346,6 @@ if (process.client) {
     top: auto;
     bottom: 0;
     width: vw(1675);
-    // height: 100%;
-    // max-height: 100vh;
     object-fit: cover;
     object-position: center;
     transition: all 0.2s ease-in-out;
@@ -512,20 +521,26 @@ if (process.client) {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: $light-gray;
+  
   &-content {
-    max-width: vw(835);
+    // max-width: vw(835);
     width: 100%;
+    height: 100%;
+    align-self: center;
     margin: auto;
     display: flex;
     flex-direction: row-reverse;
-    background-color: $light-light-gray;
-    padding: vw(36) 0;
+    // background-color: $light-light-gray;
+    padding: vw(50) 0;
     overflow: hidden;
     padding-right: vw(40);
   }
   &-block__images {
-    width: vw(318);
-    height: vw(400);
+    width: vw(400);
+    margin-right: auto;
+    height: 100%;
+    max-height: vw(515);
     display: flex;
     justify-content: center;
     position: relative;
@@ -557,4 +572,15 @@ if (process.client) {
     max-width: vw(295);
   }
 }
+.section__cup {
+  z-index: -1;
+  opacity: 0;
+  &-image {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+  }
+}
 </style>
+

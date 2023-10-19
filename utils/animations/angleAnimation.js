@@ -24,12 +24,30 @@ export function animateAngle(gsap, tl) {
     top: "-250%",
     duration: 40
   }, ">")
+  tl.to(".section__cup", {
+    top: 0,
+    duration: 40,
+  }, "<");
   tl.fromTo(".angle__image-third", {
     top: "250%",
   }, {
     top: 0,
     duration: 40
   }, "<")
+  // tl.to(".section__angle", {
+  //   top: "-100%",
+  //   duration: 40,
+  // }, "+=1.5");
+  tl.to(".section__angle", {
+    opacity: 0.5,
+    duration: 40,
+  }, "+=1.5");
+  tl.to(".section__cup", {
+    zIndex: 3,
+    opacity: 1,
+    // top: 0,
+    duration: 24,
+  }, "<");
 
   return tlAngle
 }
