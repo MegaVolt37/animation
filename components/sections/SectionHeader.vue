@@ -2,17 +2,13 @@
   <div class="section__header-wrapper section">
     <section class="section__header bg__white">
       <div class="section__header-image">
-        <img
-          class="section__header-img"
-          src="@/assets/images/bottle.svg"
-          alt="bottle"
-        />
+        <img class="section__header-img" src="@/assets/images/bottle.svg" alt="bottle" />
       </div>
       <h1 class="section__title section__header-title text__white">
         3d визуализация бутылки
       </h1>
       <p class="section__subtitle section__header-subtitle text__black">
-        с помощью 3D визуализации создали реалистичную модель упаковки
+        с&nbsp;помощью 3D&nbsp;визуализации создали реалистичную модель упаковки
         подсолнечного масла
       </p>
     </section>
@@ -32,7 +28,7 @@
   height: 100%;
   display: grid;
   position: relative;
-  padding-top: 78vh;
+  // padding-top: 78vh;
   &-image {
     position: absolute;
     right: 0;
@@ -70,8 +66,8 @@
     width: 100%;
     margin-right: 13%;
     margin-left: auto;
-    margin-top: 0;
-    margin-bottom: auto;
+    margin-top: auto;
+    margin-bottom: 3%;
   }
 }
 </style>

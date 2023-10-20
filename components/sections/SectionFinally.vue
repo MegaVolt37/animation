@@ -14,17 +14,14 @@
           <span class="text__black"
             >добавить еще тройку строк текста про визуализацию</span
           >
-          для чего и каких целей она реализована, возможно рассказать про
-          этикетку.
+          для чего и каких целей она реализована, возможно рассказать про этикетку.
         </p>
       </div>
       <div class="text__second">
-        <p
-          class="section__subtitle section__finally-end-subtitle text__light-gray"
-        >
+        <p class="section__subtitle section__finally-end-subtitle text__light-gray">
           <span class="text__black">высокая детализация</span> 10K — обозначение
-          разрешающей способности в цифровом кинематографе и компьютерной
-          графике, приблизительно соответствующее 10000 пикселей по горизонтали.
+          разрешающей способности в цифровом кинематографе и компьютерной графике,
+          приблизительно соответствующее 10000 пикселей по горизонтали.
         </p>
         <div class="text__gradient-block">
           <span
@@ -37,9 +34,7 @@
           >
         </div>
 
-        <p
-          class="section__subtitle section__finally-end-subtitle text__light-gray"
-        >
+        <p class="section__subtitle section__finally-end-subtitle text__light-gray">
           10K UHD (10240 × 4320)
         </p>
       </div>
@@ -80,6 +75,7 @@
   .text__gradient-second {
     position: absolute;
     top: 0;
+    left: 0;
     opacity: 0;
     transition: all 0.3s ease-in-out;
   }

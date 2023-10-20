@@ -54,6 +54,10 @@ main {
   height: 100vh;
   z-index: 1;
   width: 100vw;
+  &:not(.section:first-child) {
+    // margin-bottom: -2px;
+    // padding-bottom: 2px;
+  }
 }
 .section__subtitle {
   font-size: vw(18);
