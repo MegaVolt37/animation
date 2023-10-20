@@ -1,5 +1,5 @@
 body {
-  font-family: 'SFPRO500';
+  font-family: "SFPRO500";
   overflow-x: hidden;
 }
 
@@ -9,7 +9,6 @@ main {
   height: 100vh;
   overflow-x: hidden;
 }
-
 
 .bg__white {
   background-color: $white;
@@ -36,26 +35,26 @@ main {
 }
 
 .text__light-gray {
-  color: #AFAFAF;
+  color: #afafaf;
 }
 
 .text__gradient {
-  font-family: 'SFPRO600';
+  font-family: "SFPRO600";
   font-size: vw(38);
   line-height: 100%;
   letter-spacing: vw(-1);
-  background: linear-gradient(90deg, #FF0000 0%, #FFE604 104.12%);
+  background: linear-gradient(90deg, #ff0000 0%, #ffe604 104.12%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.section__title {
-  font-family: 'SFPRO600';
-  font-size: vw(76);
-  line-height: 100%;
-  letter-spacing: vw(-2);
+.section {
+  position: absolute;
+  top: 100%;
+  height: 100vh;
+  z-index: 1;
+  width: 100vw;
 }
-
 .section__subtitle {
   font-size: vw(18);
   line-height: 115%;

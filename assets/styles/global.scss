@@ -2,3 +2,10 @@
 @import "variables";
 @import "fonts";
 @import "reset";
+
+.section__title {
+  font-family: 'SFPRO600';
+  font-size: vw(76);
+  line-height: 100%;
+  letter-spacing: vw(-2);
+}
