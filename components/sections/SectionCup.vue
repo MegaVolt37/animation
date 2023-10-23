@@ -1,14 +1,12 @@
 <template>
   <section class="section__cup bg__white section">
-    <NuxtImg
+    <img
       class="section__cup-image"
       v-for="image in arr"
       :key="image"
       :src="'images/cup/' + image"
       alt="Image"
-      format="webp"
-      loading="lazy"
-      sizes="100vw sm:50vw md:400px"
+      width="470"
     />
   </section>
 </template>
@@ -85,6 +83,7 @@ const arr = [
     left: 50%;
     top: 50%;
     transform: translateY(-50%) translateX(-50%);
+    width: 35vw;
   }
 }
 </style>
