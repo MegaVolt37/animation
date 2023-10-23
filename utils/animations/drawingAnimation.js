@@ -47,6 +47,9 @@ export function animateDrawing(gsap, tl) {
       top: "-100%",
       duration: 40,
       ease: "none",
+      onUpdate: () => {
+        document.body.style = "background-color: #000;";
+      },
     },
     "+=1.5"
   );

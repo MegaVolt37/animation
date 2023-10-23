@@ -85,6 +85,9 @@ export function animateFinally(gsap, tl) {
     {
       top: "-100%",
       duration: 40,
+      onUpdate: () => {
+        document.body.style = "background-color: #f7f7f9;";
+      },
     },
     ">"
   );

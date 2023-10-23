@@ -27,6 +27,9 @@ export function animateModeling(gsap, tl) {
       top: "-100%",
       duration: 40,
       ease: "none",
+      onUpdate: () => {
+        document.body.style = "background-color: #000;";
+      },
     },
     ">"
   );
