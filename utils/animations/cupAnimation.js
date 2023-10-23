@@ -19,7 +19,7 @@ export function animateCup(gsap, tl) {
     {
       activeIndexImg: 57,
       ease: "steps(57)",
-      duration: 40,
+      duration: 80,
       // repeat: -1,
       onUpdate: () => {
         gsap.set(images, {
