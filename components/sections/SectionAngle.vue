@@ -20,21 +20,21 @@
       </div>
       <div class="section__angle-cup">
         <div class="section__angle-cup__wrapper">
-          <!-- <img
+          <img
             class="section__angle-cup__image"
             v-for="image in arr"
             :key="image"
             :src="'images/cup/' + image"
             alt="Image"
             width="470"
-          /> -->
-          <NuxtImg
+          />
+          <!-- <NuxtImg
             class="section__angle-cup__image"
             v-for="image in arr"
             :key="image"
             :src="'images/cup/' + image"
             width="470"
-          />
+          /> -->
         </div>
       </div>
       <div class="section__angle-cup__finally">
