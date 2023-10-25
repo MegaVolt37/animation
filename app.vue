@@ -9,7 +9,7 @@
           <SectionRender />
           <SectionFinally />
           <SectionAngle />
-          <SectionCup />
+          <!-- <SectionCup /> -->
         </div>
       </div>
     </ClientOnly>
@@ -18,13 +18,12 @@
 <script setup>
 import "@/assets/styles/main.scss";
 import {
-animateAngle,
-animateCup,
-animateDrawing,
-animateFinally,
-animateHeader,
-animateModeling,
-animateRender,
+  animateAngle,
+  animateDrawing,
+  animateFinally,
+  animateHeader,
+  animateModeling,
+  animateRender,
 } from "@/utils/animations";
 import { gsap } from "gsap";
 import { Observer } from "gsap/Observer";
@@ -53,7 +52,7 @@ onMounted(async () => {
     tl.add(animateRender(gsap, tl));
     tl.add(animateFinally(gsap, tl));
     tl.add(animateAngle(gsap, tl));
-    tl.add(animateCup(gsap, tl, ScrollTrigger));
+    // tl.add(animateCup(gsap, tl, ScrollTrigger));
   }
 });
 </script>

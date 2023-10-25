@@ -34,7 +34,7 @@
           >
         </div>
 
-        <p class="section__subtitle section__finally-end-subtitle text__light-gray">
+        <p class="section__subtitle section__finally-end-subtitle__end text__light-gray">
           10K UHD (10240 × 4320)
         </p>
       </div>
@@ -53,6 +53,12 @@
     height: fit-content;
     margin: auto;
     margin-left: 0;
+  }
+  &-end-subtitle {
+    margin-bottom: vw(60);
+  }
+  &-end-subtitle__end {
+    margin-top: vw(25);
   }
   .text__first {
     -webkit-text-fill-color: initial;
