@@ -40,14 +40,14 @@
       </div>
       <div class="section__angle-cup">
         <div class="section__angle-cup__wrapper">
-          <img
+          <!-- <img
             class="section__angle-cup__image"
             v-for="image in arr"
             :key="image"
             :src="'images/cup/' + image"
             alt="Image"
             width="470"
-          />
+          /> -->
           <NuxtImg
             class="section__angle-cup__image"
             v-for="image in arr"
@@ -200,16 +200,6 @@ const arr = [
     grid-template-columns: 0px 1fr;
     overflow: hidden;
     margin-right: -130px;
-    // position: relative;
-    // &::after {
-    //   content: "";
-    //   position: absolute;
-    //   right: 0;
-    //   width: 2px;
-    //   background-color: #f7f7f9;
-    //   top: 0;
-    //   bottom: 0;
-    // }
   }
   &-cup__wrapper {
     position: relative;
