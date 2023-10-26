@@ -18,7 +18,7 @@ export function animateAngle(gsap, tl) {
 			top: 0,
 		},
 		{
-			top: '-250%',
+			top: '-300vh',
 			duration: 24,
 		},
 		'+=10'
@@ -26,36 +26,108 @@ export function animateAngle(gsap, tl) {
 	tl.fromTo(
 		'.angle__image-second',
 		{
-			top: '250%',
+			top: '300vh',
 		},
 		{
 			top: 0,
-			duration: 40,
+			duration: 35,
 		},
-		'<'
+		'<-=10'
 	)
 	tl.to(
 		'.angle__image-second',
 		{
-			top: '-250%',
-			duration: 40,
+			top: '-300vh',
+			duration: 35,
 		},
 		'>'
 	)
-	// tl.to(".section__cup", {
-	//   top: 0,
-	//   duration: 40,
-	// }, "<");
 	tl.fromTo(
 		'.angle__image-third',
 		{
-			top: '250%',
+			top: '300vh',
 		},
 		{
 			top: 0,
 			duration: 40,
 		},
-		'<'
+		'<-=10'
+	)
+	tl.to(
+		'.angle__image-third',
+		{
+			top: '-300vh',
+			duration: 40,
+		},
+		'>'
+	)
+	tl.fromTo(
+		'.angle__image-fourth',
+		{
+			top: '300vh',
+		},
+		{
+			top: 0,
+			duration: 40,
+		},
+		'<-=10'
+	)
+	tl.to(
+		'.angle__image-fourth',
+		{
+			top: '-300vh',
+			duration: 40,
+		},
+		'>'
+	)
+	tl.fromTo(
+		'.angle__image-firth',
+		{
+			top: '300vh',
+		},
+		{
+			top: 0,
+			duration: 40,
+		},
+		'<-=10'
+	)
+	tl.to(
+		'.angle__image-firth',
+		{
+			top: '-300vh',
+			duration: 40,
+		},
+		'>'
+	)
+	tl.fromTo(
+		'.angle__image-sixth',
+		{
+			top: '300vh',
+		},
+		{
+			top: 0,
+			duration: 40,
+		},
+		'<-=10'
+	)
+	tl.to(
+		'.angle__image-sixth',
+		{
+			top: '-300vh',
+			duration: 40,
+		},
+		'>'
+	)
+	tl.fromTo(
+		'.angle__image-seventh',
+		{
+			top: '300vh',
+		},
+		{
+			top: 0,
+			duration: 40,
+		},
+		'<-=10'
 	)
 	tl.to(
 		'.section__angle-text',
@@ -99,7 +171,7 @@ export function animateAngle(gsap, tl) {
 		{
 			activeIndexImg: 57,
 			ease: 'steps(57)',
-			duration: 80,
+			duration: 120,
 			// repeat: -1,
 			onUpdate: () => {
 				gsap.set(images, {
@@ -140,12 +212,25 @@ export function animateAngle(gsap, tl) {
 		'.section__angle-cup__finally-wrapper',
 		{
 			css: {
-				'grid-template-columns': '120px 1fr',
+				'grid-template-columns': '110px 1fr',
 			},
 			// y: '-50%',
 			duration: 25,
 		},
 		'>'
+	)
+	tl.fromTo(
+		'.dot-wrapper',
+		{ zIndex: 1 },
+		{
+			zIndex: 0,
+			// css: {
+			// 	'z-index': 0,
+			// },
+			// y: '-50%',
+			// duration: 25,
+		},
+		'<+=16'
 	)
 	// tl.to(
 	// 	images[0],

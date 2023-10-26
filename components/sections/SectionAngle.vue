@@ -4,17 +4,37 @@
       <div class="section__angle-block__images">
         <img
           class="angle__image-first section__angle-img"
-          src="@/assets/images/Etiketka.png"
+          src="@/assets/images/angle_bottles/1.png"
           alt="bottle"
         />
         <img
           class="angle__image-second section__angle-img"
-          src="@/assets/images/Etiketka22.png"
+          src="@/assets/images/angle_bottles/2.png"
           alt="bottle"
         />
         <img
           class="angle__image-third section__angle-img"
-          src="@/assets/images/Etiketka24.png"
+          src="@/assets/images/angle_bottles/3.png"
+          alt="bottle"
+        />
+        <img
+          class="angle__image-fourth section__angle-img"
+          src="@/assets/images/angle_bottles/4.png"
+          alt="bottle"
+        />
+        <img
+          class="angle__image-firth section__angle-img"
+          src="@/assets/images/angle_bottles/5.png"
+          alt="bottle"
+        />
+        <img
+          class="angle__image-sixth section__angle-img"
+          src="@/assets/images/angle_bottles/6.png"
+          alt="bottle"
+        />
+        <img
+          class="angle__image-seventh section__angle-img"
+          src="@/assets/images/angle_bottles/7.png"
           alt="bottle"
         />
       </div>
@@ -28,13 +48,13 @@
             alt="Image"
             width="470"
           />
-          <!-- <NuxtImg
+          <NuxtImg
             class="section__angle-cup__image"
             v-for="image in arr"
             :key="image"
             :src="'images/cup/' + image"
             width="470"
-          /> -->
+          />
         </div>
       </div>
       <div class="section__angle-cup__finally">
@@ -179,6 +199,17 @@ const arr = [
     display: grid;
     grid-template-columns: 0px 1fr;
     overflow: hidden;
+    margin-right: -130px;
+    // position: relative;
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   right: 0;
+    //   width: 2px;
+    //   background-color: #f7f7f9;
+    //   top: 0;
+    //   bottom: 0;
+    // }
   }
   &-cup__wrapper {
     position: relative;
@@ -191,6 +222,8 @@ const arr = [
     display: flex;
     align-items: flex-end;
     background-color: #f7f7f9;
+    width: 130px;
+    position: relative;
   }
   &-cup__image {
     position: absolute;
@@ -199,9 +232,7 @@ const arr = [
     transform: translateY(-50%) translateX(-50%);
     max-width: 35vw;
   }
-  .angle__image-first,
-  .angle__image-second,
-  .angle__image-third {
+  .section__angle-img {
     position: absolute;
     top: 300%;
     bottom: 0;

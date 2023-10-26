@@ -41,7 +41,7 @@ onMounted(async () => {
       scrollTrigger: {
         trigger: ".content",
         start: "top top",
-        end: "+=15000",
+        end: "+=18000",
         scrub: 1,
         pin: true,
       },

@@ -47,6 +47,7 @@
   &-title {
     color: orange;
     max-width: vw(575);
+    line-height: 1.15;
     width: 100%;
     position: absolute;
     top: 50%;
