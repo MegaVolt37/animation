@@ -10,9 +10,8 @@
 
     <div class="section__render-text">
       <h1 class="section__title section__render-title text__black">Рендер</h1>
-      <p class="section__subtitle section__render-subtitle text__light-gray">
-        <span class="text__black">конечный процесс создания</span>
-        реального объекта из подготовленной сцены.
+      <p class="section__subtitle section__render-subtitle text__gray">
+        конечный процесс создания реального объекта из&nbsp;подготовленной сцены.
       </p>
     </div>
   </section>

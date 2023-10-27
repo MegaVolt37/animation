@@ -10,32 +10,30 @@
     <div class="section__finally-text">
       <div class="text__first">
         <h1 class="section__title section__finally-title text__black">Финал</h1>
-        <p class="section__subtitle section__finally-subtitle text__light-gray">
-          <span class="text__black"
-            >добавить еще тройку строк текста про визуализацию</span
-          >
-          для чего и каких целей она реализована, возможно рассказать про этикетку.
+        <p class="section__subtitle section__finally-subtitle text__gray">
+          добавить еще тройку строк текста про визуализацию для чего и каких целей она
+          реализована, возможно рассказать про этикетку.
         </p>
       </div>
       <div class="text__second">
-        <p class="section__subtitle section__finally-end-subtitle text__light-gray">
-          <span class="text__black">высокая детализация</span> 10K — обозначение
-          разрешающей способности в цифровом кинематографе и компьютерной графике,
-          приблизительно соответствующее 10000 пикселей по горизонтали.
+        <p class="section__subtitle section__finally-end-subtitle text__gray">
+          высокая детализация<br />10K&nbsp;&mdash; обозначение разрешающей способности
+          в&nbsp;цифровом кинематографе и&nbsp;компьютерной графике, приблизительно
+          соответствующее 10000 пикселей по&nbsp;горизонтали.
         </p>
         <div class="text__gradient-block">
           <span
             class="text__gradient text__black text__gradient-first section__finally-end-text__gradient"
-            >44 236 800 пикселей</span
+            >44&nbsp;236&nbsp;800 пикселей</span
           >
           <span
             class="text__gradient text__gradient-second section__finally-end-text__gradient"
-            >44 236 800 пикселей</span
+            >44&nbsp;236&nbsp;800 пикселей</span
           >
         </div>
 
         <p class="section__subtitle section__finally-end-subtitle__end text__light-gray">
-          10K UHD (10240 × 4320)
+          10K UHD (10240 &times; 4320)
         </p>
       </div>
     </div>

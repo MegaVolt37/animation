@@ -5,9 +5,9 @@
         <img class="section__header-img" src="@/assets/images/bottle.svg" alt="bottle" />
       </div>
       <h1 class="section__title section__header-title text__white">
-        3d визуализация бутылки
+        3d&nbsp;визуализация бутылки
       </h1>
-      <p class="section__subtitle section__header-subtitle text__black">
+      <p class="section__subtitle section__header-subtitle text__gray">
         с&nbsp;помощью 3D&nbsp;визуализации создали реалистичную модель упаковки
         подсолнечного масла
       </p>
@@ -46,7 +46,7 @@
   }
   &-title {
     color: orange;
-    max-width: vw(575);
+    max-width: vw(650);
     line-height: 1.15;
     width: 100%;
     position: absolute;

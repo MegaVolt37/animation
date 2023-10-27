@@ -66,7 +66,7 @@
         </div>
       </div>
       <div class="section__angle-text">
-        <h1 class="section__title section__angle-title text__black">7 разных ракурсов</h1>
+        <h1 class="section__title section__angle-title text__black">7&nbsp;разных ракурсов</h1>
         <p class="section__subtitle section__angle-subtitle text__light-gray">
           добавить еще тройку строк текста про визуализацию для чего и каких целей она
           реализована, возможно рассказать про этикетку.

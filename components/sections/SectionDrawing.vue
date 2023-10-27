@@ -32,8 +32,8 @@
     <div class="section__drawing-text">
       <h1 class="section__title section__drawing-title text__white">Чертёж</h1>
       <p class="section__subtitle section__drawing-subtitle text__gray">
-        был предоставлен клиентом, он позволил спроектировать и смоделировать объект с
-        учётом всех размеров, форм и других характеристик.
+        был предоставлен клиентом, он&nbsp;позволил спроектировать и&nbsp;смоделировать
+        объект с&nbsp;учётом всех размеров, форм и&nbsp;других характеристик.
       </p>
     </div>
   </section>

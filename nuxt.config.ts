@@ -13,7 +13,12 @@ export default defineNuxtConfig({
 			pathPrefix: false,
 		},
 	],
-	modules: ['@vueuse/nuxt', '@vueuse/motion/nuxt', '@nuxt/image'],
+	modules: [
+		'@vueuse/nuxt',
+		'@vueuse/motion/nuxt',
+		'@nuxt/image',
+		'@nuxtjs/google-fonts',
+	],
 	vite: {
 		css: {
 			preprocessorOptions: {
@@ -24,4 +29,11 @@ export default defineNuxtConfig({
 		},
 	},
 	css: ['@/assets/styles/main.scss'],
+	googleFonts: {
+		families: {
+			Inter: [500, 600],
+		},
+		useStylesheet: true,
+		outputDir: 'assets/fonts',
+	},
 })
