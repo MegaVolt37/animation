@@ -3,7 +3,7 @@
     <div class="section__render-image">
       <img
         class="section__render-img"
-        src="@/assets/images/bottle__render.png"
+        src="@/assets/images/bottle__render_new.png"
         alt="bottle"
       />
     </div>

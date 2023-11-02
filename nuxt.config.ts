@@ -18,6 +18,7 @@ export default defineNuxtConfig({
 		'@vueuse/motion/nuxt',
 		'@nuxt/image',
 		'@nuxtjs/google-fonts',
+		'nuxt-icons'
 	],
 	vite: {
 		css: {

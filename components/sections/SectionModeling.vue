@@ -2,7 +2,7 @@
   <section class="section__modeling bg__black section">
     <img
       class="section__modeling-img"
-      src="@/assets/images/bottle__modeling.png"
+      src="@/assets/images/bottle__modeling_new.png"
       alt="bottle"
     />
 

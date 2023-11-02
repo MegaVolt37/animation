@@ -2,7 +2,7 @@
   <div class="section__header-wrapper section">
     <section class="section__header bg__white">
       <div class="section__header-image">
-        <img class="section__header-img" src="@/assets/images/bottle.svg" alt="bottle" />
+        <img class="section__header-img" src="@/assets/images/bottle_new.svg" alt="bottle" />
       </div>
       <h1 class="section__title section__header-title text__white">
         3d&nbsp;визуализация бутылки
