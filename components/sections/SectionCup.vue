@@ -5,6 +5,7 @@
       v-for="image in arr"
       :key="image"
       :src="'images/cup/' + image"
+      loading="lazy"
       alt="Image"
       width="470"
     />

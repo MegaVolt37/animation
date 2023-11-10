@@ -155,13 +155,13 @@ export function animateAngle(gsap, tl) {
 	gsap.set(images[0], {
 		opacity: 1,
 		scale: 0,
-		y: '-50%',
+		// y: '-50%',
 	})
 	tl.to(
 		images[0],
 		{
 			scale: 1,
-			y: '-50%',
+			// y: '-50%',
 			duration: 60,
 		},
 		'<'

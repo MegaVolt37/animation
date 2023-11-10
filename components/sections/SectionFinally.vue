@@ -4,6 +4,7 @@
       <img
         class="section__finally-img"
         src="@/assets/images/bottle__finally.png"
+        loading="lazy"
         alt="bottle"
       />
     </div>
@@ -11,17 +12,24 @@
       <div class="text__first">
         <h1 class="section__title section__finally-title text__black">Финал</h1>
         <p class="section__subtitle section__finally-subtitle text__gray">
-          добавить еще тройку строк текста про визуализацию для чего и каких целей она
-          реализована, возможно рассказать про этикетку.
+          нанесение этикетки и&nbsp;финальная ретушь&nbsp;&mdash; завершающие этапы
+          процесса создания точной цифровой копии объекта реального мира
         </p>
       </div>
       <div class="text__second">
-        <p class="section__subtitle section__finally-end-subtitle text__gray">
+        <h1 class="section__title section__finally-end-subtitle text__black">
+          10K&nbsp;UHD
+        </h1>
+        <p class="section__subtitle section__finally-end-subtitle__end text__gray">
+          разрешение 10240&times;4320&nbsp;px делает возможным использование этого key
+          visual в&nbsp;любых форматах наружной и&nbsp;диджитал рекламы
+        </p>
+        <!-- <p class="section__subtitle section__finally-end-subtitle text__gray">
           высокая детализация<br />10K&nbsp;&mdash; обозначение разрешающей способности
           в&nbsp;цифровом кинематографе и&nbsp;компьютерной графике, приблизительно
           соответствующее 10000 пикселей по&nbsp;горизонтали.
-        </p>
-        <div class="text__gradient-block">
+        </p> -->
+        <!-- <div class="text__gradient-block">
           <span
             class="text__gradient text__black text__gradient-first section__finally-end-text__gradient"
             >44&nbsp;236&nbsp;800 пикселей</span
@@ -30,11 +38,11 @@
             class="text__gradient text__gradient-second section__finally-end-text__gradient"
             >44&nbsp;236&nbsp;800 пикселей</span
           >
-        </div>
+        </div> -->
 
-        <p class="section__subtitle section__finally-end-subtitle__end text__light-gray">
+        <!-- <p class="section__subtitle section__finally-end-subtitle__end text__gray">
           10K UHD (10240 &times; 4320)
-        </p>
+        </p> -->
       </div>
     </div>
   </section>

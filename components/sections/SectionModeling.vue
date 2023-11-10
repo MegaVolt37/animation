@@ -3,16 +3,15 @@
     <img
       class="section__modeling-img"
       src="@/assets/images/bottle__modeling_new.png"
+      loading="lazy"
       alt="bottle"
     />
 
     <div class="section__modeling-text">
-      <h1 class="section__title section__modeling-title text__white">
-        Моделинг
-      </h1>
+      <h1 class="section__title section__modeling-title text__white">Моделинг</h1>
       <p class="section__subtitle section__modeling-subtitle text__gray">
-        следующий этап, который позволяет создать трёхмерный объект,
-        приближенный к финальному результату
+        на&nbsp;этом этапе по&nbsp;двухмерному четрежу был воссоздан трёхмерный
+        объект&nbsp;&mdash; основа для финального рендера
       </p>
     </div>
   </section>

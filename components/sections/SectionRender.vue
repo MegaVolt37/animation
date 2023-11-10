@@ -4,6 +4,7 @@
       <img
         class="section__render-img"
         src="@/assets/images/bottle__render_new.png"
+        loading="lazy"
         alt="bottle"
       />
     </div>
@@ -11,7 +12,8 @@
     <div class="section__render-text">
       <h1 class="section__title section__render-title text__black">Рендер</h1>
       <p class="section__subtitle section__render-subtitle text__gray">
-        конечный процесс создания реального объекта из&nbsp;подготовленной сцены.
+        точная настройка параметров материала и&nbsp;его взаимодействия с&nbsp;освещением
+        позволила добиться высокой реалистичности
       </p>
     </div>
   </section>

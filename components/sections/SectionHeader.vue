@@ -2,10 +2,15 @@
   <div class="section__header-wrapper section">
     <section class="section__header bg__white">
       <div class="section__header-image">
-        <img class="section__header-img" src="@/assets/images/bottle_new.svg" alt="bottle" />
+        <img
+          class="section__header-img"
+          src="@/assets/images/bottle_new.svg"
+          loading="lazy"
+          alt="bottle"
+        />
       </div>
       <h1 class="section__title section__header-title text__white">
-        3d&nbsp;визуализация бутылки
+        3d-моделирование упаковки продукта
       </h1>
       <p class="section__subtitle section__header-subtitle text__gray">
         с&nbsp;помощью 3D&nbsp;визуализации создали реалистичную модель упаковки
@@ -46,7 +51,7 @@
   }
   &-title {
     color: orange;
-    max-width: vw(650);
+    max-width: vw(710);
     line-height: 1.15;
     width: 100%;
     position: absolute;

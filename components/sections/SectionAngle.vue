@@ -47,13 +47,15 @@
             :src="'images/cup/' + image"
             alt="Image"
             width="470"
+            height="470"
+            sizes="100vw sm:50vw md:470px"
           />
           <!-- <NuxtImg
             class="section__angle-cup__image"
             v-for="image in arr"
             :key="image"
-            :src="'images/cup/' + image"
-            width="470"
+            :src="'/images/cup/' + image"
+            sizes="100vw sm:50vw md:470px"
           /> -->
         </div>
       </div>
@@ -66,10 +68,10 @@
         </div>
       </div>
       <div class="section__angle-text">
-        <h1 class="section__title section__angle-title text__black">7&nbsp;разных ракурсов</h1>
+        <h1 class="section__title section__angle-title text__black">7&nbsp;ракурсов</h1>
         <p class="section__subtitle section__angle-subtitle text__light-gray">
-          добавить еще тройку строк текста про визуализацию для чего и каких целей она
-          реализована, возможно рассказать про этикетку.
+          чтобы сделать практическое применение 3d-модели продукта еще более
+          универсальным, была создана целая серия изображений
         </p>
       </div>
     </div>
@@ -137,6 +139,7 @@ const arr = [
   "!Render_00056.png",
   "!Render_00057.png",
 ];
+const img = useImage();
 </script>
 
 <style lang="scss" scoped>
