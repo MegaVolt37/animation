@@ -24,11 +24,14 @@ import {
   animateHeader,
   animateModeling,
   animateRender,
+  animateHeaderMobile,
+  animateDrawingMobile,
 } from "@/utils/animations";
 import { gsap } from "gsap";
 import { Observer } from "gsap/Observer";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 const { y } = useWindowScroll();
+const { width } = useWindowSize();
 
 gsap.registerPlugin(ScrollTrigger, Observer);
 ScrollTrigger.config({
@@ -46,13 +49,19 @@ onMounted(async () => {
         pin: true,
       },
     });
-    tl.add(animateHeader(gsap, tl));
-    tl.add(animateDrawing(gsap, tl));
-    tl.add(animateModeling(gsap, tl));
-    tl.add(animateRender(gsap, tl));
-    tl.add(animateFinally(gsap, tl));
-    tl.add(animateAngle(gsap, tl));
-    // tl.add(animateCup(gsap, tl, ScrollTrigger));
+
+    if (width.value > 768) {
+      tl.add(animateHeader(gsap, tl));
+      tl.add(animateDrawing(gsap, tl));
+      tl.add(animateModeling(gsap, tl));
+      tl.add(animateRender(gsap, tl));
+      tl.add(animateFinally(gsap, tl));
+      tl.add(animateAngle(gsap, tl));
+    } else {
+      tl.add(animateHeaderMobile(gsap, tl));
+      tl.add(animateDrawingMobile(gsap, tl));
+    }
+    console.log(width);
   }
 });
 </script>
@@ -62,42 +71,4 @@ onMounted(async () => {
   height: 100vh;
   position: relative;
 }
-
-// .section__finally-end {
-//   background-color: $light-gray;
-//   height: auto;
-//   display: flex;
-//   &-text {
-//     height: fit-content;
-//     margin: auto;
-//     margin-left: 0;
-//   }
-//   &-text__gradient {
-//     display: block;
-//     max-width: vw(200);
-//     margin-bottom: vw(25);
-//   }
-//   &__block-img {
-//     width: vw(1740);
-//     margin-left: vw(-1042);
-//     height: vw(664);
-//     height: vw(810);
-//     overflow: hidden;
-//     margin-top: -30%;
-//   }
-//   &-img {
-//     width: vw(3064);
-//     object-fit: contain;
-//     height: vw(1254);
-//     margin-left: vw(-1290);
-//     mix-blend-mode: darken;
-//   }
-//   &-title {
-//     margin-bottom: vw(60);
-//   }
-//   &-subtitle {
-//     max-width: vw(295);
-//     margin-bottom: vw(60);
-//   }
-// }
 </style>

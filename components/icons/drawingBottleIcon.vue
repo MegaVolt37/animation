@@ -97,12 +97,15 @@ const readHover = computed(() =>
   isHover.value ? "url(#paint0_linear_548_858)" : "white"
 );
 </script>
-<style scoped>
+<style lang="scss" scoped>
 .icon-wrapper {
   height: 100vh;
   display: grid;
   align-items: center;
   justify-items: flex-end;
+  @media screen and (max-width: 768px) {
+    height: vmin(935);
+  }
 }
 svg {
   position: absolute;
@@ -112,8 +115,15 @@ svg {
 }
 .icon-bg {
   margin-bottom: -215px;
+  @media screen and (max-width: 768px) {
+    width: vmin(935);
+    margin-bottom: -145px;
+  }
 }
 .bottle {
   z-index: 2;
+  @media screen and (max-width: 768px) {
+    width: vmin(680);
+  }
 }
 </style>

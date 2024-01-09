@@ -5,6 +5,9 @@ import { animateHeader } from './headerAnimation'
 import { animateModeling } from './modelingAnimation'
 import { animateRender } from './renderAnimation'
 
+import { animateHeaderMobile } from './mobile/headerAnimationMobile'
+import { animateDrawingMobile } from './mobile/drawingAnimationMobile'
+
 export {
 	animateAngle,
 	animateDrawing,
@@ -12,4 +15,6 @@ export {
 	animateHeader,
 	animateModeling,
 	animateRender,
+	animateHeaderMobile,
+	animateDrawingMobile,
 }

@@ -1,19 +1,21 @@
 <template>
   <section class="section__drawing bg__black section">
-    <div
-      ref="drawingImages"
-      class="section__drawing-images"
-      :class="{ is_hover: readHoverDrawing }"
-    >
-      <DrawingBottleIcon />
-    </div>
+    <div class="section__drawing-content">
+      <div
+        ref="drawingImages"
+        class="section__drawing-images"
+        :class="{ is_hover: readHoverDrawing }"
+      >
+        <DrawingBottleIcon />
+      </div>
 
-    <div class="section__drawing-text">
-      <h1 class="section__title section__drawing-title text__white">Чертёж</h1>
-      <p class="section__subtitle section__drawing-subtitle text__gray">
-        предоставленный клиентом чертёж стал основой проектаи позволил смоделировать
-        объект с&nbsp;высокой точностью
-      </p>
+      <div class="section__drawing-text">
+        <h1 class="section__title section__drawing-title text__white">Чертёж</h1>
+        <p class="section__subtitle section__drawing-subtitle text__gray">
+          предоставленный клиентом чертёж стал основой проектаи позволил смоделировать
+          объект с&nbsp;высокой точностью
+        </p>
+      </div>
     </div>
   </section>
 </template>
@@ -22,14 +24,31 @@
 
 <style lang="scss">
 .section__drawing {
-  display: flex;
-  align-items: center;
-  gap: vw(70);
+  @media screen and (max-width: 768px) {
+    height: vmin(935);
+  }
+  &-content {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: vw(70);
+    @media screen and (max-width: 768px) {
+      flex-direction: column-reverse;
+      gap: 0;
+    }
+  }
   &-images {
     position: relative;
     height: 100%;
     max-height: 100vh;
     width: 50%;
+    @media screen and (max-width: 768px) {
+      rotate: -90deg;
+      max-height: vmin(935);
+      width: vmin(935);
+    }
   }
   &-images__container {
     position: absolute;
@@ -53,10 +72,16 @@
     display: none;
   }
   &-title {
-    margin-bottom: vw(60);
+    margin-bottom: vmin(20);
+    @media screen and (min-width: 768px) {
+      margin-bottom: vw(60);
+    }
   }
   &-subtitle {
-    max-width: vw(295);
+    max-width: vmin(240);
+    @media screen and (min-width: 768px) {
+      max-width: vw(295);
+    }
   }
 }
 </style>
