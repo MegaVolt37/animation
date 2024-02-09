@@ -5,7 +5,6 @@
         <img
           class="section__finally-img"
           src="@/assets/images/bottle__finally.png"
-          loading="lazy"
           alt="bottle"
         />
       </div>
@@ -56,7 +55,10 @@
 .section__finally-wrapper {
   max-width: 100vw;
   height: auto;
-  display: contents;
+
+  @media screen and (min-width: 768px) {
+    display: contents;
+  }
   @media screen and (max-width: 768px) {
     position: relative;
     // height: fit-content;

@@ -1,37 +1,54 @@
 export function animateFinallyMobile(gsap) {
 	const tlFinally = gsap?.timeline({
 		scrollTrigger: {
-			trigger: '.section__finally',
-			start: 'top+=80% top',
+			trigger: '.section__finally-wrapper',
+			start: 'top top',
 			scrub: 1,
+			end: '+=3000',
 			markers: true,
-			// end: '+=3000',
-			pin: '.section__finally-wrapper',
-			// pin: true,
+			pinSpacing: false,
+			pin: true,
 		},
 	})
-	tlFinally.fromTo(
-		'.section__finally-img',
-		{
-			x: '150%',
-		},
-		{
-			x: '-75%',
-			duration: 80,
-		},
-		'>'
-	)
-	tlFinally.fromTo(
-		'.section__finally-text',
-		{
-			x: '100%',
-		},
-		{
-			x: '0%',
-			duration: 24,
-		},
-		'>-=20'
-	)
+	// tlFinally.fromTo(
+	// 	'.section__finally-img',
+	// 	{
+	// 		x: '150%',
+	// 	},
+	// 	{
+	// 		x: '-75%',
+	// 		duration: 80,
+	// 	},
+	// 	'<-=80'
+	// )
+	// tlFinally.fromTo(
+	// 	'.section__finally-title',
+	// 	{
+	// 		color: 'black',
+	// 	},
+	// 	{
+	// 		color: 'red',
+	// 		duration: 80,
+	// 		// scrollTrigger: {
+	// 		// 	trigger: '.section__finally-wrapper',
+	// 		// 	start: 'top top',
+	// 		// 	scrub: 1,
+	// 		// 	markers: true,
+	// 		// 	pin: '.section__finally-wrapper',
+	// 		// },
+	// 	}
+	// )
+	// tlFinally.fromTo(
+	// 	'.section__finally-text',
+	// 	{
+	// 		x: '100%',
+	// 	},
+	// 	{
+	// 		x: '0%',
+	// 		duration: 24,
+	// 	},
+	// 	'>-=20'
+	// )
 	// tlFinally.to(
 	// 	'.section__finally-text',
 	// 	{

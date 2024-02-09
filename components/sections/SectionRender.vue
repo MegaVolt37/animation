@@ -4,7 +4,6 @@
       <img
         class="section__render-img"
         src="@/assets/images/bottle__render_new.png"
-        loading="lazy"
         alt="bottle"
       />
     </div>

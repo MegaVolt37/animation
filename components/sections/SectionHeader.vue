@@ -5,7 +5,6 @@
         <img
           class="section__header-img"
           src="@/assets/images/bottle_new.svg"
-          loading="lazy"
           alt="bottle"
         />
       </div>

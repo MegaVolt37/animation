@@ -3,7 +3,6 @@
     <img
       class="section__modeling-img"
       src="@/assets/images/bottle__modeling_new.png"
-      loading="lazy"
       alt="bottle"
     />
 

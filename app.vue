@@ -8,7 +8,7 @@
           <SectionModeling />
           <SectionRender />
           <SectionFinally />
-          <SectionAngle />
+          <!-- <SectionAngle /> -->
           <!-- <SectionCup /> -->
         </div>
       </div>
@@ -58,53 +58,11 @@ onMounted(async () => {
           tl.add(animateAngle($gsap, tl));
         });
       } else {
-        // const tl = gsap.timeline({
-        //   scrollTrigger: {
-        //     trigger: ".content",
-        //     start: "top top",
-        //     end: `+=10000`,
-        //     scrub: 1,
-        //     pin: true,
-        //   },
-        // });
         nextTick(() => {
-          // const tl = $gsap.timeline({
-          // 	scrollTrigger: {
-          // 		trigger: '.content',
-          // 		start: 'top top',
-          // 		// pin: true,
-          // 		scrub: 1,
-          // 		end: `+=3000`,
-          // 	},
-          // })
-          // tl.to(".test-p", {
-          //   x: "100%",
-          // });
           animateHeaderMobile($gsap);
           animateDrawingMobile($gsap);
           animateRenderMobile($gsap);
-          // animateFinallyMobile($gsap);
-
-          // tl.add(animateHeaderMobile($gsap, tl))
-          // tl.add(animateDrawingMobile($gsap, tl))
-          // tl.add(animateRenderMobile($gsap, tl))
-          // tl.add(animateFinallyMobile($gsap, tl));
-          // animateFinallyMobile($gsap, tl)
-          // const tlRender = $gsap?.timeline({
-          //   scrollTrigger: {
-          //     trigger: ".test-wrapper",
-          //     start: "top+=1px top",
-          //     scrub: 1,
-          //     end: "+=3000",
-          //     // pin: '.section__finally',
-          //     markers: true,
-          //     // pinType: 'static',
-          //     pin: true,
-          //   },
-          // });
-          // tl.set(".section__modeling", { y: "200%" });
-          // animateFinallyMobile(gsap, tl);
-          // tl.add(animateDrawingMobile(gsap, tl));
+          animateFinallyMobile($gsap);
         });
       }
     },
@@ -122,8 +80,6 @@ onMounted(async () => {
   height: 100vh;
   position: relative;
   @media screen and (max-width: 768px) {
-    // overflow-x: hidden;
-    // position: static;
     height: auto;
   }
 }

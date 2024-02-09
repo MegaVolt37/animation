@@ -5,7 +5,7 @@ export function animateRenderMobile(gsap, tl) {
 			start: 'top top',
 			// end: "+=3000",
 			scrub: 1,
-			// pin: true
+			markers: true,
 		},
 	})
 	// tl.fromTo(
@@ -58,6 +58,23 @@ export function animateRenderMobile(gsap, tl) {
 		},
 		'<'
 	)
+	// tlRender.fromTo(
+	// 	'.section__finally-img',
+	// 	{
+	// 		x: '150%',
+	// 	},
+	// 	{
+	// 		x: '-75%',
+	// 		duration: 80,
+	// 		scrollTrigger: {
+	// 			trigger: '.section__render',
+	// 			start: 'top top',
+	// 			// end: "+=3000",
+	// 			scrub: 1,
+	// 			markers: true,
+	// 		},
+	// 	}
+	// )
 
 	return tlRender
 }
