@@ -4,7 +4,7 @@
       <div class="section__finally__block-img">
         <img
           class="section__finally-img"
-          src="@/assets/images/bottle__finally.png"
+          src="@/assets/images/convert/bottle__finally.webp"
           alt="bottle"
         />
       </div>

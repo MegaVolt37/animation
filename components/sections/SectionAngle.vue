@@ -4,37 +4,37 @@
       <div class="section__angle-block__images">
         <img
           class="angle__image-first section__angle-img"
-          src="@/assets/images/angle_bottles/1.png"
+          src="@/assets/images/convert/angle_bottles/1.webp"
           alt="bottle"
         />
         <img
           class="angle__image-second section__angle-img"
-          src="@/assets/images/angle_bottles/2.png"
+          src="@/assets/images/convert/angle_bottles/2.webp"
           alt="bottle"
         />
         <img
           class="angle__image-third section__angle-img"
-          src="@/assets/images/angle_bottles/3.png"
+          src="@/assets/images/convert/angle_bottles/3.webp"
           alt="bottle"
         />
         <img
           class="angle__image-fourth section__angle-img"
-          src="@/assets/images/angle_bottles/4.png"
+          src="@/assets/images/convert/angle_bottles/4.webp"
           alt="bottle"
         />
         <img
           class="angle__image-firth section__angle-img"
-          src="@/assets/images/angle_bottles/5.png"
+          src="@/assets/images/convert/angle_bottles/5.webp"
           alt="bottle"
         />
         <img
           class="angle__image-sixth section__angle-img"
-          src="@/assets/images/angle_bottles/6.png"
+          src="@/assets/images/convert/angle_bottles/6.webp"
           alt="bottle"
         />
         <img
           class="angle__image-seventh section__angle-img"
-          src="@/assets/images/angle_bottles/7.png"
+          src="@/assets/images/convert/angle_bottles/7.webp"
           alt="bottle"
         />
       </div>
