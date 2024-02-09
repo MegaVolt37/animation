@@ -5,7 +5,6 @@ export function animateFinallyMobile(gsap) {
 			start: 'top top',
 			scrub: 1,
 			// end: '+=3000',
-			markers: true,
 			pinSpacing: true,
 			pin: true,
 		},
@@ -19,11 +18,8 @@ export function animateFinallyMobile(gsap) {
 		},
 		'>'
 	)
-	tlFinally.fromTo(
+	tlFinally.to(
 		'.section__finally-img',
-		{
-			x: '-76%',
-		},
 		{
 			scale: 1.9,
 			x: '-95%',

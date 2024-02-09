@@ -8,7 +8,7 @@
           <SectionModeling />
           <SectionRender />
           <SectionFinally />
-          <!-- <SectionAngle /> -->
+          <SectionAngle />
           <!-- <SectionCup /> -->
         </div>
       </div>
@@ -29,7 +29,7 @@ import {
   animateDrawingMobile,
   animateRenderMobile,
   animateFinallyMobile,
-  // animateModelingMobile,
+  animateAngleMobile,
 } from "@/utils/animations";
 
 const { width } = useWindowSize();
@@ -64,6 +64,7 @@ onMounted(async () => {
           tl.add(animateDrawingMobile($gsap));
           tl.add(animateRenderMobile($gsap));
           tl.add(animateFinallyMobile($gsap));
+          tl.add(animateAngleMobile($gsap));
         });
       }
     },

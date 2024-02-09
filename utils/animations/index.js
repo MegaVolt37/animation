@@ -9,6 +9,7 @@ import { animateHeaderMobile } from './mobile/headerAnimationMobile'
 import { animateDrawingMobile } from './mobile/drawingAnimationMobile'
 import { animateRenderMobile } from './mobile/renderAnimationMobile'
 import { animateFinallyMobile } from './mobile/finallyAnimationMobile'
+import { animateAngleMobile } from './mobile/angleAnimationMobile'
 
 export {
 	animateAngle,
@@ -21,4 +22,5 @@ export {
 	animateDrawingMobile,
 	animateRenderMobile,
 	animateFinallyMobile,
+	animateAngleMobile,
 }

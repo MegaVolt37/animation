@@ -157,8 +157,14 @@ const img = useImage();
   background-color: $light-gray;
   @media screen and (max-width: 768px) {
     padding-bottom: vmin(25);
+    height: auto;
+    position: relative;
+    top: 0;
+    z-index: -1;
+    min-height: 100vh;
   }
   &-content {
+    padding-top: 65%;
     // max-width: vw(835);
     width: 100%;
     height: 100%;
@@ -220,7 +226,7 @@ const img = useImage();
     overflow: hidden;
     margin-right: -130px;
     @media screen and (max-width: 768px) {
-      margin-right: 0;
+      margin-right: -110px;
     }
   }
   &-cup__wrapper {
