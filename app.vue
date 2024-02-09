@@ -59,10 +59,11 @@ onMounted(async () => {
         });
       } else {
         nextTick(() => {
-          animateHeaderMobile($gsap);
-          animateDrawingMobile($gsap);
-          animateRenderMobile($gsap);
-          animateFinallyMobile($gsap);
+          const tl = $gsap.timeline({});
+          tl.add(animateHeaderMobile($gsap));
+          tl.add(animateDrawingMobile($gsap));
+          tl.add(animateRenderMobile($gsap));
+          tl.add(animateFinallyMobile($gsap));
         });
       }
     },

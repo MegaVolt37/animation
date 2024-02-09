@@ -76,7 +76,7 @@
     flex-direction: column;
     align-items: center;
     top: 0;
-    min-height: 50vh;
+    min-height: 100vh;
     // overflow: hidden;
     padding-bottom: vmin(40);
     // gap: vmin(80);
@@ -162,7 +162,9 @@
     transform: translateX(-6%);
     @media screen and (max-width: 768px) {
       height: auto;
-      width: vmin(1300);
+      width: vmin(1100);
+      margin-top: -29%;
+      transform: translateX(150%);
     }
   }
   &-title {
