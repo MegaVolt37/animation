@@ -18,7 +18,8 @@ export default defineNuxtConfig({
 		'@vueuse/motion/nuxt',
 		'@nuxt/image',
 		'@nuxtjs/google-fonts',
-		'nuxt-icons'
+		'nuxt-icons',
+		'@hypernym/nuxt-gsap',
 	],
 	vite: {
 		css: {
@@ -36,5 +37,10 @@ export default defineNuxtConfig({
 		},
 		useStylesheet: true,
 		outputDir: 'assets/fonts',
+	},
+	gsap: {
+		extraPlugins: {
+			scrollTrigger: true,
+		},
 	},
 })

@@ -155,7 +155,9 @@ const img = useImage();
   align-items: center;
   justify-content: center;
   background-color: $light-gray;
-
+  @media screen and (max-width: 768px) {
+    padding-bottom: vmin(25);
+  }
   &-content {
     // max-width: vw(835);
     width: 100%;
@@ -169,6 +171,12 @@ const img = useImage();
     overflow: hidden;
     padding-right: vw(40);
     position: relative;
+    @media screen and (max-width: 768px) {
+      flex-direction: column-reverse;
+      padding: 0;
+      gap: vmin(40);
+      width: 100vw;
+    }
   }
   &-block__images {
     width: vw(400);
@@ -178,6 +186,12 @@ const img = useImage();
     display: flex;
     justify-content: center;
     position: relative;
+    @media screen and (max-width: 768px) {
+      width: 80%;
+      max-height: vmin(360);
+      margin: 0 auto;
+      aspect-ratio: 1/1;
+    }
   }
   &-img {
     margin: auto;
@@ -190,6 +204,8 @@ const img = useImage();
     left: 50%;
     top: 50%;
     transform: translateY(-50%) translateX(-50%);
+    @media screen and (max-width: 768px) {
+    }
   }
   &-cup__finally {
     display: none;
@@ -203,11 +219,17 @@ const img = useImage();
     grid-template-columns: 0px 1fr;
     overflow: hidden;
     margin-right: -130px;
+    @media screen and (max-width: 768px) {
+      margin-right: 0;
+    }
   }
   &-cup__wrapper {
     position: relative;
     width: 35vw;
     aspect-ratio: 1/1;
+    @media screen and (max-width: 768px) {
+      width: 100vw;
+    }
   }
   .dot-wrapper {
     // height: auto;
@@ -224,6 +246,10 @@ const img = useImage();
     top: 50%;
     transform: translateY(-50%) translateX(-50%);
     max-width: 35vw;
+    @media screen and (max-width: 768px) {
+      max-width: 100vw;
+      aspect-ratio: 1/1;
+    }
   }
   .section__angle-img {
     position: absolute;
@@ -235,13 +261,22 @@ const img = useImage();
   }
   &-text {
     margin: auto;
+    @media screen and (max-width: 768px) {
+      margin: 0 auto;
+    }
   }
   &-title {
     max-width: vw(320);
     margin-bottom: vw(60);
+    @media screen and (max-width: 768px) {
+      max-width: vmin(240);
+    }
   }
   &-subtitle {
     max-width: vw(295);
+    @media screen and (max-width: 768px) {
+      max-width: vmin(240);
+    }
   }
 }
 </style>

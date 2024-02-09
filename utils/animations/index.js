@@ -7,6 +7,8 @@ import { animateRender } from './renderAnimation'
 
 import { animateHeaderMobile } from './mobile/headerAnimationMobile'
 import { animateDrawingMobile } from './mobile/drawingAnimationMobile'
+import { animateRenderMobile } from './mobile/renderAnimationMobile'
+import { animateFinallyMobile } from './mobile/finallyAnimationMobile'
 
 export {
 	animateAngle,
@@ -17,4 +19,6 @@ export {
 	animateRender,
 	animateHeaderMobile,
 	animateDrawingMobile,
+	animateRenderMobile,
+	animateFinallyMobile,
 }

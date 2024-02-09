@@ -29,7 +29,9 @@
 </template>
 
 <script setup>
-const { width } = useWindowSize();
+defineProps({
+  width: Number || String,
+});
 </script>
 
 <style lang="scss" scoped>
@@ -38,11 +40,23 @@ const { width } = useWindowSize();
   top: 0;
   height: 100vh;
   z-index: 1;
+  @media screen and (max-width: 768px) {
+    // height: vmin(935);
+
+    position: relative;
+    top: 0;
+  }
 }
 .section__header {
   height: 100%;
   display: grid;
   position: relative;
+  @media screen and (max-width: 768px) {
+    // height: vmin(935);
+
+    position: relative;
+    top: 0;
+  }
   &-image {
     position: absolute;
     top: 0;
@@ -57,7 +71,7 @@ const { width } = useWindowSize();
       display: block;
       top: 50%;
       right: 0;
-      transform: translateY(-50%);
+      // transform: translateY(-50%);
       width: vw(1530);
       height: vw(387);
     }
@@ -66,7 +80,7 @@ const { width } = useWindowSize();
     position: absolute;
     top: 50%;
     right: 0;
-    transform: translateY(-50%);
+    // transform: translateY(-50%);
     width: 100vw;
 
     display: flex;
@@ -103,6 +117,7 @@ const { width } = useWindowSize();
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      background-position: 100%;
     }
   }
   .section__header-subtitle__wrapper {

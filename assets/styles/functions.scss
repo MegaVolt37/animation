@@ -1,6 +1,6 @@
 @function vw($value, $size: 1120) {
-  @return calc($value / $size) * 100vw;
+	@return calc($value / $size) * 100vw;
 }
 @function vmin($value, $size: 360) {
-  @return calc($value / $size) * 100vmin;
+	@return calc($value / $size) * 100vmin;
 }

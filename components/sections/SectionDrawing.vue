@@ -25,7 +25,11 @@
 <style lang="scss">
 .section__drawing {
   @media screen and (max-width: 768px) {
-    height: vmin(935);
+    // height: vmin(935);
+    height: auto;
+    position: relative;
+    top: 0;
+    // transform: translateY(100%);
   }
   &-content {
     position: relative;
@@ -36,7 +40,8 @@
     gap: vw(70);
     @media screen and (max-width: 768px) {
       flex-direction: column-reverse;
-      gap: 0;
+      gap: vmin(60);
+      height: auto;
     }
   }
   &-images {

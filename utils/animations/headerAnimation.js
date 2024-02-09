@@ -2,7 +2,7 @@ export function animateHeader(gsap, tl) {
 	const titleHeader = document.querySelector('.section__header-title')
 	const bottleHeader = document.querySelector('.section__header-img')
 	function changeTitle() {
-		titleHeader.style.backgroundPosition = `${100}%`
+		titleHeader.style.backgroundPosition = `100% ${100}%`
 		if (window.scrollY === 0) return
 		const titleSize = titleHeader.getBoundingClientRect()
 		const bottleSize = bottleHeader.getBoundingClientRect()
@@ -30,6 +30,9 @@ export function animateHeader(gsap, tl) {
 	// 	opacity: 0,
 	// 	yPercent: 100,
 	// })
+	tl.set('.section__header-title__wrapper', {
+		y: '-50%',
+	})
 	const tlHeader = gsap?.timeline({
 		scrollTrigger: {
 			trigger: '.section__header-wrapper',
@@ -39,16 +42,17 @@ export function animateHeader(gsap, tl) {
 			// pin: true,
 		},
 	})
-	
+
 	tl.fromTo(
 		'.section__header-image',
 		{
-			xPercent: -100,
-			right: '100vw'
+			x: '-100%',
+			right: '100vw',
+			y: '-50%',
 		},
 		{
 			right: '-10%',
-			xPercent: -10,
+			x: '-10%',
 			duration: 40,
 			onUpdate: (self) => {
 				changeTitle()
@@ -59,10 +63,10 @@ export function animateHeader(gsap, tl) {
 	tl.to(
 		'.section__header-image',
 		{
+			// x: '6%',
+			// y: '-13%',
 			x: '6%',
-			y: '-13%',
-			// xPercent: 6,
-			// yPercent: -13,
+			y: '-65%',
 			duration: 24,
 		},
 		'+=2.5'
@@ -70,8 +74,8 @@ export function animateHeader(gsap, tl) {
 	tl.to(
 		'.section__header-title__wrapper',
 		{
-			// yPercent: -13,
-			y: '-13%',
+			y: '-65%',
+			// y: '-13%',
 			duration: 24,
 		},
 		'<'
@@ -98,34 +102,35 @@ export function animateHeader(gsap, tl) {
 		},
 		{
 			opacity: 1,
-			yPercent: 0,
-			duration: 24,
-		},
-		'<'
-	)
-	tl.fromTo(
-		'.section__header-img',
-		{ scale: '1' },
-		{
-			scale: '2.5',
-			duration: 24,
-			yPercent: 0,
-		},
-		'>'
-	)
-	tl.to(
-		'.section__header-image',
-		{
 			y: '0%',
 			duration: 24,
 		},
 		'<'
 	)
 	tl.to(
+		'.section__header-image',
+		{
+			y: '-50%',
+			duration: 24,
+		},
+		'>'
+	)
+	tl.fromTo(
+		'.section__header-img',
+		{ scale: '1' },
+		{
+			scale: '5',
+			duration: 24,
+			y: '0%',
+		},
+		'<'
+	)
+
+	tl.to(
 		'.section__header-subtitle',
 		{
 			opacity: 0,
-			yPercent: 0,
+			y: '0%',
 			duration: 5,
 		},
 		'<'

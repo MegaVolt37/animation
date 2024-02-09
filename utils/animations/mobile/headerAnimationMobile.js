@@ -2,7 +2,7 @@ export function animateHeaderMobile(gsap, tl) {
 	const titleHeader = document.querySelector('.section__header-title')
 	const bottleHeader = document.querySelector('.section__header-img')
 	function changeTitle() {
-		titleHeader.style.backgroundPosition = `center ${100}%`
+		titleHeader.style.backgroundPosition = `100% ${100}%`
 		if (window.scrollY === 0) return
 		const titleSize = titleHeader.getBoundingClientRect()
 		const bottleSize = bottleHeader.getBoundingClientRect()
@@ -23,21 +23,26 @@ export function animateHeaderMobile(gsap, tl) {
 		if (overlapPercentage < 0) {
 			titleHeader.style.backgroundPosition = `center -${100}%`
 		} else {
-			titleHeader.style.backgroundPosition = `center -${100 - overlapPercentage}%`
+			titleHeader.style.backgroundPosition = `center -${
+				100 - overlapPercentage
+			}%`
 		}
 	}
+	gsap.set('.section__header-title__wrapper', {
+		y: '-50%',
+	})
 	const tlHeaderMobile = gsap?.timeline({
 		scrollTrigger: {
-			trigger: '.section__header-wrapper',
-			start: 'top top',
-			scrub: 2,
+			trigger: '.content',
+			start: 'top-=1px top',
+			scrub: 1,
+			pin: '.section__header-wrapper',
 		},
 	})
-	
-	tl.fromTo(
+	tlHeaderMobile.fromTo(
 		'.section__header-image',
 		{
-			top: '100vh'
+			top: '100vh',
 		},
 		{
 			top: '-5vh',
@@ -48,7 +53,7 @@ export function animateHeaderMobile(gsap, tl) {
 		},
 		'<'
 	)
-	tl.fromTo(
+	tlHeaderMobile.fromTo(
 		'.section__header-subtitle',
 		{
 			opacity: 0,
@@ -59,26 +64,26 @@ export function animateHeaderMobile(gsap, tl) {
 		},
 		'>-=15'
 	)
-	tl.fromTo(
+	tlHeaderMobile.fromTo(
 		'.section__header-img',
 		{ scale: '1' },
 		{
 			scale: '2.5',
 			duration: 24,
-			yPercent: 0,
+			y: '0%',
 		},
 		'>'
 	)
-	tl.to(
+	tlHeaderMobile.to(
 		'.section__header-subtitle',
 		{
 			opacity: 0,
-			yPercent: 0,
+			y: '0%',
 			duration: 5,
 		},
 		'<'
 	)
-	tl.fromTo(
+	tlHeaderMobile.fromTo(
 		'.section__header-title',
 		{ opacity: 1 },
 		{
@@ -87,11 +92,12 @@ export function animateHeaderMobile(gsap, tl) {
 		},
 		'<'
 	)
-	tl.to('.section__header-wrapper', {
-		top: '-100%',
-		duration: 1,
-	})
-	tl.to('.section__drawing', { top: '0%', duration: 1 }, '<')
+	// tl.to('.section__header-wrapper', {
+	// 	// top: '-100%',
+	// 	top: '-100%',
+	// 	duration: 40,
+	// })
+	// tl.to('.section__drawing', { y: '0%', duration: 40 }, '<')
 
 	return tlHeaderMobile
 }
