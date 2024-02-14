@@ -10,14 +10,14 @@ export function animateFinallyMobile(gsap) {
 		},
 	})
 
-	tlFinally.to(
-		'.section__finally__block-img',
-		{
-			position: 'relative',
-			'z-index': 2,
-		},
-		'>'
-	)
+	// tlFinally.to(
+	// 	'.section__finally__block-img',
+	// 	{
+	// 		position: 'relative',
+	// 		'z-index': 2,
+	// 	},
+	// 	'>'
+	// )
 	tlFinally.to(
 		'.section__finally-img',
 		{

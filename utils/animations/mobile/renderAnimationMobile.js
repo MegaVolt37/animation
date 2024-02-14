@@ -4,7 +4,6 @@ export function animateRenderMobile(gsap, tl) {
 			trigger: '.section__render',
 			start: 'top top',
 			scrub: 1,
-			markers: true,
 		},
 	})
 	tlRender.to(
@@ -32,9 +31,9 @@ export function animateRenderMobile(gsap, tl) {
 		},
 		{
 			x: '-76%',
-			duration: 120,
+			duration: 40,
 		},
-		'>+=200'
+		'>+=20'
 	)
 	return tlRender
 }

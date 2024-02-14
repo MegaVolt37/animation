@@ -4,38 +4,52 @@
       <div class="section__angle-block__images">
         <img
           class="angle__image-first section__angle-img"
-          src="@/assets/images/convert/angle_bottles/1.webp"
+          src="/images/angle_bottles/test/Масло Владовское 1 RGB-min.png"
           alt="bottle"
+          width="510"
+          height="510"
         />
         <img
           class="angle__image-second section__angle-img"
-          src="@/assets/images/convert/angle_bottles/2.webp"
+          src="/images/angle_bottles/test/Масло Владовское 2 RGB-min.png"
           alt="bottle"
+          width="510"
+          height="510"
         />
         <img
           class="angle__image-third section__angle-img"
-          src="@/assets/images/convert/angle_bottles/3.webp"
+          src="/images/angle_bottles/test/Масло Владовское 3 RGB-min.png"
           alt="bottle"
+          width="510"
+          height="510"
         />
         <img
           class="angle__image-fourth section__angle-img"
-          src="@/assets/images/convert/angle_bottles/4.webp"
+          src="/images/angle_bottles/test/Масло Владовское 4 RGB-min.png"
           alt="bottle"
+          width="510"
+          height="510"
         />
         <img
           class="angle__image-firth section__angle-img"
-          src="@/assets/images/convert/angle_bottles/5.webp"
+          src="/images/angle_bottles/test/Масло Владовское 5 RGB-min.png"
           alt="bottle"
+          width="510"
+          height="510"
         />
         <img
           class="angle__image-sixth section__angle-img"
-          src="@/assets/images/convert/angle_bottles/6.webp"
+          src="/images/angle_bottles/test/Масло Владовское 6 RGB-min.png"
           alt="bottle"
+          width="510"
+          height="510"
         />
         <img
           class="angle__image-seventh section__angle-img"
-          src="@/assets/images/convert/angle_bottles/7.webp"
+          src="/images/angle_bottles/test/Масло Владовское 7 RGB-min.png"
           alt="bottle"
+          width="510"
+          height="510"
         />
       </div>
       <div class="section__angle-cup">
@@ -156,7 +170,7 @@ const img = useImage();
   justify-content: center;
   background-color: $light-gray;
   @media screen and (max-width: 768px) {
-    padding-bottom: vmin(25);
+    // padding-bottom: vmin(25);
     height: auto;
     position: relative;
     top: 0;
@@ -261,6 +275,10 @@ const img = useImage();
     position: absolute;
     top: 300%;
     bottom: 0;
+    @media screen and (max-width: 768px) {
+      top: 0;
+      left: 300%;
+    }
   }
   .angle__image-first {
     top: 0;

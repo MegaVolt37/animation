@@ -82,7 +82,8 @@ onMounted(async () => {
   height: 100vh;
   position: relative;
   @media screen and (max-width: 768px) {
-    height: auto;
+    // height: auto;
+    height: fit-content;
   }
 }
 </style>
