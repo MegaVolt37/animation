@@ -100,9 +100,13 @@ const readHover = computed(() =>
 <style lang="scss" scoped>
 .icon-wrapper {
   height: 100vh;
-  display: grid;
-  align-items: center;
-  justify-items: flex-end;
+  // display: grid;
+  // align-items: center;
+  // justify-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
   @media screen and (max-width: 768px) {
     height: vmin(935);
   }

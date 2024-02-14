@@ -30,6 +30,7 @@ import {
   animateRenderMobile,
   animateFinallyMobile,
   animateAngleMobile,
+  animateCupMobile,
 } from "@/utils/animations";
 
 const { width } = useWindowSize();
@@ -65,6 +66,7 @@ onMounted(async () => {
           tl.add(animateRenderMobile($gsap));
           tl.add(animateFinallyMobile($gsap));
           tl.add(animateAngleMobile($gsap));
+          tl.add(animateCupMobile($gsap));
         });
       }
     },
