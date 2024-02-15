@@ -7,7 +7,7 @@ export function animateAngleMobile(gsap, tl) {
 		scrollTrigger: {
 			trigger: '.section__angle',
 			start: 'top top',
-			end: '+=7000',
+			end: '+=10000',
 			scrub: 1,
 			pinSpacing: true,
 			pin: true,
