@@ -1,11 +1,11 @@
-export function animateFinallyMobile(gsap) {
+export function animateFinallyMobile(gsap, tl) {
 	const tlFinally = gsap?.timeline({
 		scrollTrigger: {
-			trigger: '.section__finally-wrapper',
+			trigger: '.section__finally',
 			start: 'top top',
 			scrub: 1,
-			// end: '+=3000',
-			pinSpacing: true,
+			end: '+=3000',
+			// pinSpacing: true,
 			pin: true,
 		},
 	})
@@ -18,15 +18,35 @@ export function animateFinallyMobile(gsap) {
 	// 	},
 	// 	'>'
 	// )
-	tlFinally.to(
+	tl.fromTo(
 		'.section__finally-img',
+		{
+			x: '150%',
+		},
+		{
+			x: '-76%',
+			duration: 40,
+			scrollTrigger: {
+				trigger: '.section__render',
+				start: 'bottom+=100 bottom',
+				scrub: 1,
+				// pinSpacing: true,
+			},
+		},
+		''
+	)
+	tlFinally.fromTo(
+		'.section__finally-img',
+		{
+			x: '-76%',
+		},
 		{
 			scale: 1.9,
 			x: '-95%',
 			y: '75%',
 			duration: 24,
 		},
-		'>'
+		'>+=5'
 	)
 
 	tlFinally.to(

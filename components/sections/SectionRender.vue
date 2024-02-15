@@ -1,5 +1,5 @@
 <template>
-  <section class="section__render bg__gray section">
+  <section class="section__render bg__gray section" ref="sectionRender">
     <div class="section__render-image">
       <img
         class="section__render-img"

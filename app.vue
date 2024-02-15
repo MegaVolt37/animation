@@ -8,7 +8,7 @@
           <SectionModeling />
           <SectionRender />
           <SectionFinally />
-          <SectionAngle />
+          <!-- <SectionAngle /> -->
           <!-- <SectionCup /> -->
         </div>
       </div>
@@ -28,6 +28,7 @@ import {
   animateHeaderMobile,
   animateDrawingMobile,
   animateRenderMobile,
+  animateModelingMobile,
   animateFinallyMobile,
   animateAngleMobile,
   animateCupMobile,
@@ -61,12 +62,13 @@ onMounted(async () => {
       } else {
         nextTick(() => {
           const tl = $gsap.timeline({});
-          tl.add(animateHeaderMobile($gsap));
-          tl.add(animateDrawingMobile($gsap));
-          tl.add(animateRenderMobile($gsap));
-          tl.add(animateFinallyMobile($gsap));
-          tl.add(animateAngleMobile($gsap));
-          tl.add(animateCupMobile($gsap));
+          tl.add(animateHeaderMobile($gsap, tl));
+          tl.add(animateDrawingMobile($gsap, tl));
+          tl.add(animateRenderMobile($gsap, tl));
+          tl.add(animateModelingMobile($gsap, tl));
+          tl.add(animateFinallyMobile($gsap, tl));
+          // tl.add(animateAngleMobile($gsap, tl))
+          // tl.add(animateCupMobile($gsap, tl))
         });
       }
     },

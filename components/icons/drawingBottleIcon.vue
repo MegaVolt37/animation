@@ -100,22 +100,17 @@ const readHover = computed(() =>
 <style lang="scss" scoped>
 .icon-wrapper {
   height: 100vh;
-  // display: grid;
-  // align-items: center;
-  // justify-items: flex-end;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
+  display: grid;
+  align-items: center;
+  justify-content: end;
+  justify-items: end;
   @media screen and (max-width: 768px) {
     height: vmin(935);
   }
 }
 svg {
-  position: absolute;
   grid-column: 1;
   grid-row: 1;
-  /* right: 0; */
 }
 .icon-bg {
   margin-bottom: -215px;
@@ -125,6 +120,7 @@ svg {
   }
 }
 .bottle {
+  position: relative;
   z-index: 2;
   @media screen and (max-width: 768px) {
     width: vmin(680);

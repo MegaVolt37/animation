@@ -1,12 +1,16 @@
-export function animateModeling(gsap, tl) {
+export function animateModelingMobile(gsap, tl) {
 	const lEase = gsap.parseEase('linear')
+	const body = document.body
 	const tlModeling = gsap.timeline({
-		scrollTrigger: {
-			trigger: '.section__modeling',
-			start: 'top top',
-			scrub: 1,
-			// pin: true
-		},
+		// scrollTrigger: {
+		// 	trigger: '.section__modeling',
+		// 	start: 'top top',
+		// 	scrub: 1,
+		// 	// pin: true
+		// },
+	})
+	tlModeling.to(body, {
+		backgroundColor: '#f7f7f9',
 	})
 	// tl.fromTo(
 	// 	'.section__modeling-text',
@@ -52,23 +56,23 @@ export function animateModeling(gsap, tl) {
 	// 	},
 	// 	'<'
 	// )
-	tlModeling.to(
-		'.section__modeling',
-		{
-			top: '0%',
-			duration: 0,
-		},
-		'>'
-	)
-	tlModeling.to(
-		'.section__render',
-		{
-			top: '0%',
-			y: 0,
-			duration: 0,
-		},
-		'<'
-	)
+	// tlModeling.to(
+	// 	'.section__modeling',
+	// 	{
+	// 		top: '0%',
+	// 		duration: 0,
+	// 	},
+	// 	'>'
+	// )
+	// tlModeling.to(
+	// 	'.section__render',
+	// 	{
+	// 		top: '0%',
+	// 		y: 0,
+	// 		duration: 0,
+	// 	},
+	// 	'<'
+	// )
 
 	return tlModeling
 }
