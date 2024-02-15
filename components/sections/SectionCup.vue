@@ -4,7 +4,7 @@
       class="section__cup-image"
       v-for="image in arr"
       :key="image"
-      :src="'images/cup/' + image"
+      :src="'images/cup3/' + image"
       loading="lazy"
       alt="Image"
       width="470"

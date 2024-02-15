@@ -8,7 +8,7 @@
           <SectionModeling />
           <SectionRender />
           <SectionFinally />
-          <!-- <SectionAngle /> -->
+          <SectionAngle />
           <!-- <SectionCup /> -->
         </div>
       </div>
@@ -67,7 +67,7 @@ onMounted(async () => {
           tl.add(animateRenderMobile($gsap, tl));
           tl.add(animateModelingMobile($gsap, tl));
           tl.add(animateFinallyMobile($gsap, tl));
-          // tl.add(animateAngleMobile($gsap, tl))
+          tl.add(animateAngleMobile($gsap, tl));
           // tl.add(animateCupMobile($gsap, tl))
         });
       }
