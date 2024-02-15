@@ -212,24 +212,24 @@ export function animateAngleMobile(gsap, tl) {
 		},
 		'<'
 	)
-	// tlAngle.to(
-	// 	'.section__angle-cup__finally-wrapper',
-	// 	{
-	// 		css: {
-	// 			'grid-template-columns': '110px 1fr',
-	// 		},
-	// 		duration: 25,
-	// 	},
-	// 	'>'
-	// )
-	// tlAngle.fromTo(
-	// 	'.dot-wrapper',
-	// 	{ zIndex: 1 },
-	// 	{
-	// 		zIndex: 0,
-	// 	},
-	// 	'<+=16'
-	// )
+	tlAngle.to(
+		'.section__angle-cup__finally-wrapper',
+		{
+			css: {
+				'grid-template-columns': '110px 1fr',
+			},
+			duration: 25,
+		},
+		'>'
+	)
+	tlAngle.fromTo(
+		'.dot-wrapper',
+		{ zIndex: 1 },
+		{
+			zIndex: 0,
+		},
+		'<+=16'
+	)
 
 	return tlAngle
 }
