@@ -3,7 +3,7 @@
     <div class="section__render-image">
       <img
         class="section__render-img"
-        src="@/assets/images/bottle__render_new.png"
+        src="/images/bottle__render_new.png"
         alt="bottle"
       />
     </div>
@@ -24,7 +24,7 @@
 .section__render {
   display: flex;
   flex-direction: row-reverse;
-  @media screen and (max-width: 768px) {
+  @include md-max {
     flex-direction: column;
     align-items: center;
     position: relative;
@@ -37,7 +37,7 @@
     height: fit-content;
     margin: auto;
     margin-left: vw(143);
-    @media screen and (max-width: 768px) {
+    @include md-max {
       margin: 0;
     }
   }
@@ -46,7 +46,7 @@
     width: vw(331);
     height: vw(571);
     margin-bottom: auto;
-    @media screen and (max-width: 768px) {
+    @include md-max {
       margin: 0;
       width: vmin(245);
       height: auto;
@@ -54,7 +54,7 @@
   }
   &-title {
     margin-bottom: vw(60);
-    @media screen and (max-width: 768px) {
+    @include md-max {
       max-width: vmin(240);
       margin: 0 auto;
       margin-bottom: vmin(20);
@@ -62,7 +62,7 @@
   }
   &-subtitle {
     max-width: vw(295);
-    @media screen and (max-width: 768px) {
+    @include md-max {
       max-width: vmin(240);
       margin: 0 auto;
     }

@@ -11,7 +11,6 @@ import { animateRenderMobile } from './mobile/renderAnimationMobile'
 import { animateModelingMobile } from './mobile/modelingAnimationMobile'
 import { animateFinallyMobile } from './mobile/finallyAnimationMobile'
 import { animateAngleMobile } from './mobile/angleAnimationMobile'
-import { animateCupMobile } from './mobile/cupAnimationMobile'
 
 export {
 	animateAngle,
@@ -26,5 +25,4 @@ export {
 	animateModelingMobile,
 	animateFinallyMobile,
 	animateAngleMobile,
-	animateCupMobile,
 }

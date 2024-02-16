@@ -138,7 +138,7 @@ const readHover = computed(() =>
   align-items: center;
   justify-content: end;
   justify-items: end;
-  @media screen and (max-width: 768px) {
+  @include md-max {
     height: vmin(935);
   }
 }
@@ -148,7 +148,7 @@ svg {
 }
 .icon-bg {
   margin-bottom: -215px;
-  @media screen and (max-width: 768px) {
+  @include md-max {
     width: vmin(935);
     // margin-bottom: -145px;
     margin-bottom: -115px;
@@ -157,7 +157,7 @@ svg {
 .bottle {
   position: relative;
   z-index: 2;
-  @media screen and (max-width: 768px) {
+  @include md-max {
     // width: vmin(680);
     width: vmin(915);
   }

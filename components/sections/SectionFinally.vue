@@ -56,10 +56,10 @@
   max-width: 100vw;
   height: auto;
 
-  @media screen and (min-width: 768px) {
+  @include md-min {
     display: contents;
   }
-  @media screen and (max-width: 768px) {
+  @include md-max {
     position: relative;
     // height: fit-content;
     top: 0;
@@ -69,7 +69,7 @@
 .section__finally {
   background-color: $light-gray;
   display: flex;
-  @media screen and (max-width: 768px) {
+  @include md-max {
     // flex-direction: column;
     // align-items: center;
     position: relative;
@@ -88,7 +88,7 @@
     margin: auto;
     margin-left: 0;
     // position: relative;
-    @media screen and (max-width: 768px) {
+    @include md-max {
       position: relative;
       // display: none;
       overflow: hidden;
@@ -143,7 +143,7 @@
     max-height: 100vh;
     height: 100vh;
     width: 59%;
-    @media screen and (max-width: 768px) {
+    @include md-max {
       max-height: none;
       height: fit-content;
       position: relative;
@@ -163,7 +163,7 @@
     mix-blend-mode: darken;
     margin-top: -9%;
     transform: translateX(-6%);
-    @media screen and (max-width: 768px) {
+    @include md-max {
       height: auto;
       width: vmin(1100);
       margin-top: -29%;
@@ -175,7 +175,7 @@
   }
   &-subtitle {
     max-width: vw(295);
-    @media screen and (max-width: 768px) {
+    @include md-max {
       max-width: vmin(240);
     }
   }

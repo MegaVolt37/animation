@@ -4,13 +4,6 @@ body {
 	font-weight: 500;
 }
 
-// main {
-//   display: flex;
-//   width: 700vw;
-//   height: 100vh;
-//   overflow-x: hidden;
-// }
-
 .bg__white {
 	background-color: $white;
 }
@@ -56,14 +49,14 @@ body {
 	height: 100vh;
 	z-index: 1;
 	width: 100vw;
-	@media screen and (max-width: 768px) {
+	@include md-max {
 		height: auto;
 	}
 }
 .section__subtitle {
 	font-size: vmin(16);
 	line-height: 120%;
-	@media screen and (min-width: 768px) {
+	@include md-min {
 		font-size: vw(18);
 	}
 }

@@ -1,5 +1,6 @@
 export function animateAngle(gsap, tl) {
-	const images = gsap.utils.toArray('.section__angle-cup__image')
+	const imagesCup = gsap.utils.toArray('.section__angle-cup__image')
+	const imagesAngle = gsap.utils.toArray('.section__angle-img')
 	const objSequenceImage = {
 		activeIndexImg: 0,
 	}
@@ -7,13 +8,11 @@ export function animateAngle(gsap, tl) {
 		scrollTrigger: {
 			trigger: '.section__angle',
 			start: 'top top',
-			// end: "+=3000",
 			scrub: 2,
-			// pin: true,
 		},
 	})
 	tl.fromTo(
-		'.angle__image-first',
+		imagesAngle[0],
 		{
 			top: 0,
 		},
@@ -24,7 +23,7 @@ export function animateAngle(gsap, tl) {
 		'+=10'
 	)
 	tl.fromTo(
-		'.angle__image-second',
+		imagesAngle[1],
 		{
 			top: '300vh',
 		},
@@ -35,7 +34,7 @@ export function animateAngle(gsap, tl) {
 		'<-=10'
 	)
 	tl.to(
-		'.angle__image-second',
+		imagesAngle[1],
 		{
 			top: '-300vh',
 			duration: 35,
@@ -43,7 +42,7 @@ export function animateAngle(gsap, tl) {
 		'>'
 	)
 	tl.fromTo(
-		'.angle__image-third',
+		imagesAngle[2],
 		{
 			top: '300vh',
 		},
@@ -54,7 +53,7 @@ export function animateAngle(gsap, tl) {
 		'<-=10'
 	)
 	tl.to(
-		'.angle__image-third',
+		imagesAngle[2],
 		{
 			top: '-300vh',
 			duration: 40,
@@ -62,7 +61,7 @@ export function animateAngle(gsap, tl) {
 		'>'
 	)
 	tl.fromTo(
-		'.angle__image-fourth',
+		imagesAngle[3],
 		{
 			top: '300vh',
 		},
@@ -73,7 +72,7 @@ export function animateAngle(gsap, tl) {
 		'<-=10'
 	)
 	tl.to(
-		'.angle__image-fourth',
+		imagesAngle[3],
 		{
 			top: '-300vh',
 			duration: 40,
@@ -81,7 +80,7 @@ export function animateAngle(gsap, tl) {
 		'>'
 	)
 	tl.fromTo(
-		'.angle__image-firth',
+		imagesAngle[4],
 		{
 			top: '300vh',
 		},
@@ -92,7 +91,7 @@ export function animateAngle(gsap, tl) {
 		'<-=10'
 	)
 	tl.to(
-		'.angle__image-firth',
+		imagesAngle[4],
 		{
 			top: '-300vh',
 			duration: 40,
@@ -100,7 +99,7 @@ export function animateAngle(gsap, tl) {
 		'>'
 	)
 	tl.fromTo(
-		'.angle__image-sixth',
+		imagesAngle[5],
 		{
 			top: '300vh',
 		},
@@ -111,7 +110,7 @@ export function animateAngle(gsap, tl) {
 		'<-=10'
 	)
 	tl.to(
-		'.angle__image-sixth',
+		imagesAngle[5],
 		{
 			top: '-300vh',
 			duration: 40,
@@ -119,7 +118,7 @@ export function animateAngle(gsap, tl) {
 		'>'
 	)
 	tl.fromTo(
-		'.angle__image-seventh',
+		imagesAngle[6],
 		{
 			top: '300vh',
 		},
@@ -146,22 +145,17 @@ export function animateAngle(gsap, tl) {
 		'<'
 	)
 
-	gsap.set(images, {
+	gsap.set(imagesCup, {
 		opacity: 0,
 	})
-	// gsap.set('section__angle-cup__finally', {
-	// 	display: 'none',
-	// })
-	gsap.set(images[0], {
+	gsap.set(imagesCup[0], {
 		opacity: 1,
 		scale: 0,
-		// y: '-50%',
 	})
 	tl.to(
-		images[0],
+		imagesCup[0],
 		{
 			scale: 1,
-			// y: '-50%',
 			duration: 60,
 		},
 		'<'
@@ -172,12 +166,11 @@ export function animateAngle(gsap, tl) {
 			activeIndexImg: 57,
 			ease: 'steps(57)',
 			duration: 120,
-			// repeat: -1,
 			onUpdate: () => {
-				gsap.set(images, {
+				gsap.set(imagesCup, {
 					opacity: 0,
 				})
-				gsap.set(images[objSequenceImage.activeIndexImg], {
+				gsap.set(imagesCup[objSequenceImage.activeIndexImg], {
 					opacity: 1,
 				})
 			},
@@ -188,7 +181,6 @@ export function animateAngle(gsap, tl) {
 		'.section__angle-cup',
 		{
 			scale: 0,
-			// y: '-50%',
 			duration: 40,
 		},
 		'>'
@@ -204,7 +196,6 @@ export function animateAngle(gsap, tl) {
 		'.section__angle-cup__finally',
 		{
 			display: 'block',
-			// y: '-50%',
 		},
 		'<'
 	)
@@ -214,7 +205,6 @@ export function animateAngle(gsap, tl) {
 			css: {
 				'grid-template-columns': '110px 1fr',
 			},
-			// y: '-50%',
 			duration: 25,
 		},
 		'>'
@@ -224,57 +214,9 @@ export function animateAngle(gsap, tl) {
 		{ zIndex: 1 },
 		{
 			zIndex: 0,
-			// css: {
-			// 	'z-index': 0,
-			// },
-			// y: '-50%',
-			// duration: 25,
 		},
 		'<+=16'
 	)
-	// tl.to(
-	// 	images[0],
-	// 	{
-	// 		scale: 1,
-	// 		y: '-50%',
-	// 		duration: 60,
-	// 	},
-	// 	'<'
-	// )
-	// tl.to(
-	// 	'.section__angle-cup__wrapper',
-	// 	{
-	// 		// scale: 1,
-	// 		width: '100px',
-	// 		// y: '-50%',
-	// 		duration: 40,
-	// 	},
-	// 	'>'
-	// )
-	// tl.to(
-	// 	images,
-	// 	{
-	// 		// scale: 1,
-	// 		width: '100px',
-	// 		// y: '-50%',
-	// 		duration: 40,
-	// 	},
-	// 	'<'
-	// )
-	// tl.to(".section__angle", {
-	//   top: "-100%",
-	//   duration: 40,
-	// }, "+=1.5");
-	// tl.to(".section__angle", {
-	//   opacity: 0.5,
-	//   duration: 40,
-	// }, "+=1.5");
-	// tl.to(".section__cup", {
-	//   zIndex: 3,
-	//   opacity: 1,
-	//   // top: 0,
-	//   duration: 24,
-	// }, "<");
 
 	return tlAngle
 }

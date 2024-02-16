@@ -1,3 +1,4 @@
+@import 'breakpoints';
 @import 'functions';
 @import 'variables';
 @import 'fonts';
@@ -6,11 +7,10 @@
 .section__title {
 	font-family: 'Inter';
 	font-weight: 600;
-	// font-size: vmin(38);
 	font-size: clamp(38px, 10vw, 76px);
 	line-height: 100%;
 	letter-spacing: vw(-2);
-	@media screen and (min-width: 768px) {
+	@include md-min {
 		font-size: vw(76);
 	}
 }

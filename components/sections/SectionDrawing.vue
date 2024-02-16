@@ -24,7 +24,7 @@
 
 <style lang="scss">
 .section__drawing {
-  @media screen and (max-width: 768px) {
+  @include md-max {
     // height: vmin(935);
     height: auto;
     position: relative;
@@ -38,7 +38,7 @@
     display: flex;
     align-items: center;
     gap: vw(70);
-    @media screen and (max-width: 768px) {
+    @include md-max {
       flex-direction: column-reverse;
       gap: vmin(60);
       height: auto;
@@ -49,7 +49,7 @@
     height: 100%;
     max-height: 100vh;
     width: 50%;
-    @media screen and (max-width: 768px) {
+    @include md-max {
       rotate: -90deg;
       max-height: vmin(935);
       width: vmin(935);
@@ -78,13 +78,13 @@
   }
   &-title {
     margin-bottom: vmin(20);
-    @media screen and (min-width: 768px) {
+    @include md-min {
       margin-bottom: vw(60);
     }
   }
   &-subtitle {
     max-width: vmin(240);
-    @media screen and (min-width: 768px) {
+    @include md-min {
       max-width: vw(295);
     }
   }

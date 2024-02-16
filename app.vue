@@ -9,14 +9,12 @@
           <SectionRender />
           <SectionFinally />
           <SectionAngle />
-          <!-- <SectionCup /> -->
         </div>
       </div>
     </ClientOnly>
   </div>
 </template>
 <script setup>
-// const { y } = useWindowScroll();
 import "@/assets/styles/main.scss";
 import {
   animateAngle,
@@ -31,7 +29,6 @@ import {
   animateModelingMobile,
   animateFinallyMobile,
   animateAngleMobile,
-  // animateCupMobile,
 } from "@/utils/animations";
 
 const { width } = useWindowSize();
@@ -68,7 +65,6 @@ onMounted(async () => {
           tl.add(animateModelingMobile($gsap, tl));
           tl.add(animateFinallyMobile($gsap, tl));
           tl.add(animateAngleMobile($gsap, tl));
-          // tl.add(animateCupMobile($gsap, tl));
         });
       }
     },
@@ -85,8 +81,7 @@ onMounted(async () => {
 .content {
   height: 100vh;
   position: relative;
-  @media screen and (max-width: 768px) {
-    // height: auto;
+  @include md-max {
     height: fit-content;
   }
 }

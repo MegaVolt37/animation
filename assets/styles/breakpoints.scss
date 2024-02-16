@@ -1,0 +1,11 @@
+@import './variables.scss';
+@mixin md-max {
+	@media (max-width: #{$width-md}) {
+		@content;
+	}
+}
+@mixin md-min {
+	@media (min-width: #{$width-md}) {
+		@content;
+	}
+}

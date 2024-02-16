@@ -1,5 +1,6 @@
 export function animateAngleMobile(gsap, tl) {
-	const images = gsap.utils.toArray('.section__angle-cup__image')
+	const imagesCup = gsap.utils.toArray('.section__angle-cup__image')
+	const imagesAngle = gsap.utils.toArray('.section__angle-img')
 	const objSequenceImage = {
 		activeIndexImg: 0,
 	}
@@ -25,7 +26,7 @@ export function animateAngleMobile(gsap, tl) {
 		'<'
 	)
 	tlAngle.fromTo(
-		'.angle__image-first',
+		imagesAngle[0],
 		{
 			left: 0,
 		},
@@ -36,7 +37,7 @@ export function animateAngleMobile(gsap, tl) {
 		'+=10'
 	)
 	tlAngle.fromTo(
-		'.angle__image-second',
+		imagesAngle[1],
 		{
 			left: '300vw',
 		},
@@ -47,7 +48,7 @@ export function animateAngleMobile(gsap, tl) {
 		'<-=10'
 	)
 	tlAngle.to(
-		'.angle__image-second',
+		imagesAngle[1],
 		{
 			left: '-300vw',
 			duration: 35,
@@ -55,7 +56,7 @@ export function animateAngleMobile(gsap, tl) {
 		'>'
 	)
 	tlAngle.fromTo(
-		'.angle__image-third',
+		imagesAngle[2],
 		{
 			left: '300vw',
 		},
@@ -66,7 +67,7 @@ export function animateAngleMobile(gsap, tl) {
 		'<-=10'
 	)
 	tlAngle.to(
-		'.angle__image-third',
+		imagesAngle[2],
 		{
 			left: '-300vw',
 			duration: 40,
@@ -74,7 +75,7 @@ export function animateAngleMobile(gsap, tl) {
 		'>'
 	)
 	tlAngle.fromTo(
-		'.angle__image-fourth',
+		imagesAngle[3],
 		{
 			left: '300vw',
 		},
@@ -85,7 +86,7 @@ export function animateAngleMobile(gsap, tl) {
 		'<-=10'
 	)
 	tlAngle.to(
-		'.angle__image-fourth',
+		imagesAngle[3],
 		{
 			left: '-300vw',
 			duration: 40,
@@ -93,7 +94,7 @@ export function animateAngleMobile(gsap, tl) {
 		'>'
 	)
 	tlAngle.fromTo(
-		'.angle__image-firth',
+		imagesAngle[4],
 		{
 			left: '300vw',
 		},
@@ -104,7 +105,7 @@ export function animateAngleMobile(gsap, tl) {
 		'<-=10'
 	)
 	tlAngle.to(
-		'.angle__image-firth',
+		imagesAngle[4],
 		{
 			left: '-300vw',
 			duration: 40,
@@ -112,7 +113,7 @@ export function animateAngleMobile(gsap, tl) {
 		'>'
 	)
 	tlAngle.fromTo(
-		'.angle__image-sixth',
+		imagesAngle[5],
 		{
 			left: '300vw',
 		},
@@ -123,7 +124,7 @@ export function animateAngleMobile(gsap, tl) {
 		'<-=10'
 	)
 	tlAngle.to(
-		'.angle__image-sixth',
+		imagesAngle[5],
 		{
 			left: '-300vw',
 			duration: 40,
@@ -131,7 +132,7 @@ export function animateAngleMobile(gsap, tl) {
 		'>'
 	)
 	tlAngle.fromTo(
-		'.angle__image-seventh',
+		imagesAngle[6],
 		{
 			left: '300vw',
 		},
@@ -158,15 +159,15 @@ export function animateAngleMobile(gsap, tl) {
 		'<'
 	)
 
-	gsap.set(images, {
+	gsap.set(imagesCup, {
 		opacity: 0,
 	})
-	gsap.set(images[0], {
+	gsap.set(imagesCup[0], {
 		opacity: 1,
 		scale: 0,
 	})
 	tlAngle.to(
-		images[0],
+		imagesCup[0],
 		{
 			scale: 1,
 			duration: 60,
@@ -180,10 +181,10 @@ export function animateAngleMobile(gsap, tl) {
 			ease: 'steps(57)',
 			duration: 120,
 			onUpdate: () => {
-				gsap.set(images, {
+				gsap.set(imagesCup, {
 					opacity: 0,
 				})
-				gsap.set(images[objSequenceImage.activeIndexImg], {
+				gsap.set(imagesCup[objSequenceImage.activeIndexImg], {
 					opacity: 1,
 				})
 			},
